@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if User.any?
+    #if User.any?
   	 user = User.find_by(name: params[:name])
   	 if user and user.authenticate(params[:password])
   	 	 session[:user_id] = user.id
@@ -12,10 +12,10 @@ class SessionsController < ApplicationController
   	 else
   	 	 redirect_to login_url, alert: "Invalid user/password combination"
 		  end
-    else
+    #else
       #new_user = User.create(name: params[:name], password: params[:password], password_confirmation: params[:password])
       #session[:user_id] = new_user.id
-      redirect_to admin_url
+      #redirect_to admin_url
     end
   end
 
