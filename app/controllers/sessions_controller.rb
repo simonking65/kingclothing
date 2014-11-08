@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
   	 	 redirect_to login_url, alert: "Invalid user/password combination"
 		  end
     else
-      new_user = User.create(name: params[:name], password: params[:password], password_confirmation: params[:password])
-      session[:user_id] = new_user.id
+      #new_user = User.create(name: params[:name], password: params[:password], password_confirmation: params[:password])
+      #session[:user_id] = new_user.id
       redirect_to admin_url
     end
   end
