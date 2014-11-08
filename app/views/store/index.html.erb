@@ -9,8 +9,9 @@
 				<%= sanitize(product.description) %> 
 				<div class="price_line">
 					<span class="price"><%= number_to_currency(product.price, :unit => "£") %></span> 
-					<%= select("item", "size", %w[small large extra\ large]) %>
-					<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
+					<%= select(:item, :sizze, %w[extra\ small small medium large extra\ large]) %>
+
+					<%= button_to 'Add to Cart', line_items_path(product_id: product), sizzle: @item, remote: true %>
 				</div>
 			</div>
 		<% end %>
