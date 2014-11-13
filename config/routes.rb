@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
+  get "paypal_express/checkout"
+
+  get "paypal_express/review"
+
   get 'questions' => 'static_pages#questions'
 
   get 'news' => 'static_pages#news'

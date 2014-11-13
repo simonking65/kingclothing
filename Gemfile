@@ -8,13 +8,19 @@ gem 'rails', '4.1.5'
 group :development, :test do
 # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
-#	gem 'debugger'
+	gem 'debugger'
+
 
 end
 
 group :production do
 	gem 'pg'
 end
+#gem 'minitest'
+#gem 'minitest'
+gem 'activemerchant'
+gem 'settingslogic'
+#gem 'active_utils'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

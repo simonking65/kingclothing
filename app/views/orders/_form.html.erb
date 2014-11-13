@@ -30,4 +30,7 @@
   <div class="actions">
     <%= f.submit 'Place Order' %>
   </div>
+  <div class="ppbutton">
+    <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), :controller => 'paypal_express', :action => 'checkout' %>
+    </div>
 <% end %>

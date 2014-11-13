@@ -21,7 +21,6 @@ Rails.application.configure do
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
-
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
@@ -38,4 +37,16 @@ end
 
 Kingclothing::Application.configure do
   config.action_mailer.delivery_method = :test
+    # Force ActiveMerchant into test mode
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = "test"
+    paypal_options = {
+      :login => "simon.king65-facilitator_api1.gmail.com",
+      :password => "MLP7C4HCMZTT6A7Y", 
+      :signature => "AcbkD2jLSn.hCPB3rhfsE5wX8zSMAvxbibNzxPzROTihhXQOhWvagcfE"
+    }
+    ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
+    ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+  end
+
 end
