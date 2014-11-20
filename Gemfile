@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-#ruby '2.0.0'
-gem 'rails', '4.1.5'
+
+
+ruby '2.0.0'
+gem 'rails', '4.0.0'
 group :development, :test do
 # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
-	gem 'debugger'
+	#gem 'debugger'
 
 
 end
@@ -18,8 +20,11 @@ group :production do
 end
 #gem 'minitest'
 #gem 'minitest'
-gem 'activemerchant'
-gem 'settingslogic'
+gem 'paypal-sdk-core', '~> 0.3.0',	:git => 'https://github.com/paypal/sdk-core-ruby.git'
+gem 'paypal-sdk-rest', '~> 0.7.0',	:git => 'https://github.com/paypal/rest-api-sdk-ruby.git'
+gem 'paypal-sdk-merchant'
+#gem 'activemerchant'
+#gem 'settingslogic'
 #gem 'active_utils'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -44,7 +49,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
+#gem 'bcrypt', '~> 3.1.7'
+#gem 'bcrypt'
+gem 'bcrypt-ruby', '~> 3.0.1'
 gem 'bcrypt', '~> 3.1.7'
+
+#gem 'bcrypt-ruby'
 
 # Use unicorn as the app server
 # gem 'unicorn'

@@ -1,4 +1,4 @@
-Rails.application.configure do
+Kingclothing::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -33,20 +33,14 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-end
+#end
 
-Kingclothing::Application.configure do
+#Kingclothing.Application.configure do
   config.action_mailer.delivery_method = :test
     # Force ActiveMerchant into test mode
-  config.after_initialize do
-    ActiveMerchant::Billing::Base.mode = "test"
-    paypal_options = {
-      :login => "simon.king65-facilitator_api1.gmail.com",
-      :password => "MLP7C4HCMZTT6A7Y", 
-      :signature => "AcbkD2jLSn.hCPB3rhfsE5wX8zSMAvxbibNzxPzROTihhXQOhWvagcfE"
-    }
-    ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
-    ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
-  end
+  #config.after_initialize do
+   # ActiveMerchant::Billing::Base.mode = :test
+    
+  #end
 
 end

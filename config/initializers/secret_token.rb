@@ -1,0 +1,1 @@
+Kingclothing::Application.config.secret_key_base = 'b21c1903dc796f3dcbd7ee82990265f0e0b217a222361fcdd91f74d48cb942d6e0b437b8c8bcc352ed99cd08c7c332acdada548b04f4ae548238e955fa77d9cf'
