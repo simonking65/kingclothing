@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  skip_before_action :authorize, only: [:new, :create]
+  skip_before_action :authorize, only: [:new, :create, :execute, :cancel]
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
@@ -33,21 +33,54 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
+    @order.payment_method = @order.pay_type
+  #@order.attributes = params[:order]
+  debugger
+    @order.return_url = order_execute_url(":order_id")
+    @order.cancel_url = order_cancel_url(":order_id")
+    #respond_to do |format|
+      if @order.payment_method and @order.save
+        debugger
+        if @order.approve_url
+          debugger
+          redirect_to @order.approve_url
+        else
+          redirect_to orders_path, :notice => "Order[#{@order.description}] placed successfully"
+        end  
+        
+        
 
-    respond_to do |format|
-      if @order.save
-        Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
-        OrderNotifier.received(@order).deliver
-        format.html { redirect_to store_url, notice: 'Thank you for your order.' }
-        format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
+    #end
+  end
+
+
+  def execute
+    debugger
+    order = current_user.orders.find(params[:order_id])
+    if order.execute(params["PayerID"])
+              Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        OrderNotifier.received(@order).deliver
+        format.html { redirect_to store_url, notice: 'Thank you for your order.' }
+        format.json { render :show, status: :created, location: @order }
+      redirect_to orders_path, :notice => "Order[#{order.description}] placed successfully"
+    else
+      redirect_to orders_path, :alert => order.payment.error.inspect
     end
   end
 
+  def cancel
+    order = current_user.orders.find(params[:order_id])
+    unless order.state == "approved"
+      order.state = "cancelled"
+      order.save
+    end
+    redirect_to orders_path, :alert => "Order[#{order.description}] cancelled"
+  end
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update

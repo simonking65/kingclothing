@@ -26,7 +26,10 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :orders
+  resources :orders do
+    get :execute
+    get :cancel
+  end
 
   resources :line_items
 

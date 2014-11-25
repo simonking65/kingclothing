@@ -2,6 +2,7 @@ class Payment < PayPal::SDK::REST::Payment
   include ActiveModel::Validations
 
   def create
+    debugger
     return false if invalid?
     super
   end
@@ -15,29 +16,31 @@ class Payment < PayPal::SDK::REST::Payment
 
 
   def add_payment_method(order)
-    user = order.user
-    if order.payment_method == "credit_card" and user.credit_card_id
-      self.payer.payment_method = "credit_card"
-      self.payer.funding_instruments = {
-        :credit_card_token => {
-          :credit_card_id => user.credit_card_id,
-          :payer_id => user.email }}
-    else
+    #user = order.user
+    #if order.payment_method == "credit_card" and user.credit_card_id
+    #  self.payer.payment_method = "credit_card"
+    #  self.payer.funding_instruments = {
+    #    :credit_card_token => {
+    #      :credit_card_id => user.credit_card_id,
+    #      :payer_id => user.email }}
+    #else
       self.payer.payment_method = "paypal"
-    end
+    #end
   end
 
   def order=(order)
+    debugger
     self.intent = "sale"
     add_payment_method(order)
     self.transactions = {
       :amount => {
-        :total => order.amount,
+        :total => order.total_price,
         :currency => "USD" },
       :item_list => {
-        :items => { :name => "pizza", :sku => "pizza", :price => order.amount, :currency => "USD", :quantity => 1 }
+        :items => { :name => "pizza", :sku => "pizza", :price => order.total_price, :currency => "USD", :quantity => 1 }
       },
-      :description => order.description
+      #:description => order.description
+      :description => "my test"
      }
      self.redirect_urls = {
        :return_url => order.return_url.sub(/:order_id/, order.id.to_s),
