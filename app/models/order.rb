@@ -46,6 +46,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
       errors.add :payment_method, @payment.error["message"] if @payment.error
       raise ActiveRecord::Rollback, "Can't place the order"
     end
+    logger.info payment.to_s
   end
 
   def execute(payer_id)
