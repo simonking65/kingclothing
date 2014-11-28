@@ -40,8 +40,11 @@ class OrdersController < ApplicationController
     @order.return_url = order_execute_url(":order_id")
     @order.cancel_url = order_cancel_url(":order_id")
     #respond_to do |format|
+
+    logger.info "just about to payment_method and save"
       if @order.payment_method and @order.save
         debugger
+        logger.info "about to approve url"
         if @order.approve_url
           debugger
           redirect_to @order.approve_url
