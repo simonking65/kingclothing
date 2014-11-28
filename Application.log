@@ -1,0 +1,290 @@
+# Logfile created on 2014-11-28 20:16:46 +0000 by logger.rb/44203
+D, [2014-11-28T20:17:13.587015 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:13.587148 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:13.587744 #55959]  INFO -- : Started GET "/orders/13/cancel?token=EC-0LL87754YY423701L" for 127.0.0.1 at 2014-11-28 20:17:13 +0000
+D, [2014-11-28T20:17:14.135766 #55959] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2014-11-28T20:17:14.317269 #55959]  INFO -- : Processing by OrdersController#cancel as HTML
+I, [2014-11-28T20:17:14.317369 #55959]  INFO -- :   Parameters: {"token"=>"EC-0LL87754YY423701L", "order_id"=>"13"}
+I, [2014-11-28T20:17:14.355232 #55959]  INFO -- : Completed 500 Internal Server Error in 38ms
+F, [2014-11-28T20:17:14.360538 #55959] FATAL -- : 
+NameError (undefined local variable or method `current_user' for #<OrdersController:0x007fb59785afd0>):
+  app/controllers/orders_controller.rb:78:in `cancel'
+
+
+I, [2014-11-28T20:17:14.448465 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+I, [2014-11-28T20:17:14.458275 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+I, [2014-11-28T20:17:14.467929 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+I, [2014-11-28T20:17:14.468102 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.5ms)
+D, [2014-11-28T20:17:23.240583 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:23.240678 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:23.240825 #55959]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-11-28 20:17:23 +0000
+I, [2014-11-28T20:17:23.305255 #55959]  INFO -- : Processing by StoreController#index as HTML
+D, [2014-11-28T20:17:23.396416 #55959] DEBUG -- :   [1m[35mCart Load (39.7ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 38]]
+D, [2014-11-28T20:17:23.504929 #55959] DEBUG -- :   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1[0m
+I, [2014-11-28T20:17:23.550085 #55959]  INFO -- : Cache digest for store/index.html: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2014-11-28T20:17:23.569064 #55959]  INFO -- : Read fragment views/store/products/2-20141022062504570899000/a93d4e2e981ab3dfce98a095c3b6c059 (17.4ms)
+I, [2014-11-28T20:17:23.569540 #55959]  INFO -- :   Rendered store/index.html.erb within layouts/application (67.7ms)
+D, [2014-11-28T20:17:24.110068 #55959] DEBUG -- :   [1m[35mLineItem Exists (0.2ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 38]]
+D, [2014-11-28T20:17:24.159986 #55959] DEBUG -- :   [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 38]]
+I, [2014-11-28T20:17:24.160379 #55959]  INFO -- :   Rendered collection (0.0ms)
+I, [2014-11-28T20:17:24.209915 #55959]  INFO -- :   Rendered carts/_cart.html.erb (52.2ms)
+I, [2014-11-28T20:17:24.210716 #55959]  INFO -- : Completed 200 OK in 905ms (Views: 771.7ms | ActiveRecord: 42.0ms)
+D, [2014-11-28T20:17:24.275201 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.278673 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.279062 #55959]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.297966 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.298043 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.298238 #55959]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.308551 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.308755 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.308955 #55959]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.319672 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.319784 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.320191 #55959]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.337005 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.337093 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.337329 #55959]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.352897 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.352978 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.353172 #55959]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.364441 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.364592 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.364793 #55959]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.378571 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.378654 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.378871 #55959]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.395070 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.395177 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.395391 #55959]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.417736 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.417814 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.418034 #55959]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.429090 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.429190 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.429409 #55959]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.451085 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.451167 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.451393 #55959]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.476483 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.476688 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.486796 #55959]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.557892 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.558035 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.558254 #55959]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.580329 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.580615 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.580813 #55959]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.587863 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.588049 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.588256 #55959]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.602181 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.602257 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.602449 #55959]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.614899 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.614976 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.615166 #55959]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.625956 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.626033 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.626215 #55959]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.635782 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.635919 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.636108 #55959]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.649765 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.649843 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.650032 #55959]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.658081 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.658172 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.658388 #55959]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.668312 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.668512 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.668974 #55959]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.692520 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.692613 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.692832 #55959]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.710822 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.710904 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.711104 #55959]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.748014 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.748088 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.748278 #55959]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.756485 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.756563 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.756822 #55959]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.788552 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.788636 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.788762 #55959]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.806781 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.806872 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.807994 #55959]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:24.838518 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:24.838723 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:24.838902 #55959]  INFO -- : Started GET "/assets/kingclothingnyc.png" for 127.0.0.1 at 2014-11-28 20:17:24 +0000
+D, [2014-11-28T20:17:29.539507 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:29.539592 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:29.539791 #55959]  INFO -- : Started POST "/line_items?product_id=1" for 127.0.0.1 at 2014-11-28 20:17:29 +0000
+I, [2014-11-28T20:17:29.558900 #55959]  INFO -- : Processing by LineItemsController#create as JS
+I, [2014-11-28T20:17:29.559022 #55959]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+D, [2014-11-28T20:17:29.561016 #55959] DEBUG -- :   [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 38]]
+D, [2014-11-28T20:17:29.562079 #55959] DEBUG -- :   [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+D, [2014-11-28T20:17:29.579450 #55959] DEBUG -- :   [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 1 LIMIT 1  [["cart_id", 38]]
+D, [2014-11-28T20:17:29.619588 #55959] DEBUG -- :   [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2014-11-28T20:17:29.622751 #55959] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2014-11-28T20:17:29.654716 #55959] DEBUG -- :   [1m[36mSQL (19.2ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 38], ["created_at", Fri, 28 Nov 2014 20:17:29 UTC +00:00], ["product_id", 1], ["productprice", #<BigDecimal:7fb59649d010,'0.1299E2',18(36)>], ["size", "extra small"], ["updated_at", Fri, 28 Nov 2014 20:17:29 UTC +00:00]]
+D, [2014-11-28T20:17:29.658546 #55959] DEBUG -- :   [1m[35m (3.3ms)[0m  commit transaction
+D, [2014-11-28T20:17:29.675318 #55959] DEBUG -- :   [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 38]]
+I, [2014-11-28T20:17:29.700835 #55959]  INFO -- :   Rendered line_items/_line_item.html.erb (1.9ms)
+I, [2014-11-28T20:17:29.703172 #55959]  INFO -- :   Rendered carts/_cart.html.erb (29.1ms)
+I, [2014-11-28T20:17:29.703553 #55959]  INFO -- :   Rendered line_items/create.js.erb (31.1ms)
+I, [2014-11-28T20:17:29.704364 #55959]  INFO -- : Completed 200 OK in 145ms (Views: 44.6ms | ActiveRecord: 23.9ms)
+D, [2014-11-28T20:17:34.982606 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:34.982693 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:34.982878 #55959]  INFO -- : Started POST "/line_items?product_id=2" for 127.0.0.1 at 2014-11-28 20:17:34 +0000
+I, [2014-11-28T20:17:34.992461 #55959]  INFO -- : Processing by LineItemsController#create as JS
+I, [2014-11-28T20:17:34.992641 #55959]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"2"}
+D, [2014-11-28T20:17:34.994343 #55959] DEBUG -- :   [1m[35mCart Load (0.4ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 38]]
+D, [2014-11-28T20:17:34.995212 #55959] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "2"]]
+D, [2014-11-28T20:17:34.996469 #55959] DEBUG -- :   [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 2 LIMIT 1  [["cart_id", 38]]
+D, [2014-11-28T20:17:34.997752 #55959] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+D, [2014-11-28T20:17:34.998328 #55959] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2014-11-28T20:17:35.175474 #55959] DEBUG -- :   [1m[36mSQL (175.9ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 38], ["created_at", Fri, 28 Nov 2014 20:17:34 UTC +00:00], ["product_id", 2], ["productprice", #<BigDecimal:7fb594686fb8,'0.1099E2',18(36)>], ["size", "extra small"], ["updated_at", Fri, 28 Nov 2014 20:17:34 UTC +00:00]]
+D, [2014-11-28T20:17:35.178331 #55959] DEBUG -- :   [1m[35m (2.3ms)[0m  commit transaction
+D, [2014-11-28T20:17:35.183655 #55959] DEBUG -- :   [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 38]]
+D, [2014-11-28T20:17:35.186981 #55959] DEBUG -- :   [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+I, [2014-11-28T20:17:35.188316 #55959]  INFO -- :   Rendered line_items/_line_item.html.erb (2.4ms)
+I, [2014-11-28T20:17:35.189512 #55959]  INFO -- :   Rendered carts/_cart.html.erb (6.6ms)
+I, [2014-11-28T20:17:35.190013 #55959]  INFO -- :   Rendered line_items/create.js.erb (8.2ms)
+I, [2014-11-28T20:17:35.190268 #55959]  INFO -- : Completed 200 OK in 197ms (Views: 11.2ms | ActiveRecord: 179.4ms)
+D, [2014-11-28T20:17:36.693045 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:36.693177 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:36.693407 #55959]  INFO -- : Started GET "/orders/new" for 127.0.0.1 at 2014-11-28 20:17:36 +0000
+I, [2014-11-28T20:17:36.701653 #55959]  INFO -- : Processing by OrdersController#new as HTML
+D, [2014-11-28T20:17:36.703224 #55959] DEBUG -- :   [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 38]]
+D, [2014-11-28T20:17:36.705057 #55959] DEBUG -- :   [1m[35mLineItem Exists (0.1ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 38]]
+I, [2014-11-28T20:17:36.872461 #55959]  INFO -- :   Rendered orders/_form.html.erb (100.6ms)
+I, [2014-11-28T20:17:36.872971 #55959]  INFO -- :   Rendered orders/new.html.erb within layouts/application (117.6ms)
+D, [2014-11-28T20:17:36.885560 #55959] DEBUG -- :   [1m[36mCACHE (0.0ms)[0m  [1mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 38]]
+D, [2014-11-28T20:17:36.887334 #55959] DEBUG -- :   [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 38]]
+D, [2014-11-28T20:17:36.890092 #55959] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2014-11-28T20:17:36.891612 #55959] DEBUG -- :   [1m[35mProduct Load (0.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 2]]
+I, [2014-11-28T20:17:36.892284 #55959]  INFO -- :   Rendered line_items/_line_item.html.erb (3.8ms)
+I, [2014-11-28T20:17:36.893547 #55959]  INFO -- :   Rendered carts/_cart.html.erb (6.9ms)
+I, [2014-11-28T20:17:36.894543 #55959]  INFO -- : Completed 200 OK in 193ms (Views: 175.4ms | ActiveRecord: 1.2ms)
+D, [2014-11-28T20:17:36.992459 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:36.992575 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:36.992795 #55959]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:36 +0000
+D, [2014-11-28T20:17:36.999639 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:36.999751 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:36.999917 #55959]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:36 +0000
+D, [2014-11-28T20:17:37.004314 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.004394 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.004629 #55959]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.018112 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.018254 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.018460 #55959]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.025472 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.025552 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.025736 #55959]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.030590 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.030682 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.031035 #55959]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.035994 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.036074 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.036375 #55959]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.043589 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.043673 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.043905 #55959]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.053278 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.053359 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.053549 #55959]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.064807 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.064926 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.065165 #55959]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.070187 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.070264 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.070459 #55959]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.075361 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.077826 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.078059 #55959]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.086353 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.086432 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.086673 #55959]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.099144 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.099226 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.099464 #55959]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.106197 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.106286 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.106536 #55959]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.118524 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.118673 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.118891 #55959]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.123873 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.123999 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.124179 #55959]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.131442 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.131520 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.131748 #55959]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.138823 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.138902 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.139089 #55959]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.145730 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.145807 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.145998 #55959]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.153616 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.153704 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.153900 #55959]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.170012 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.170094 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.170334 #55959]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.194650 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.194742 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.194988 #55959]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.209495 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.209583 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.209802 #55959]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.216920 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.217004 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.217180 #55959]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.224002 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.224081 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.224273 #55959]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:37.231017 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:37.231098 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:37.231227 #55959]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2014-11-28 20:17:37 +0000
+D, [2014-11-28T20:17:48.648672 #55959] DEBUG -- : 
+D, [2014-11-28T20:17:48.648985 #55959] DEBUG -- : 
+I, [2014-11-28T20:17:48.649214 #55959]  INFO -- : Started POST "/orders" for 127.0.0.1 at 2014-11-28 20:17:48 +0000
+I, [2014-11-28T20:17:48.654168 #55959]  INFO -- : Processing by OrdersController#create as HTML
+I, [2014-11-28T20:17:48.654288 #55959]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"U13ZD+shAipF3Nbux9ImynsBy0rtz4KIa0xTVOQyAiM=", "order"=>{"name"=>"simon", "address"=>"s", "email"=>"s@s.com", "pay_type"=>"Paypal"}, "commit"=>"Place Order"}
+D, [2014-11-28T20:17:48.656257 #55959] DEBUG -- :   [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 38]]
+I, [2014-11-28T20:17:48.657840 #55959]  INFO -- : log info
+D, [2014-11-28T20:17:48.660185 #55959] DEBUG -- :   [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 38]]
+D, [2014-11-28T20:17:52.366358 #55959] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+D, [2014-11-28T20:17:52.391946 #55959] DEBUG -- :   [1m[35mSQL (10.2ms)[0m  INSERT INTO "orders" ("address", "created_at", "email", "name", "pay_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["address", "s"], ["created_at", Fri, 28 Nov 2014 20:17:52 UTC +00:00], ["email", "s@s.com"], ["name", "simon"], ["pay_type", "Paypal"], ["updated_at", Fri, 28 Nov 2014 20:17:52 UTC +00:00]]
+D, [2014-11-28T20:17:52.422019 #55959] DEBUG -- :   [1m[36mSQL (14.0ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 54[0m  [["cart_id", nil], ["order_id", 14], ["updated_at", Fri, 28 Nov 2014 20:17:52 UTC +00:00]]
+D, [2014-11-28T20:17:52.437482 #55959] DEBUG -- :   [1m[35mSQL (1.2ms)[0m  UPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 55  [["cart_id", nil], ["order_id", 14], ["updated_at", Fri, 28 Nov 2014 20:17:52 UTC +00:00]]
+D, [2014-11-28T20:17:53.637325 #55959] DEBUG -- :   [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2014-11-28T20:17:53.645895 #55959] DEBUG -- :   [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 2]]
+I, [2014-11-28T20:17:54.197304 #55959]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/oauth2/token
+I, [2014-11-28T20:17:55.401141 #55959]  INFO -- : Response[200]: OK, Duration: 1.203s
+I, [2014-11-28T20:17:55.414671 #55959]  INFO -- : PayPal-Request-Id: 33cc13da-d96f-4bcf-98f1-bc6cb45e18d3
+I, [2014-11-28T20:17:55.415306 #55959]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment
+I, [2014-11-28T20:17:56.761428 #55959]  INFO -- : Response[201]: Created, Duration: 1.345s
+D, [2014-11-28T20:17:56.791150 #55959] DEBUG -- :   [1m[36mSQL (3.1ms)[0m  [1mUPDATE "orders" SET "name" = ?, "address" = ?, "email" = ?, "pay_type" = ?, "created_at" = ?, "updated_at" = ?, "id" = ?, "payment_id" = ?, "state" = ? WHERE "orders"."id" = 14[0m  [["name", "simon"], ["address", "s"], ["email", "s@s.com"], ["pay_type", "Paypal"], ["created_at", Fri, 28 Nov 2014 20:17:52 UTC +00:00], ["updated_at", Fri, 28 Nov 2014 20:17:52 UTC +00:00], ["id", 14], ["payment_id", "PAY-95U106963F551720EKR4NQ5A"], ["state", "created"]]
+D, [2014-11-28T20:17:56.798255 #55959] DEBUG -- :   [1m[35m (3.3ms)[0m  commit transaction
+I, [2014-11-28T20:17:58.671290 #55959]  INFO -- : Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-94N0767972996281F
+I, [2014-11-28T20:17:58.672983 #55959]  INFO -- : Completed 302 Found in 10018ms (ActiveRecord: 33.9ms)
+D, [2014-11-28T20:18:15.737031 #55959] DEBUG -- : 
+D, [2014-11-28T20:18:15.737454 #55959] DEBUG -- : 
+I, [2014-11-28T20:18:15.738124 #55959]  INFO -- : Started GET "/orders/14/cancel?token=EC-94N0767972996281F" for 127.0.0.1 at 2014-11-28 20:18:15 +0000
+I, [2014-11-28T20:18:15.752099 #55959]  INFO -- : Processing by OrdersController#cancel as HTML
+I, [2014-11-28T20:18:15.752476 #55959]  INFO -- :   Parameters: {"token"=>"EC-94N0767972996281F", "order_id"=>"14"}
+I, [2014-11-28T20:18:15.764246 #55959]  INFO -- : Completed 500 Internal Server Error in 11ms
+F, [2014-11-28T20:18:15.781353 #55959] FATAL -- : 
+NameError (undefined local variable or method `current_user' for #<OrdersController:0x007fb598111868>):
+  app/controllers/orders_controller.rb:78:in `cancel'
+
+
+I, [2014-11-28T20:18:15.840170 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+I, [2014-11-28T20:18:15.852618 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+I, [2014-11-28T20:18:15.864178 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+I, [2014-11-28T20:18:15.864878 #55959]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.4ms)

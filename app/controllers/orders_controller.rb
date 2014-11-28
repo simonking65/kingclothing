@@ -31,6 +31,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
+    logger.info "log info"
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
     @order.payment_method = @order.pay_type

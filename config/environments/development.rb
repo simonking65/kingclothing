@@ -40,7 +40,7 @@ Kingclothing::Application.configure do
     # Force ActiveMerchant into test mode
   #config.after_initialize do
    # ActiveMerchant::Billing::Base.mode = :test
-    
+   Rails.logger = Logger.new("Application.log") 
   #end
 
 end
