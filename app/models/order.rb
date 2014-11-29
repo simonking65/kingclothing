@@ -42,6 +42,8 @@ attr_accessor :return_url, :cancel_url, :payment_method
       self.payment_id = @payment.id
       self.state      = @payment.state
       save
+      puts "@payment save just done"
+      puts @payment.inspect
     else
       errors.add :payment_method, @payment.error["message"] if @payment.error
       raise ActiveRecord::Rollback, "Can't place the order"
