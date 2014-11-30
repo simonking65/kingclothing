@@ -46,7 +46,7 @@ class Payment < PayPal::SDK::REST::Payment
        :return_url => order.return_url.sub(/:order_id/, order.id.to_s),
        :cancel_url => order.cancel_url.sub(/:order_id/, order.id.to_s)
      }
-     puts self.inspect
+     logger.info self.inspect
   end
 
 end
