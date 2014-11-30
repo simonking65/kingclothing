@@ -56,6 +56,7 @@ class OrdersController < ApplicationController
         
 
       else
+        logger.info "failed!!!"
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }
       end
