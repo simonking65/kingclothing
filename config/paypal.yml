@@ -25,7 +25,7 @@ development:
   <<: *default
 
 production:
-  <<: *default
+  
    # Credentials for New APIs
   client_id: AR0CiBDB41Bd0AioC1FqW0mlVNcuGiQIZEOYqr_ueyp0AVTziwzg5XOGmvBf
   client_secret: ED_1cRA9v5ehsoD2aLZAn7UENoe3FEmkPoDg447S0dDeCumVva86Ea_-Y73I
