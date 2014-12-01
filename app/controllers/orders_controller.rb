@@ -43,7 +43,9 @@ class OrdersController < ApplicationController
 
     logger.info "just about to payment_method and save"
     logger.info @order.inspect
-      if @order.payment_method and @order.save
+      if @order.payment_method
+      debugger 
+        if  @order.save
         debugger
         logger.info "about to approve url"
         if @order.approve_url
@@ -54,7 +56,7 @@ class OrdersController < ApplicationController
           redirect_to orders_path, :notice => "Order[#{@order.description}] placed successfully"
         end  
         
-        
+        end
 
       else
         logger.info "failed!!!"

@@ -34,6 +34,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
   def create_payment
   	payment_method = "paypal"
   	debugger
+    logger.info "about to @payment.create"
     # if payment_method == "credit_card" and !user.save
     #   raise ActiveRecord::Rollback, "Can't place the order"
     # end
