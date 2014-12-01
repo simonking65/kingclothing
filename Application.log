@@ -1165,3 +1165,320 @@ D, [2014-11-29T19:20:35.982745 #56310] DEBUG -- :   [1m[35mSQL (1.4ms)[0m  UP
 D, [2014-11-29T19:20:35.996979 #56310] DEBUG -- :   [1m[36mSQL (1.3ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 61[0m  [["cart_id", nil], ["order_id", 17], ["updated_at", Sat, 29 Nov 2014 19:20:35 UTC +00:00]]
 D, [2014-11-29T19:21:04.767412 #56310] DEBUG -- :   [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
 D, [2014-11-29T19:21:04.776697 #56310] DEBUG -- :   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+D, [2014-11-30T22:53:11.202530 #56794] DEBUG -- : 
+D, [2014-11-30T22:53:11.202621 #56794] DEBUG -- : 
+I, [2014-11-30T22:53:11.202915 #56794]  INFO -- : Started POST "/orders" for 127.0.0.1 at 2014-11-30 22:53:11 +0000
+D, [2014-11-30T22:53:12.318576 #56794] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2014-11-30T22:53:12.806520 #56794]  INFO -- : Processing by OrdersController#create as HTML
+I, [2014-11-30T22:53:12.818258 #56794]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"U13ZD+shAipF3Nbux9ImynsBy0rtz4KIa0xTVOQyAiM=", "order"=>{"name"=>"s", "address"=>"s", "email"=>"s", "pay_type"=>"Paypal"}, "commit"=>"Place Order"}
+D, [2014-11-30T22:53:12.944337 #56794] DEBUG -- :   [1m[35mCart Load (14.9ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 38]]
+I, [2014-11-30T22:53:12.954616 #56794]  INFO -- : log info
+D, [2014-11-30T22:53:13.056835 #56794] DEBUG -- :   [1m[36mLineItem Load (0.9ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 38]]
+I, [2014-11-30T22:53:56.282744 #56794]  INFO -- : just about to payment_method and save
+D, [2014-11-30T22:53:56.284576 #56794] DEBUG -- :   [1m[35m (0.4ms)[0m  begin transaction
+D, [2014-11-30T22:53:56.458575 #56794] DEBUG -- :   [1m[36mSQL (108.5ms)[0m  [1mINSERT INTO "orders" ("address", "created_at", "email", "name", "pay_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "s"], ["created_at", Sun, 30 Nov 2014 22:53:56 UTC +00:00], ["email", "s"], ["name", "s"], ["pay_type", "Paypal"], ["updated_at", Sun, 30 Nov 2014 22:53:56 UTC +00:00]]
+D, [2014-11-30T22:53:56.543713 #56794] DEBUG -- :   [1m[35mSQL (16.7ms)[0m  UPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 60  [["cart_id", nil], ["order_id", 17], ["updated_at", Sun, 30 Nov 2014 22:53:56 UTC +00:00]]
+D, [2014-11-30T22:53:56.554132 #56794] DEBUG -- :   [1m[36mSQL (1.0ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 61[0m  [["cart_id", nil], ["order_id", 17], ["updated_at", Sun, 30 Nov 2014 22:53:56 UTC +00:00]]
+D, [2014-11-30T22:54:00.056080 #56794] DEBUG -- :   [1m[35mProduct Load (7.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+D, [2014-11-30T22:54:00.150499 #56794] DEBUG -- :   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+I, [2014-11-30T22:54:00.182204 #56794]  INFO -- : #<Payment:0x007f9feaef7658 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9feaea1208 @error=nil, @payment_method="paypal">, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9feea792d0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9feea78ce0 @error=nil, @total="23.98", @currency="USD">, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9feea73cb8 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9feea72e30 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test">], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9feea700b8 @error=nil, @return_url="http://localhost:3000/orders/17/execute", @cancel_url="http://localhost:3000/orders/17/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>>
+I, [2014-11-30T22:54:01.693053 #56794]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/oauth2/token
+I, [2014-11-30T22:54:03.127867 #56794]  INFO -- : Response[200]: OK, Duration: 1.434s
+I, [2014-11-30T22:54:03.136001 #56794]  INFO -- : PayPal-Request-Id: 478aebd8-5fe1-4260-906b-e24ec08e6059
+I, [2014-11-30T22:54:03.136440 #56794]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment
+I, [2014-11-30T22:54:05.096836 #56794]  INFO -- : Response[201]: Created, Duration: 1.960s
+D, [2014-11-30T22:54:05.113550 #56794] DEBUG -- :   [1m[35mSQL (2.2ms)[0m  UPDATE "orders" SET "name" = ?, "address" = ?, "email" = ?, "pay_type" = ?, "created_at" = ?, "updated_at" = ?, "id" = ?, "payment_id" = ?, "state" = ? WHERE "orders"."id" = 17  [["name", "s"], ["address", "s"], ["email", "s"], ["pay_type", "Paypal"], ["created_at", Sun, 30 Nov 2014 22:53:56 UTC +00:00], ["updated_at", Sun, 30 Nov 2014 22:53:56 UTC +00:00], ["id", 17], ["payment_id", "PAY-6KE30944097139812KR52ADA"], ["state", "created"]]
+I, [2014-11-30T22:54:05.115503 #56794]  INFO -- : @payment save just done
+I, [2014-11-30T22:54:05.158491 #56794]  INFO -- : #<Payment:0x007f9feaef7658 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fee932d68 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fee932570 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fee9320c0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fee931620 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fee931198 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fee930540 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fee92b7c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fee92ac80 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9feea700b8 @error=nil, @return_url="http://localhost:3000/orders/17/execute", @cancel_url="http://localhost:3000/orders/17/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9feea39068 @base=#<Payment:0x007f9feaef7658 ...>, @messages={}>, @request_id="478aebd8-5fe1-4260-906b-e24ec08e6059", @header={}, @id="PAY-6KE30944097139812KR52ADA", @create_time=Sun, 30 Nov 2014 22:54:04 +0000, @update_time=Sun, 30 Nov 2014 22:54:04 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9287a0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee923a48 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5U709826TL530215U", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9228f0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA/execute", @rel="execute", @method="POST">]>
+I, [2014-11-30T22:54:05.159483 #56794]  INFO -- : #<Payment:0x007f9feaef7658 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fee932d68 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fee932570 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fee9320c0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fee931620 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fee931198 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fee930540 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fee92b7c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fee92ac80 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9feea700b8 @error=nil, @return_url="http://localhost:3000/orders/17/execute", @cancel_url="http://localhost:3000/orders/17/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9feea39068 @base=#<Payment:0x007f9feaef7658 ...>, @messages={}>, @request_id="478aebd8-5fe1-4260-906b-e24ec08e6059", @header={}, @id="PAY-6KE30944097139812KR52ADA", @create_time=Sun, 30 Nov 2014 22:54:04 +0000, @update_time=Sun, 30 Nov 2014 22:54:04 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9287a0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee923a48 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5U709826TL530215U", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9228f0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA/execute", @rel="execute", @method="POST">]>
+D, [2014-11-30T22:54:05.188461 #56794] DEBUG -- :   [1m[36m (27.3ms)[0m  [1mcommit transaction[0m
+I, [2014-11-30T22:54:05.207561 #56794]  INFO -- : about to approve url
+I, [2014-11-30T22:54:31.215186 #56794]  INFO -- : #<Payment:0x007f9feaef7658 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fee932d68 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fee932570 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fee9320c0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fee931620 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fee931198 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fee930540 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fee92b7c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fee92ac80 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9feea700b8 @error=nil, @return_url="http://localhost:3000/orders/17/execute", @cancel_url="http://localhost:3000/orders/17/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9feea39068 @base=#<Payment:0x007f9feaef7658 ...>, @messages={}>, @request_id="478aebd8-5fe1-4260-906b-e24ec08e6059", @header={}, @id="PAY-6KE30944097139812KR52ADA", @create_time=Sun, 30 Nov 2014 22:54:04 +0000, @update_time=Sun, 30 Nov 2014 22:54:04 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9287a0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee923a48 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5U709826TL530215U", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9228f0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA/execute", @rel="execute", @method="POST">]>
+I, [2014-11-30T22:54:42.750092 #56794]  INFO -- : #<Payment:0x007f9feaef7658 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fee932d68 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fee932570 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fee9320c0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fee931620 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fee931198 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fee930540 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fee92b7c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fee92ac80 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9feea700b8 @error=nil, @return_url="http://localhost:3000/orders/17/execute", @cancel_url="http://localhost:3000/orders/17/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9feea39068 @base=#<Payment:0x007f9feaef7658 ...>, @messages={}>, @request_id="478aebd8-5fe1-4260-906b-e24ec08e6059", @header={}, @id="PAY-6KE30944097139812KR52ADA", @create_time=Sun, 30 Nov 2014 22:54:04 +0000, @update_time=Sun, 30 Nov 2014 22:54:04 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9287a0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee923a48 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5U709826TL530215U", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9228f0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA/execute", @rel="execute", @method="POST">]>
+I, [2014-11-30T22:54:42.750804 #56794]  INFO -- : https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5U709826TL530215U
+I, [2014-11-30T22:54:44.508916 #56794]  INFO -- : #<Payment:0x007f9feaef7658 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fee932d68 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fee932570 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fee9320c0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fee931620 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fee931198 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fee930540 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fee92b7c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fee92ac80 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9feea700b8 @error=nil, @return_url="http://localhost:3000/orders/17/execute", @cancel_url="http://localhost:3000/orders/17/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9feea39068 @base=#<Payment:0x007f9feaef7658 ...>, @messages={}>, @request_id="478aebd8-5fe1-4260-906b-e24ec08e6059", @header={}, @id="PAY-6KE30944097139812KR52ADA", @create_time=Sun, 30 Nov 2014 22:54:04 +0000, @update_time=Sun, 30 Nov 2014 22:54:04 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9287a0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee923a48 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5U709826TL530215U", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fee9228f0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-6KE30944097139812KR52ADA/execute", @rel="execute", @method="POST">]>
+I, [2014-11-30T22:54:44.511161 #56794]  INFO -- : Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5U709826TL530215U
+I, [2014-11-30T22:54:44.512354 #56794]  INFO -- : Completed 302 Found in 91693ms (ActiveRecord: 182.4ms)
+D, [2014-11-30T22:57:33.388473 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:33.389014 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:33.390019 #56794]  INFO -- : Started GET "/orders/17/cancel?token=EC-5U709826TL530215U" for 127.0.0.1 at 2014-11-30 22:57:33 +0000
+I, [2014-11-30T22:57:33.476482 #56794]  INFO -- : Processing by OrdersController#cancel as HTML
+I, [2014-11-30T22:57:33.477142 #56794]  INFO -- :   Parameters: {"token"=>"EC-5U709826TL530215U", "order_id"=>"17"}
+I, [2014-11-30T22:57:33.491223 #56794]  INFO -- : Completed 500 Internal Server Error in 13ms
+F, [2014-11-30T22:57:33.507569 #56794] FATAL -- : 
+NameError (undefined local variable or method `current_user' for #<OrdersController:0x007f9feced4638>):
+  app/controllers/orders_controller.rb:83:in `cancel'
+
+
+I, [2014-11-30T22:57:33.668470 #56794]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+I, [2014-11-30T22:57:33.686205 #56794]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.5ms)
+I, [2014-11-30T22:57:33.701402 #56794]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+I, [2014-11-30T22:57:33.702893 #56794]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.2/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.1ms)
+D, [2014-11-30T22:57:48.222218 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:48.222715 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:48.223488 #56794]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-11-30 22:57:48 +0000
+I, [2014-11-30T22:57:48.280278 #56794]  INFO -- : Processing by StoreController#index as HTML
+D, [2014-11-30T22:57:48.288921 #56794] DEBUG -- :   [1m[35mCart Load (0.5ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 38]]
+D, [2014-11-30T22:57:48.364455 #56794] DEBUG -- :   [1m[36mProduct Load (0.9ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1[0m
+I, [2014-11-30T22:57:48.422017 #56794]  INFO -- : Cache digest for store/index.html: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2014-11-30T22:57:48.478379 #56794]  INFO -- : Read fragment views/store/products/2-20141022062504570899000/a93d4e2e981ab3dfce98a095c3b6c059 (50.7ms)
+I, [2014-11-30T22:57:48.479637 #56794]  INFO -- :   Rendered store/index.html.erb within layouts/application (125.8ms)
+D, [2014-11-30T22:57:49.541567 #56794] DEBUG -- :   [1m[35mLineItem Exists (0.8ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 38]]
+D, [2014-11-30T22:57:49.605109 #56794] DEBUG -- :   [1m[36mLineItem Load (0.7ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 38]]
+I, [2014-11-30T22:57:49.607422 #56794]  INFO -- :   Rendered collection (0.3ms)
+I, [2014-11-30T22:57:49.814776 #56794]  INFO -- :   Rendered carts/_cart.html.erb (215.9ms)
+I, [2014-11-30T22:57:49.820177 #56794]  INFO -- : Completed 200 OK in 1539ms (Views: 1524.7ms | ActiveRecord: 2.9ms)
+D, [2014-11-30T22:57:50.011822 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.017360 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.018566 #56794]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.085136 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.085560 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.086476 #56794]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.125127 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.125654 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.126640 #56794]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.162756 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.163246 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.164138 #56794]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.189215 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.190345 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.191308 #56794]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.232752 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.233307 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.234249 #56794]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.268173 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.268687 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.269617 #56794]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.311811 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.312335 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.313417 #56794]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.341258 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.341798 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.342727 #56794]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.380077 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.380596 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.381750 #56794]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.415244 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.415676 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.416579 #56794]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.515339 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.516375 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.517552 #56794]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.566804 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.567240 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.568283 #56794]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.616833 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.617384 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.618301 #56794]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.665205 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.674423 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.675507 #56794]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.717931 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.718453 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.719445 #56794]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.764553 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.765140 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.766069 #56794]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.841586 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.842250 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.844293 #56794]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.877390 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.877850 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.878758 #56794]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.916269 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.917379 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.918396 #56794]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.966323 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.966867 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.967777 #56794]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:50.994975 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:50.995495 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:50.996415 #56794]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:50 +0000
+D, [2014-11-30T22:57:51.043555 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.046139 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.047263 #56794]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:51.081509 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.082058 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.083647 #56794]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:51.146392 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.147054 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.148289 #56794]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:51.177113 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.177526 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.178463 #56794]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:51.282275 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.282954 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.285650 #56794]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:51.350268 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.350865 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.352021 #56794]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:51.402712 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.403331 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.404330 #56794]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:51.458983 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:51.459723 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:51.460608 #56794]  INFO -- : Started GET "/assets/kingclothingnyc.png" for 127.0.0.1 at 2014-11-30 22:57:51 +0000
+D, [2014-11-30T22:57:56.966151 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:56.967038 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:56.968081 #56794]  INFO -- : Started POST "/line_items?product_id=1" for 127.0.0.1 at 2014-11-30 22:57:56 +0000
+I, [2014-11-30T22:57:57.036356 #56794]  INFO -- : Processing by LineItemsController#create as JS
+I, [2014-11-30T22:57:57.037046 #56794]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+D, [2014-11-30T22:57:57.046079 #56794] DEBUG -- :   [1m[35mCart Load (0.6ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 38]]
+D, [2014-11-30T22:57:57.052444 #56794] DEBUG -- :   [1m[36mProduct Load (0.8ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+D, [2014-11-30T22:57:57.079324 #56794] DEBUG -- :   [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 1 LIMIT 1  [["cart_id", 38]]
+D, [2014-11-30T22:57:57.091758 #56794] DEBUG -- :   [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2014-11-30T22:57:57.096597 #56794] DEBUG -- :   [1m[35m (0.5ms)[0m  begin transaction
+D, [2014-11-30T22:57:57.161190 #56794] DEBUG -- :   [1m[36mSQL (21.9ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 38], ["created_at", Sun, 30 Nov 2014 22:57:57 UTC +00:00], ["product_id", 1], ["productprice", #<BigDecimal:7f9fea119d10,'0.1299E2',18(36)>], ["size", "extra small"], ["updated_at", Sun, 30 Nov 2014 22:57:57 UTC +00:00]]
+D, [2014-11-30T22:57:57.167469 #56794] DEBUG -- :   [1m[35m (3.2ms)[0m  commit transaction
+D, [2014-11-30T22:57:57.206492 #56794] DEBUG -- :   [1m[36mLineItem Load (0.6ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 38]]
+I, [2014-11-30T22:57:57.236448 #56794]  INFO -- :   Rendered line_items/_line_item.html.erb (7.8ms)
+I, [2014-11-30T22:57:57.247984 #56794]  INFO -- :   Rendered carts/_cart.html.erb (47.8ms)
+I, [2014-11-30T22:57:57.249816 #56794]  INFO -- :   Rendered line_items/create.js.erb (54.8ms)
+I, [2014-11-30T22:57:57.252571 #56794]  INFO -- : Completed 200 OK in 214ms (Views: 80.7ms | ActiveRecord: 29.1ms)
+D, [2014-11-30T22:57:58.606935 #56794] DEBUG -- : 
+D, [2014-11-30T22:57:58.607474 #56794] DEBUG -- : 
+I, [2014-11-30T22:57:58.608472 #56794]  INFO -- : Started POST "/line_items?product_id=2" for 127.0.0.1 at 2014-11-30 22:57:58 +0000
+I, [2014-11-30T22:57:58.635559 #56794]  INFO -- : Processing by LineItemsController#create as JS
+I, [2014-11-30T22:57:58.636232 #56794]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"2"}
+D, [2014-11-30T22:57:58.655544 #56794] DEBUG -- :   [1m[35mCart Load (0.7ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 38]]
+D, [2014-11-30T22:57:58.668062 #56794] DEBUG -- :   [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "2"]]
+D, [2014-11-30T22:57:58.680170 #56794] DEBUG -- :   [1m[35mLineItem Load (0.8ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 2 LIMIT 1  [["cart_id", 38]]
+D, [2014-11-30T22:57:58.691129 #56794] DEBUG -- :   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+D, [2014-11-30T22:57:58.696621 #56794] DEBUG -- :   [1m[35m (0.6ms)[0m  begin transaction
+D, [2014-11-30T22:57:58.709593 #56794] DEBUG -- :   [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 38], ["created_at", Sun, 30 Nov 2014 22:57:58 UTC +00:00], ["product_id", 2], ["productprice", #<BigDecimal:7f9fee0c8808,'0.1099E2',18(36)>], ["size", "extra small"], ["updated_at", Sun, 30 Nov 2014 22:57:58 UTC +00:00]]
+D, [2014-11-30T22:57:58.716732 #56794] DEBUG -- :   [1m[35m (3.4ms)[0m  commit transaction
+D, [2014-11-30T22:57:58.736597 #56794] DEBUG -- :   [1m[36mLineItem Load (0.6ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 38]]
+D, [2014-11-30T22:57:58.753574 #56794] DEBUG -- :   [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+I, [2014-11-30T22:57:58.765064 #56794]  INFO -- :   Rendered line_items/_line_item.html.erb (18.8ms)
+I, [2014-11-30T22:57:58.776109 #56794]  INFO -- :   Rendered carts/_cart.html.erb (43.7ms)
+I, [2014-11-30T22:57:58.777993 #56794]  INFO -- :   Rendered line_items/create.js.erb (52.0ms)
+I, [2014-11-30T22:57:58.779749 #56794]  INFO -- : Completed 200 OK in 142ms (Views: 59.0ms | ActiveRecord: 9.8ms)
+D, [2014-11-30T22:58:01.055785 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.056370 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.057097 #56794]  INFO -- : Started GET "/orders/new" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+I, [2014-11-30T22:58:01.076960 #56794]  INFO -- : Processing by OrdersController#new as HTML
+D, [2014-11-30T22:58:01.085155 #56794] DEBUG -- :   [1m[36mCart Load (0.5ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 38]]
+D, [2014-11-30T22:58:01.099394 #56794] DEBUG -- :   [1m[35mLineItem Exists (0.7ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 38]]
+I, [2014-11-30T22:58:01.261823 #56794]  INFO -- :   Rendered orders/_form.html.erb (88.1ms)
+I, [2014-11-30T22:58:01.262873 #56794]  INFO -- :   Rendered orders/new.html.erb within layouts/application (109.6ms)
+D, [2014-11-30T22:58:01.315952 #56794] DEBUG -- :   [1m[36mCACHE (0.2ms)[0m  [1mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 38]]
+D, [2014-11-30T22:58:01.324221 #56794] DEBUG -- :   [1m[35mLineItem Load (0.7ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 38]]
+D, [2014-11-30T22:58:01.340239 #56794] DEBUG -- :   [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2014-11-30T22:58:01.354538 #56794] DEBUG -- :   [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 2]]
+I, [2014-11-30T22:58:01.362814 #56794]  INFO -- :   Rendered line_items/_line_item.html.erb (32.8ms)
+I, [2014-11-30T22:58:01.373938 #56794]  INFO -- :   Rendered carts/_cart.html.erb (53.7ms)
+I, [2014-11-30T22:58:01.379794 #56794]  INFO -- : Completed 200 OK in 302ms (Views: 273.9ms | ActiveRecord: 3.4ms)
+D, [2014-11-30T22:58:01.512567 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.513087 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.520024 #56794]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.553166 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.575142 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.576158 #56794]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.592549 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.593056 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.594071 #56794]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.610379 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.610860 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.612037 #56794]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.635975 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.636499 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.637635 #56794]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.687745 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.688383 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.689690 #56794]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.718666 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.737520 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.738578 #56794]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.764571 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.764995 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.765991 #56794]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.789558 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.790065 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.791214 #56794]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.812173 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.813461 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.814445 #56794]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.852102 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.852700 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.853767 #56794]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.900201 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.900604 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.901488 #56794]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.922312 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.923132 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.927903 #56794]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.958114 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.958623 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.959538 #56794]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:01.989517 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:01.990387 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:01.991989 #56794]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:01 +0000
+D, [2014-11-30T22:58:02.017127 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.017701 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.018986 #56794]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.053500 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.054063 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.055533 #56794]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.071501 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.072018 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.073177 #56794]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.126123 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.126712 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.144039 #56794]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.160277 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.160812 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.161849 #56794]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.185953 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.186550 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.187490 #56794]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.203462 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.204101 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.205382 #56794]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.241506 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.242170 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.243318 #56794]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.264719 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.265258 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.266304 #56794]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.282134 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.282716 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.283707 #56794]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.301890 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.302523 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.304007 #56794]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:02.327668 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:02.328291 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:02.329047 #56794]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2014-11-30 22:58:02 +0000
+D, [2014-11-30T22:58:26.459558 #56794] DEBUG -- : 
+D, [2014-11-30T22:58:26.460017 #56794] DEBUG -- : 
+I, [2014-11-30T22:58:26.460898 #56794]  INFO -- : Started POST "/orders" for 127.0.0.1 at 2014-11-30 22:58:26 +0000
+I, [2014-11-30T22:58:26.479653 #56794]  INFO -- : Processing by OrdersController#create as HTML
+I, [2014-11-30T22:58:26.480294 #56794]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"U13ZD+shAipF3Nbux9ImynsBy0rtz4KIa0xTVOQyAiM=", "order"=>{"name"=>"h", "address"=>"h", "email"=>"h", "pay_type"=>"Paypal"}, "commit"=>"Place Order"}
+D, [2014-11-30T22:58:26.492112 #56794] DEBUG -- :   [1m[36mCart Load (0.6ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 38]]
+I, [2014-11-30T22:58:26.494422 #56794]  INFO -- : log info
+D, [2014-11-30T22:58:26.507035 #56794] DEBUG -- :   [1m[35mLineItem Load (0.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 38]]
+I, [2014-11-30T22:58:53.848182 #56794]  INFO -- : just about to payment_method and save
+D, [2014-12-01T07:22:37.538159 #56794] DEBUG -- :   [1m[36m (1.4ms)[0m  [1mbegin transaction[0m
+D, [2014-12-01T07:22:37.680095 #56794] DEBUG -- :   [1m[35mSQL (126.6ms)[0m  INSERT INTO "orders" ("address", "created_at", "email", "name", "pay_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["address", "h"], ["created_at", Mon, 01 Dec 2014 07:22:37 UTC +00:00], ["email", "h"], ["name", "h"], ["pay_type", "Paypal"], ["updated_at", Mon, 01 Dec 2014 07:22:37 UTC +00:00]]
+D, [2014-12-01T07:22:37.694127 #56794] DEBUG -- :   [1m[36mSQL (1.1ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 62[0m  [["cart_id", nil], ["order_id", 18], ["updated_at", Mon, 01 Dec 2014 07:22:37 UTC +00:00]]
+D, [2014-12-01T07:22:37.704235 #56794] DEBUG -- :   [1m[35mSQL (0.9ms)[0m  UPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 63  [["cart_id", nil], ["order_id", 18], ["updated_at", Mon, 01 Dec 2014 07:22:37 UTC +00:00]]
+D, [2014-12-01T07:24:56.979365 #56794] DEBUG -- :   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2014-12-01T07:24:56.989882 #56794] DEBUG -- :   [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 2]]
+I, [2014-12-01T07:24:56.994255 #56794]  INFO -- : #<Payment:0x007f9fee0a0e20 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fecf94c80 @error=nil, @payment_method="paypal">, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fecf2d2b0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fecf2cdd8 @error=nil, @total="23.98", @currency="USD">, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fecf27d10 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fecf27450 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test">], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9fecf24340 @error=nil, @return_url="http://localhost:3000/orders/18/execute", @cancel_url="http://localhost:3000/orders/18/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>>
+I, [2014-12-01T07:24:57.929923 #56794]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/oauth2/token
+I, [2014-12-01T07:25:01.284218 #56794]  INFO -- : Response[200]: OK, Duration: 3.354s
+I, [2014-12-01T07:25:01.295075 #56794]  INFO -- : PayPal-Request-Id: efa7fcd4-daab-4d1c-aa96-c484915a2844
+I, [2014-12-01T07:25:01.295623 #56794]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment
+I, [2014-12-01T07:25:02.622875 #56794]  INFO -- : Response[201]: Created, Duration: 1.327s
+D, [2014-12-01T07:25:02.638317 #56794] DEBUG -- :   [1m[36mSQL (1.6ms)[0m  [1mUPDATE "orders" SET "name" = ?, "address" = ?, "email" = ?, "pay_type" = ?, "created_at" = ?, "updated_at" = ?, "id" = ?, "payment_id" = ?, "state" = ? WHERE "orders"."id" = 18[0m  [["name", "h"], ["address", "h"], ["email", "h"], ["pay_type", "Paypal"], ["created_at", Mon, 01 Dec 2014 07:22:37 UTC +00:00], ["updated_at", Mon, 01 Dec 2014 07:22:37 UTC +00:00], ["id", 18], ["payment_id", "PAY-3S009641AA8959419KR6BPTQ"], ["state", "created"]]
+I, [2014-12-01T07:25:02.640484 #56794]  INFO -- : @payment save just done
+I, [2014-12-01T07:25:02.642045 #56794]  INFO -- : #<Payment:0x007f9fee0a0e20 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fece35d08 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fece35510 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fece35088 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fece34660 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fea7ebeb8 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fea7eafe0 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fea7ea248 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fea7e97f8 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9fecf24340 @error=nil, @return_url="http://localhost:3000/orders/18/execute", @cancel_url="http://localhost:3000/orders/18/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9fee0411c8 @base=#<Payment:0x007f9fee0a0e20 ...>, @messages={}>, @request_id="efa7fcd4-daab-4d1c-aa96-c484915a2844", @header={}, @id="PAY-3S009641AA8959419KR6BPTQ", @create_time=Mon, 01 Dec 2014 07:25:02 +0000, @update_time=Mon, 01 Dec 2014 07:25:02 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2f4f8 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2e4e0 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1W85028488549015P", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2d5e0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ/execute", @rel="execute", @method="POST">]>
+I, [2014-12-01T07:25:02.643190 #56794]  INFO -- : #<Payment:0x007f9fee0a0e20 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fece35d08 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fece35510 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fece35088 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fece34660 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fea7ebeb8 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fea7eafe0 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fea7ea248 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fea7e97f8 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9fecf24340 @error=nil, @return_url="http://localhost:3000/orders/18/execute", @cancel_url="http://localhost:3000/orders/18/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9fee0411c8 @base=#<Payment:0x007f9fee0a0e20 ...>, @messages={}>, @request_id="efa7fcd4-daab-4d1c-aa96-c484915a2844", @header={}, @id="PAY-3S009641AA8959419KR6BPTQ", @create_time=Mon, 01 Dec 2014 07:25:02 +0000, @update_time=Mon, 01 Dec 2014 07:25:02 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2f4f8 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2e4e0 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1W85028488549015P", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2d5e0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ/execute", @rel="execute", @method="POST">]>
+D, [2014-12-01T07:25:02.664783 #56794] DEBUG -- :   [1m[35m (20.3ms)[0m  commit transaction
+I, [2014-12-01T07:25:33.440863 #56794]  INFO -- : about to approve url
+I, [2014-12-01T07:25:35.292330 #56794]  INFO -- : #<Payment:0x007f9fee0a0e20 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fece35d08 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fece35510 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fece35088 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fece34660 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fea7ebeb8 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fea7eafe0 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fea7ea248 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fea7e97f8 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9fecf24340 @error=nil, @return_url="http://localhost:3000/orders/18/execute", @cancel_url="http://localhost:3000/orders/18/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9fee0411c8 @base=#<Payment:0x007f9fee0a0e20 ...>, @messages={}>, @request_id="efa7fcd4-daab-4d1c-aa96-c484915a2844", @header={}, @id="PAY-3S009641AA8959419KR6BPTQ", @create_time=Mon, 01 Dec 2014 07:25:02 +0000, @update_time=Mon, 01 Dec 2014 07:25:02 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2f4f8 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2e4e0 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1W85028488549015P", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2d5e0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ/execute", @rel="execute", @method="POST">]>
+I, [2014-12-01T07:25:41.045062 #56794]  INFO -- : #<Payment:0x007f9fee0a0e20 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fece35d08 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fece35510 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fece35088 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fece34660 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fea7ebeb8 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fea7eafe0 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fea7ea248 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fea7e97f8 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9fecf24340 @error=nil, @return_url="http://localhost:3000/orders/18/execute", @cancel_url="http://localhost:3000/orders/18/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9fee0411c8 @base=#<Payment:0x007f9fee0a0e20 ...>, @messages={}>, @request_id="efa7fcd4-daab-4d1c-aa96-c484915a2844", @header={}, @id="PAY-3S009641AA8959419KR6BPTQ", @create_time=Mon, 01 Dec 2014 07:25:02 +0000, @update_time=Mon, 01 Dec 2014 07:25:02 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2f4f8 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2e4e0 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1W85028488549015P", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2d5e0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ/execute", @rel="execute", @method="POST">]>
+I, [2014-12-01T07:25:41.045772 #56794]  INFO -- : https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1W85028488549015P
+I, [2014-12-01T07:25:43.349880 #56794]  INFO -- : #<Payment:0x007f9fee0a0e20 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f9fece35d08 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007f9fece35510 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::Address:0x007f9fece35088 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f9fece34660 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f9fea7ebeb8 @error=nil, @total="23.98", @currency="USD", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007f9fea7eafe0 @error=nil, @subtotal="23.98">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f9fea7ea248 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f9fea7e97f8 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f9fecf24340 @error=nil, @return_url="http://localhost:3000/orders/18/execute", @cancel_url="http://localhost:3000/orders/18/cancel">, @logger=#<Logger:0x007f9fea915410 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f9fea915280 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f9fea9151e0 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f9fea9150a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f9fea914ba0>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007f9fee0411c8 @base=#<Payment:0x007f9fee0a0e20 ...>, @messages={}>, @request_id="efa7fcd4-daab-4d1c-aa96-c484915a2844", @header={}, @id="PAY-3S009641AA8959419KR6BPTQ", @create_time=Mon, 01 Dec 2014 07:25:02 +0000, @update_time=Mon, 01 Dec 2014 07:25:02 +0000, @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2f4f8 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2e4e0 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1W85028488549015P", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007f9fece2d5e0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-3S009641AA8959419KR6BPTQ/execute", @rel="execute", @method="POST">]>
+I, [2014-12-01T07:25:43.353303 #56794]  INFO -- : Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1W85028488549015P
+I, [2014-12-01T07:25:43.355231 #56794]  INFO -- : Completed 302 Found in 30436874ms (ActiveRecord: 154.1ms)

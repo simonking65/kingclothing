@@ -42,6 +42,7 @@ class OrdersController < ApplicationController
     #respond_to do |format|
 
     logger.info "just about to payment_method and save"
+    logger.info @order.inspect
       if @order.payment_method and @order.save
         debugger
         logger.info "about to approve url"
