@@ -48,6 +48,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
     else
       errors.add :payment_method, @payment.error["message"] if @payment.error
       raise ActiveRecord::Rollback, "Can't place the order"
+      logger.info "@payment.create failed #{@payment.error["message"]}"
     end
     logger.info payment.inspect
   end
