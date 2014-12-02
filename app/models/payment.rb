@@ -11,6 +11,7 @@ class Payment < PayPal::SDK::REST::Payment
     logger.info "got past invalid"
     super
     logger.info "back from super"
+    logger.info self.to_hash
   end
 
   def error=(error)
