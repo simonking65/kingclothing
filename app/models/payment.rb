@@ -7,6 +7,7 @@ class Payment < PayPal::SDK::REST::Payment
     return false if invalid?
     logger.info "got past invalid"
     super
+    logger.info "back from super"
   end
 
   def error=(error)
