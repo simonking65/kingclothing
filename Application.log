@@ -1735,3 +1735,29 @@ D, [2014-12-01T21:00:24.783764 #57192] DEBUG -- :   [1m[35mSQL (1.3ms)[0m  UP
 D, [2014-12-01T21:10:02.086558 #57192] DEBUG -- :   [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
 D, [2014-12-01T21:10:02.095387 #57192] DEBUG -- :   [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 2]]
 I, [2014-12-01T21:11:04.961924 #57192]  INFO -- : #<Payment:0x007f95fcea0288 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007f95fce031b8 @error=nil, @payment_method="paypal">, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007f95fccaa960 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007f95fccaa208 @error=nil, @total="23.98", @currency="USD">, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007f95fcca3cc8 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007f95fcca27b0 @error=nil, @name="pizza", @sku="pizza", @price="23.98", @currency="USD", @quantity="1">]>, @description="my test">], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007f95fae0c8a0 @error=nil, @return_url="http://localhost:3000/orders/19/execute", @cancel_url="http://localhost:3000/orders/19/cancel">, @logger=#<Logger:0x007f95fa1e18c8 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007f95fa1e1710 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007f95fa1e1508 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007f95fa1e13f0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007f95fa1e1238>>>>>
+D, [2014-12-02T09:30:16.407546 #57646] DEBUG -- : 
+D, [2014-12-02T09:30:16.407849 #57646] DEBUG -- : 
+I, [2014-12-02T09:30:16.408230 #57646]  INFO -- : Started POST "/orders" for 127.0.0.1 at 2014-12-02 09:30:16 +0000
+D, [2014-12-02T09:30:17.076417 #57646] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (11.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2014-12-02T09:30:17.453225 #57646]  INFO -- : Processing by OrdersController#create as HTML
+I, [2014-12-02T09:30:17.464884 #57646]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"U13ZD+shAipF3Nbux9ImynsBy0rtz4KIa0xTVOQyAiM=", "order"=>{"name"=>"s", "address"=>"s", "email"=>"s", "pay_type"=>"Paypal"}, "commit"=>"Place Order"}
+D, [2014-12-02T09:30:17.555834 #57646] DEBUG -- :   [1m[35mCart Load (25.6ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 3]]
+I, [2014-12-02T09:30:17.573800 #57646]  INFO -- : log info
+D, [2014-12-02T09:30:17.700898 #57646] DEBUG -- :   [1m[36mLineItem Load (11.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 3]]
+I, [2014-12-02T09:30:24.159686 #57646]  INFO -- : just about to payment_method and save
+I, [2014-12-02T09:30:24.160882 #57646]  INFO -- : #<Order id: nil, name: "s", address: "s", email: "s", pay_type: "Paypal", created_at: nil, updated_at: nil, payment_method: nil, payment_id: nil, state: nil, amount: nil, description: nil>
+D, [2014-12-02T09:30:25.676137 #57646] DEBUG -- :   [1m[35m (0.4ms)[0m  begin transaction
+D, [2014-12-02T09:30:25.845718 #57646] DEBUG -- :   [1m[36mSQL (133.8ms)[0m  [1mINSERT INTO "orders" ("address", "created_at", "email", "name", "pay_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["address", "s"], ["created_at", Tue, 02 Dec 2014 09:30:25 UTC +00:00], ["email", "s"], ["name", "s"], ["pay_type", "Paypal"], ["updated_at", Tue, 02 Dec 2014 09:30:25 UTC +00:00]]
+D, [2014-12-02T09:30:25.895008 #57646] DEBUG -- :   [1m[35mSQL (2.3ms)[0m  UPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 64  [["cart_id", nil], ["order_id", 19], ["updated_at", Tue, 02 Dec 2014 09:30:25 UTC +00:00]]
+D, [2014-12-02T09:30:25.903814 #57646] DEBUG -- :   [1m[36mSQL (0.9ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 65[0m  [["cart_id", nil], ["order_id", 19], ["updated_at", Tue, 02 Dec 2014 09:30:25 UTC +00:00]]
+I, [2014-12-02T09:30:27.073036 #57646]  INFO -- : about to @payment.create
+D, [2014-12-02T09:30:43.478843 #57646] DEBUG -- :   [1m[35mProduct Load (1.1ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+D, [2014-12-02T09:30:43.573247 #57646] DEBUG -- :   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+I, [2014-12-02T09:30:43.593117 #57646]  INFO -- : in order=
+I, [2014-12-02T09:31:07.540767 #57646]  INFO -- : in payment.create
+I, [2014-12-02T09:31:11.003725 #57646]  INFO -- : got past invalid
+I, [2014-12-02T09:31:13.474803 #57646]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/oauth2/token
+I, [2014-12-02T09:31:15.909925 #57646]  INFO -- : Response[200]: OK, Duration: 2.435s
+I, [2014-12-02T09:31:15.918191 #57646]  INFO -- : PayPal-Request-Id: 3f8502f5-42be-4f8e-8487-662fa88937a8
+I, [2014-12-02T09:31:15.918658 #57646]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment
+I, [2014-12-02T09:31:17.137596 #57646]  INFO -- : Response[201]: Created, Duration: 1.218s
