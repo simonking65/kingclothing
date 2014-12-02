@@ -15,6 +15,7 @@ class Payment < PayPal::SDK::REST::Payment
 
   def error=(error)
     error["details"].each do |detail|
+      logger.info " in error="
       errors.add detail["field"], detail["issue"]
     end if error and error["details"]
     super
