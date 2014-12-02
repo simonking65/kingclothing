@@ -3,7 +3,9 @@ class Payment < PayPal::SDK::REST::Payment
 
   def create
     debugger
+    logger.info "in payment.create"
     return false if invalid?
+    logger.info "got past invalid"
     super
   end
 
@@ -46,7 +48,7 @@ class Payment < PayPal::SDK::REST::Payment
        :return_url => order.return_url.sub(/:order_id/, order.id.to_s),
        :cancel_url => order.cancel_url.sub(/:order_id/, order.id.to_s)
      }
-     logger.info self.inspect
+     logger.info "in order="
   end
 
 end
