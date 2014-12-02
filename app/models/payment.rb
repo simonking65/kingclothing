@@ -5,7 +5,9 @@ class Payment < PayPal::SDK::REST::Payment
     debugger
     logger.info "in payment.create"
     logger.info self.to_hash
-    return false if invalid?
+    invreturn = invalid?
+    logger.info errors.inspect
+    return false if invreturn
     logger.info "got past invalid"
     super
     logger.info "back from super"
