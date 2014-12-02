@@ -46,16 +46,20 @@ class OrdersController < ApplicationController
       if @order.payment_method
       debugger 
         if  @order.save
-        debugger
-        logger.info "about to approve url"
-        if @order.approve_url
           debugger
-          logger.info @order.approve_url.to_s
-          redirect_to @order.approve_url
-        else
-          redirect_to orders_path, :notice => "Order[#{@order.description}] placed successfully"
-        end  
+          logger.info "about to approve url"
+          if @order.approve_url
+            debugger
+            logger.info @order.approve_url.to_s
+            redirect_to @order.approve_url
+          else
+            redirect_to orders_path, :notice => "Order[#{@order.description}] placed successfully"
+          end  
         
+        else
+          logger.info "failed to order.save"
+          logger.info @order.error["message"]
+
         end
 
       else
