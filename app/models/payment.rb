@@ -43,12 +43,12 @@ class Payment < PayPal::SDK::REST::Payment
     self.transactions = {
       :amount => {
         :total => order.total_price,
-        :currency => "USD" },
+        :currency => "GBP" },
       :item_list => {
-        :items => { :name => "pizza", :sku => "pizza", :price => order.total_price, :currency => "USD", :quantity => 1 }
+        :items => { :name => "Tee Shirts", :sku => "Tee Shirts", :price => order.total_price, :currency => "GBP", :quantity => 1 }
       },
       #:description => order.description
-      :description => "my test"
+      :description => "King Clothing"
      }
      self.redirect_urls = {
        :return_url => order.return_url.sub(/:order_id/, order.id.to_s),

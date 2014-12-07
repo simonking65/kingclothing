@@ -36,7 +36,7 @@ class OrdersController < ApplicationController
     @order.add_line_items_from_cart(@cart)
     @order.payment_method = @order.pay_type
   #@order.attributes = params[:order]
-  debugger
+  
     @order.return_url = order_execute_url(":order_id")
     @order.cancel_url = order_cancel_url(":order_id")
     #respond_to do |format|
@@ -53,7 +53,7 @@ class OrdersController < ApplicationController
             logger.info @order.approve_url.to_s
             redirect_to @order.approve_url
           else
-            redirect_to orders_path, :notice => "Order[#{@order.description}] placed successfully"
+            redirect_to store_url, :notice => "Order[#{@order.description}] placed successfully"
           end  
         
         else
@@ -73,16 +73,16 @@ class OrdersController < ApplicationController
 
   def execute
     debugger
-    order = current_user.orders.find(params[:order_id])
+    order = Order.find(params[:order_id])
     if order.execute(params["PayerID"])
               Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
-        OrderNotifier.received(@order).deliver
+        OrderNotifier.received(order).deliver
         format.html { redirect_to store_url, notice: 'Thank you for your order.' }
-        format.json { render :show, status: :created, location: @order }
-      redirect_to orders_path, :notice => "Order[#{order.description}] placed successfully"
+        #format.json { render :show, status: :created, location: @order }
+      #redirect_to orders_path, :notice => "Order[#{order.description}] placed successfully"
     else
-      redirect_to orders_path, :alert => order.payment.error.inspect
+      redirect_to store_url, :alert => order.payment.error.inspect
     end
   end
 
