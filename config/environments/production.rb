@@ -67,7 +67,7 @@ Kingclothing::Application.configure do
     config.action_mailer.smtp_settings = { 
     :address => "smtp.gmail.com", 
     :port => 587,
-    :domain => "frozen-savannah-1680.herokuapp.com",
+    :domain => "gmail.com",
     :authentication => :plain, 
     :user_name => "simon.king65@gmail.com", 
     :password => "teddy1067",
