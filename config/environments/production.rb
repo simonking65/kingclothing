@@ -62,8 +62,18 @@ Kingclothing::Application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
-
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = { 
+    :tls => true,
+    :address => "smtp.gmail.com", 
+    :port => 587,
+    :domain => "frozen-savannah-1680.herokuapp.com",
+    :authentication => :plain, 
+    :user_name => "simon.king65@gmail.com", 
+    :password => "teddy1067",
+    :enable_starttls => true 
+  } 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
