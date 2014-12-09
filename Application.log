@@ -6404,3 +6404,108 @@ I, [2014-12-06T09:58:36.129531 #60476]  INFO -- : Started GET "/assets/camo%20pr
 D, [2014-12-06T09:58:36.273247 #60476] DEBUG -- : 
 D, [2014-12-06T09:58:36.274302 #60476] DEBUG -- : 
 I, [2014-12-06T09:58:36.275017 #60476]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2014-12-06 09:58:36 +0000
+D, [2014-12-09T21:34:12.672377 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:12.695614 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:12.696504 #1683]  INFO -- : Started GET "/" for 127.0.0.1 at 2014-12-09 21:34:12 +0000
+D, [2014-12-09T21:34:14.193759 #1683] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2014-12-09T21:34:14.434589 #1683]  INFO -- : Processing by StoreController#index as HTML
+D, [2014-12-09T21:34:14.529129 #1683] DEBUG -- :   [1m[35mCart Load (37.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 48]]
+D, [2014-12-09T21:34:14.634218 #1683] DEBUG -- :   [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1[0m
+I, [2014-12-09T21:34:14.666087 #1683]  INFO -- : Cache digest for store/index.html: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2014-12-09T21:34:14.708237 #1683]  INFO -- : Read fragment views/store/products/2-20141022062504570899000/a93d4e2e981ab3dfce98a095c3b6c059 (29.9ms)
+I, [2014-12-09T21:34:14.708736 #1683]  INFO -- :   Rendered store/index.html.erb within layouts/application (79.3ms)
+D, [2014-12-09T21:34:15.327918 #1683] DEBUG -- :   [1m[35mLineItem Exists (0.6ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 48]]
+D, [2014-12-09T21:34:15.378010 #1683] DEBUG -- :   [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 48]]
+I, [2014-12-09T21:34:15.378692 #1683]  INFO -- :   Rendered collection (0.0ms)
+I, [2014-12-09T21:34:15.451247 #1683]  INFO -- :   Rendered carts/_cart.html.erb (75.8ms)
+I, [2014-12-09T21:34:15.452590 #1683]  INFO -- : Completed 200 OK in 1018ms (Views: 903.7ms | ActiveRecord: 40.0ms)
+D, [2014-12-09T21:34:15.919832 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:15.919986 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:15.920287 #1683]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:15 +0000
+D, [2014-12-09T21:34:16.055048 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.055270 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.055667 #1683]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.066907 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.066991 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.067173 #1683]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.105317 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.105405 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.105593 #1683]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.222861 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.223079 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.223536 #1683]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.235152 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.235339 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.236056 #1683]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.311248 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.311391 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.311616 #1683]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.322168 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.322290 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.322685 #1683]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.335950 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.336071 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.336323 #1683]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.347161 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.350770 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.351277 #1683]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.380622 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.380861 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.381116 #1683]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.391735 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.391869 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.399236 #1683]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.416243 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.416329 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.417135 #1683]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.487512 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.487592 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.487799 #1683]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.496529 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.497963 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.498238 #1683]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.511040 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.511124 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.511336 #1683]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.523759 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.524030 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.524292 #1683]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.535422 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.535508 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.535697 #1683]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.547610 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.547704 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.547897 #1683]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.559098 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.559203 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.559391 #1683]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.574120 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.574300 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.574545 #1683]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.647590 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.648157 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.648377 #1683]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.657339 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.657420 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.657664 #1683]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.666098 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.666658 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.666943 #1683]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.674419 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.674499 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.674694 #1683]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.682507 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.682601 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.682806 #1683]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.698826 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.698907 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.699046 #1683]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.736383 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.736470 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.736592 #1683]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:16.807079 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:16.809187 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:16.809391 #1683]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2014-12-09 21:34:16 +0000
+D, [2014-12-09T21:34:17.075746 #1683] DEBUG -- : 
+D, [2014-12-09T21:34:17.075906 #1683] DEBUG -- : 
+I, [2014-12-09T21:34:17.076053 #1683]  INFO -- : Started GET "/assets/kingclothingnyc.png" for 127.0.0.1 at 2014-12-09 21:34:17 +0000
