@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :users
 
   resources :orders do
+    get :confirm
     get :execute
     get :cancel
   end

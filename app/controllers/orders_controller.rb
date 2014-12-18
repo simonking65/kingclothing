@@ -37,19 +37,19 @@ class OrdersController < ApplicationController
     @order.payment_method = @order.pay_type
   #@order.attributes = params[:order]
   
-    @order.return_url = order_execute_url(":order_id")
+    @order.return_url = order_confirm_url(":order_id")
     @order.cancel_url = order_cancel_url(":order_id")
     #respond_to do |format|
 
     logger.info "just about to payment_method and save"
     logger.info @order.inspect
       if @order.payment_method
-      debugger 
+     
         if  @order.save
-          debugger
+          
           logger.info "about to approve url"
           if @order.approve_url
-            debugger
+            
             logger.info @order.approve_url.to_s
             redirect_to @order.approve_url
           else
@@ -72,7 +72,7 @@ class OrdersController < ApplicationController
 
 
   def execute
-    debugger
+    
     order = Order.find(params[:order_id])
     if order.execute(params["PayerID"])
               Cart.destroy(session[:cart_id])
@@ -84,6 +84,24 @@ class OrdersController < ApplicationController
     else
       redirect_to store_url, :alert => order.payment.error.inspect
     end
+  end
+
+  def confirm
+    order = Order.find(params[:order_id])
+    @order = order
+    debugger
+      if order.confirm(params["PayerID"])
+              Cart.destroy(session[:cart_id])
+        session[:cart_id] = nil
+        OrderNotifier.received(order).deliver
+        #format.html { redirect_to store_url, notice: 'Thank you for your order.' }
+        #format.json { render :show, status: :created, location: @order }
+      #redirect_to store_url, :notice => "Order[#{order.description}] placed successfully"
+    else
+      redirect_to store_url, :alert => order.payment.error.inspect
+    end
+
+
   end
 
   def cancel

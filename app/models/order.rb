@@ -33,7 +33,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
 
   def create_payment
   	payment_method = "paypal"
-  	debugger
+  	
     logger.info "about to @payment.create"
     # if payment_method == "credit_card" and !user.save
     #   raise ActiveRecord::Rollback, "Can't place the order"
@@ -55,20 +55,40 @@ attr_accessor :return_url, :cancel_url, :payment_method
   end
 
   def execute(payer_id)
-  	debugger
-    if payment.present? and payment.execute(:payer_id => payer_id)
+  	
+    if payment.present?
+       
+      if payment.execute(:payer_id => payer_id)
       self.state = payment.state
       save
+
+      else
+        errors.add :description, payment.error.inspect
+        false
+      end
     else
       errors.add :description, payment.error.inspect
       false
     end
   end
 
-
+  def confirm(payer_id)
+    debugger
+    if payment.present?
+      debugger 
+      self.shipping_address1 = payment.payer.payer_info.shipping_address.line1
+      save
+      #return true
+      #payment.execute(:payer_id => payer_id)
+      
+    else
+      errors.add :description, payment.error.inspect
+      false
+    end
+  end
 
   def approve_url
-  	debugger
+  	
     logger.info payment.inspect
     payment.links.find{|link| link.method == "REDIRECT" }.try(:href)
   end

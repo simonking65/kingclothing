@@ -2,7 +2,7 @@ class Payment < PayPal::SDK::REST::Payment
   include ActiveModel::Validations
 
   def create
-    debugger
+    
     logger.info "in payment.create"
     logger.info self.to_hash
     invreturn = invalid?
