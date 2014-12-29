@@ -23207,3 +23207,256 @@ I, [2014-12-21T09:19:15.821338 #12236]  INFO -- : PayPal-Request-Id: d5c33956-a4
 I, [2014-12-21T09:19:15.883342 #12236]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment/PAY-96X78531KG7448150KSLJAPA/execute
 I, [2014-12-21T09:19:16.906400 #12236]  INFO -- : Response[400]: Bad Request, Duration: 0.984s
 I, [2014-12-21T09:19:16.933402 #12236]  INFO -- :  in error=
+D, [2014-12-29T15:26:02.158196 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:02.189396 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:02.251796 #18196]  INFO -- : Started POST "/line_items?product_id=1" for 127.0.0.1 at 2014-12-29 15:26:02 +0000
+D, [2014-12-29T15:26:04.779000 #18196] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (15.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2014-12-29T15:26:06.341003 #18196]  INFO -- : Processing by LineItemsController#create as JS
+I, [2014-12-29T15:26:06.403403 #18196]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+D, [2014-12-29T15:26:06.637404 #18196] DEBUG -- :   [1m[35mCart Load (31.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 29]]
+D, [2014-12-29T15:26:06.762204 #18196] DEBUG -- :   [1m[36mProduct Load (0.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+D, [2014-12-29T15:26:07.183405 #18196] DEBUG -- :   [1m[35mLineItem Load (0.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 1 LIMIT 1  [["cart_id", 29]]
+D, [2014-12-29T15:26:07.370605 #18196] DEBUG -- :   [1m[36mProduct Load (15.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2014-12-29T15:26:07.401805 #18196] DEBUG -- :   [1m[35m (0.0ms)[0m  begin transaction
+D, [2014-12-29T15:26:07.698205 #18196] DEBUG -- :   [1m[36mSQL (78.0ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 29], ["created_at", Mon, 29 Dec 2014 15:26:07 UTC +00:00], ["product_id", 1], ["productprice", #<BigDecimal:934d2e0,'0.1999E2',18(36)>], ["size", "extra small"], ["updated_at", Mon, 29 Dec 2014 15:26:07 UTC +00:00]]
+D, [2014-12-29T15:26:07.901006 #18196] DEBUG -- :   [1m[35m (140.4ms)[0m  commit transaction
+D, [2014-12-29T15:26:08.337807 #18196] DEBUG -- :   [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 29]]
+I, [2014-12-29T15:26:08.540607 #18196]  INFO -- :   Rendered line_items/_line_item.html.erb (140.4ms)
+I, [2014-12-29T15:26:08.587407 #18196]  INFO -- :   Rendered carts/_cart.html.erb (296.4ms)
+I, [2014-12-29T15:26:08.634207 #18196]  INFO -- :   Rendered line_items/create.js.erb (561.6ms)
+I, [2014-12-29T15:26:08.696607 #18196]  INFO -- : Completed 200 OK in 2215ms (Views: 733.2ms | ActiveRecord: 280.8ms)
+D, [2014-12-29T15:26:12.118083 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:12.154684 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:12.198686 #18196]  INFO -- : Started GET "/orders/new" for 127.0.0.1 at 2014-12-29 15:26:12 +0000
+I, [2014-12-29T15:26:12.280691 #18196]  INFO -- : Processing by OrdersController#new as HTML
+D, [2014-12-29T15:26:12.342695 #18196] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 29]]
+D, [2014-12-29T15:26:12.521705 #18196] DEBUG -- :   [1m[36mLineItem Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 29]]
+I, [2014-12-29T15:26:12.983731 #18196]  INFO -- :   Rendered orders/_form.html.erb (293.0ms)
+I, [2014-12-29T15:26:13.029734 #18196]  INFO -- :   Rendered orders/new.html.erb within layouts/application (369.0ms)
+D, [2014-12-29T15:26:39.351239 #18196] DEBUG -- :   [1m[35mCACHE (0.0ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 29]]
+D, [2014-12-29T15:26:39.447245 #18196] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 29]]
+D, [2014-12-29T15:26:39.543250 #18196] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+I, [2014-12-29T15:26:39.595253 #18196]  INFO -- :   Rendered line_items/_line_item.html.erb (93.0ms)
+I, [2014-12-29T15:26:39.642256 #18196]  INFO -- :   Rendered carts/_cart.html.erb (242.0ms)
+I, [2014-12-29T15:26:39.703260 #18196]  INFO -- : Completed 200 OK in 27364ms (Views: 27087.5ms | ActiveRecord: 6.0ms)
+D, [2014-12-29T15:26:40.142285 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.188287 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.219289 #18196]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.272292 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.287293 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.326295 #18196]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.367298 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.380298 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.424301 #18196]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.463303 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.475304 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.506305 #18196]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.549308 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.560309 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.595311 #18196]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.629313 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.642313 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.682316 #18196]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.725318 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.741319 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.778321 #18196]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.809323 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.820323 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.850325 #18196]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.885327 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.896328 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.923329 #18196]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:40.957331 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:40.969332 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:40.998334 #18196]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:40 +0000
+D, [2014-12-29T15:26:41.031336 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.043336 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.083338 #18196]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.140342 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.151342 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.181344 #18196]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.215346 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.226347 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.276350 #18196]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.336353 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.354354 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.385356 #18196]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.435359 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.446359 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.477361 #18196]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.517363 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.528364 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.556366 #18196]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.596368 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.620369 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.647371 #18196]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.676372 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.688373 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.716375 #18196]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.749377 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.760377 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.788379 #18196]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.820381 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.833381 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.862383 #18196]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.897385 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.907386 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:41.937387 #18196]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:41.970389 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:41.981390 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:42.009391 #18196]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:41 +0000
+D, [2014-12-29T15:26:42.042393 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:42.053394 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:42.081396 #18196]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:42 +0000
+D, [2014-12-29T15:26:42.111397 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:42.121398 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:42.149399 #18196]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:42 +0000
+D, [2014-12-29T15:26:42.178401 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:42.190402 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:42.216403 #18196]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:42 +0000
+D, [2014-12-29T15:26:42.245405 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:42.256406 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:42.286407 #18196]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-29 15:26:42 +0000
+D, [2014-12-29T15:26:42.353411 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:42.362412 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:42.387413 #18196]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2014-12-29 15:26:42 +0000
+D, [2014-12-29T15:26:42.471418 #18196] DEBUG -- : 
+D, [2014-12-29T15:26:42.483419 #18196] DEBUG -- : 
+I, [2014-12-29T15:26:42.512420 #18196]  INFO -- : Started GET "/assets/kingclothingnyc.png" for 127.0.0.1 at 2014-12-29 15:26:42 +0000
+D, [2014-12-29T15:27:04.393767 #18196] DEBUG -- : 
+D, [2014-12-29T15:27:04.413768 #18196] DEBUG -- : 
+I, [2014-12-29T15:27:04.459771 #18196]  INFO -- : Started POST "/orders" for 127.0.0.1 at 2014-12-29 15:27:04 +0000
+I, [2014-12-29T15:27:04.523775 #18196]  INFO -- : Processing by OrdersController#create as HTML
+I, [2014-12-29T15:27:04.641781 #18196]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zNmHvl/+ueeUW4bTUOPgbphWtn05CsBGvH9XCGaUnCI=", "order"=>{"name"=>"s", "address"=>"s", "shipping_address1"=>"s", "email"=>"simon.king65@gmail.com", "pay_type"=>"Paypal"}, "commit"=>"Place Order"}
+D, [2014-12-29T15:27:04.701785 #18196] DEBUG -- :   [1m[36mCart Load (0.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 29]]
+I, [2014-12-29T15:27:04.725786 #18196]  INFO -- : log info
+D, [2014-12-29T15:27:04.765788 #18196] DEBUG -- : Unpermitted parameters: shipping_address1
+D, [2014-12-29T15:27:04.833792 #18196] DEBUG -- :   [1m[35mLineItem Load (0.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 29]]
+I, [2014-12-29T15:27:04.874795 #18196]  INFO -- : just about to payment_method and save
+I, [2014-12-29T15:27:04.983801 #18196]  INFO -- : #<Order id: nil, name: "s", address: "s", email: "simon.king65@gmail.com", pay_type: "Paypal", created_at: nil, updated_at: nil, payment_method: nil, payment_id: nil, state: nil, amount: nil, description: nil, shipping_address1: nil>
+D, [2014-12-29T15:27:05.018803 #18196] DEBUG -- :   [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+D, [2014-12-29T15:27:05.175812 #18196] DEBUG -- :   [1m[35mSQL (6.0ms)[0m  INSERT INTO "orders" ("address", "created_at", "email", "name", "pay_type", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["address", "s"], ["created_at", Mon, 29 Dec 2014 15:27:05 UTC +00:00], ["email", "simon.king65@gmail.com"], ["name", "s"], ["pay_type", "Paypal"], ["updated_at", Mon, 29 Dec 2014 15:27:05 UTC +00:00]]
+D, [2014-12-29T15:27:05.281818 #18196] DEBUG -- :   [1m[36mSQL (2.0ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 34[0m  [["cart_id", nil], ["order_id", 33], ["updated_at", Mon, 29 Dec 2014 15:27:05 UTC +00:00]]
+I, [2014-12-29T15:27:05.311820 #18196]  INFO -- : about to @payment.create
+D, [2014-12-29T15:27:05.405825 #18196] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+I, [2014-12-29T15:27:05.444827 #18196]  INFO -- : in order=
+I, [2014-12-29T15:27:05.470829 #18196]  INFO -- : in payment.create
+I, [2014-12-29T15:27:05.651839 #18196]  INFO -- : {"intent"=>"sale", "payer"=>{"payment_method"=>"paypal"}, "transactions"=>[{"amount"=>{"currency"=>"GBP", "total"=>"19.99"}, "description"=>"King Clothing", "item_list"=>{"items"=>[{"quantity"=>"1", "name"=>"Tee Shirts", "price"=>"19.99", "currency"=>"GBP", "sku"=>"Tee Shirts"}]}}], "redirect_urls"=>{"return_url"=>"http://localhost:3000/orders/33/confirm", "cancel_url"=>"http://localhost:3000/orders/33/cancel"}}
+I, [2014-12-29T15:27:06.221872 #18196]  INFO -- : #<ActiveModel::Errors:0x00000007e73dd8 @base=#<Payment:0x00000007ed7040 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x00000007ed6dc0 @error=nil, @payment_method="paypal">, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x00000007e9b8d8 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x00000007e9b7e8 @error=nil, @total="19.99", @currency="GBP">, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x00000007e9a488 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x00000007e9a208 @error=nil, @name="Tee Shirts", @sku="Tee Shirts", @price="19.99", @currency="GBP", @quantity="1">]>, @description="King Clothing">], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x00000007e99498 @error=nil, @return_url="http://localhost:3000/orders/33/confirm", @cancel_url="http://localhost:3000/orders/33/cancel">, @logger=#<Logger:0x000000059cf4a0 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x000000059cf478 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x000000059cf428 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x000000059cf3b0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x000000059cf338>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x00000007e73dd8 ...>>, @messages={}>
+I, [2014-12-29T15:27:06.246873 #18196]  INFO -- : got past invalid
+I, [2014-12-29T15:27:06.378881 #18196]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/oauth2/token
+I, [2014-12-29T15:27:08.230987 #18196]  INFO -- : Response[200]: OK, Duration: 1.815s
+I, [2014-12-29T15:27:08.272989 #18196]  INFO -- : PayPal-Request-Id: c24219c2-0c91-41a3-85fb-fb0dfbb55de1
+I, [2014-12-29T15:27:08.317992 #18196]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment
+I, [2014-12-29T15:27:09.581064 #18196]  INFO -- : Response[201]: Created, Duration: 1.221s
+I, [2014-12-29T15:27:09.611065 #18196]  INFO -- : back from super
+I, [2014-12-29T15:27:10.084093 #18196]  INFO -- : {"id"=>"PAY-5VX96240849909202KSQXFTI", "intent"=>"sale", "payer"=>{"payment_method"=>"paypal"}, "transactions"=>[{"amount"=>{"currency"=>"GBP", "total"=>"19.99", "details"=>{"subtotal"=>"19.99"}}, "description"=>"King Clothing", "item_list"=>{"items"=>[{"quantity"=>"1", "name"=>"Tee Shirts", "price"=>"19.99", "currency"=>"GBP", "sku"=>"Tee Shirts"}]}}], "state"=>"created", "redirect_urls"=>{"return_url"=>"http://localhost:3000/orders/33/confirm", "cancel_url"=>"http://localhost:3000/orders/33/cancel"}, "create_time"=>"2014-12-29T15:27:09Z", "update_time"=>"2014-12-29T15:27:10Z", "links"=>[{"href"=>"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI", "rel"=>"self", "method"=>"GET"}, {"href"=>"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J", "rel"=>"approval_url", "method"=>"REDIRECT"}, {"href"=>"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI/execute", "rel"=>"execute", "method"=>"POST"}]}
+D, [2014-12-29T15:27:10.298105 #18196] DEBUG -- :   [1m[36mSQL (4.0ms)[0m  [1mUPDATE "orders" SET "name" = ?, "address" = ?, "email" = ?, "pay_type" = ?, "created_at" = ?, "updated_at" = ?, "id" = ?, "payment_id" = ?, "state" = ? WHERE "orders"."id" = 33[0m  [["name", "s"], ["address", "s"], ["email", "simon.king65@gmail.com"], ["pay_type", "Paypal"], ["created_at", Mon, 29 Dec 2014 15:27:05 UTC +00:00], ["updated_at", Mon, 29 Dec 2014 15:27:05 UTC +00:00], ["id", 33], ["payment_id", "PAY-5VX96240849909202KSQXFTI"], ["state", "created"]]
+I, [2014-12-29T15:27:10.327106 #18196]  INFO -- : @payment save just done
+I, [2014-12-29T15:27:11.214157 #18196]  INFO -- : #<Payment:0x00000007ed7040 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x00000007cb0a00 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x00000007cb0910 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x00000007cb0898 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x00000007cb0730 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x00000007cb06b8 @error=nil, @total="19.99", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x00000007cb0550 @error=nil, @subtotal="19.99">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x00000007cb03c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x00000007cb02a8 @error=nil, @name="Tee Shirts", @sku="Tee Shirts", @price="19.99", @currency="GBP", @quantity="1">]>, @description="King Clothing", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x00000007e99498 @error=nil, @return_url="http://localhost:3000/orders/33/confirm", @cancel_url="http://localhost:3000/orders/33/cancel">, @logger=#<Logger:0x000000059cf4a0 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x000000059cf478 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x000000059cf428 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x000000059cf3b0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x000000059cf338>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x00000007e73dd8 @base=#<Payment:0x00000007ed7040 ...>, @messages={}>, @request_id="c24219c2-0c91-41a3-85fb-fb0dfbb55de1", @header={}, @id="PAY-5VX96240849909202KSQXFTI", @create_time="2014-12-29T15:27:09Z", @update_time="2014-12-29T15:27:10Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x00000007c93d38 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93b30 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93950 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI/execute", @rel="execute", @method="POST">]>
+I, [2014-12-29T15:27:11.928198 #18196]  INFO -- : #<Payment:0x00000007ed7040 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x00000007cb0a00 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x00000007cb0910 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x00000007cb0898 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x00000007cb0730 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x00000007cb06b8 @error=nil, @total="19.99", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x00000007cb0550 @error=nil, @subtotal="19.99">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x00000007cb03c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x00000007cb02a8 @error=nil, @name="Tee Shirts", @sku="Tee Shirts", @price="19.99", @currency="GBP", @quantity="1">]>, @description="King Clothing", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x00000007e99498 @error=nil, @return_url="http://localhost:3000/orders/33/confirm", @cancel_url="http://localhost:3000/orders/33/cancel">, @logger=#<Logger:0x000000059cf4a0 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x000000059cf478 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x000000059cf428 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x000000059cf3b0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x000000059cf338>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x00000007e73dd8 @base=#<Payment:0x00000007ed7040 ...>, @messages={}>, @request_id="c24219c2-0c91-41a3-85fb-fb0dfbb55de1", @header={}, @id="PAY-5VX96240849909202KSQXFTI", @create_time="2014-12-29T15:27:09Z", @update_time="2014-12-29T15:27:10Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x00000007c93d38 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93b30 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93950 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI/execute", @rel="execute", @method="POST">]>
+D, [2014-12-29T15:27:12.068206 #18196] DEBUG -- :   [1m[35m (116.0ms)[0m  commit transaction
+I, [2014-12-29T15:27:12.088207 #18196]  INFO -- : about to approve url
+I, [2014-12-29T15:27:12.927255 #18196]  INFO -- : #<Payment:0x00000007ed7040 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x00000007cb0a00 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x00000007cb0910 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x00000007cb0898 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x00000007cb0730 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x00000007cb06b8 @error=nil, @total="19.99", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x00000007cb0550 @error=nil, @subtotal="19.99">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x00000007cb03c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x00000007cb02a8 @error=nil, @name="Tee Shirts", @sku="Tee Shirts", @price="19.99", @currency="GBP", @quantity="1">]>, @description="King Clothing", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x00000007e99498 @error=nil, @return_url="http://localhost:3000/orders/33/confirm", @cancel_url="http://localhost:3000/orders/33/cancel">, @logger=#<Logger:0x000000059cf4a0 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x000000059cf478 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x000000059cf428 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x000000059cf3b0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x000000059cf338>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x00000007e73dd8 @base=#<Payment:0x00000007ed7040 ...>, @messages={}>, @request_id="c24219c2-0c91-41a3-85fb-fb0dfbb55de1", @header={}, @id="PAY-5VX96240849909202KSQXFTI", @create_time="2014-12-29T15:27:09Z", @update_time="2014-12-29T15:27:10Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x00000007c93d38 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93b30 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93950 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI/execute", @rel="execute", @method="POST">]>
+I, [2014-12-29T15:27:13.774304 #18196]  INFO -- : #<Payment:0x00000007ed7040 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x00000007cb0a00 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x00000007cb0910 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x00000007cb0898 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x00000007cb0730 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x00000007cb06b8 @error=nil, @total="19.99", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x00000007cb0550 @error=nil, @subtotal="19.99">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x00000007cb03c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x00000007cb02a8 @error=nil, @name="Tee Shirts", @sku="Tee Shirts", @price="19.99", @currency="GBP", @quantity="1">]>, @description="King Clothing", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x00000007e99498 @error=nil, @return_url="http://localhost:3000/orders/33/confirm", @cancel_url="http://localhost:3000/orders/33/cancel">, @logger=#<Logger:0x000000059cf4a0 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x000000059cf478 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x000000059cf428 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x000000059cf3b0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x000000059cf338>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x00000007e73dd8 @base=#<Payment:0x00000007ed7040 ...>, @messages={}>, @request_id="c24219c2-0c91-41a3-85fb-fb0dfbb55de1", @header={}, @id="PAY-5VX96240849909202KSQXFTI", @create_time="2014-12-29T15:27:09Z", @update_time="2014-12-29T15:27:10Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x00000007c93d38 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93b30 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93950 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI/execute", @rel="execute", @method="POST">]>
+I, [2014-12-29T15:27:13.825307 #18196]  INFO -- : https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J
+I, [2014-12-29T15:27:14.682356 #18196]  INFO -- : #<Payment:0x00000007ed7040 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x00000007cb0a00 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x00000007cb0910 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x00000007cb0898 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x00000007cb0730 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x00000007cb06b8 @error=nil, @total="19.99", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x00000007cb0550 @error=nil, @subtotal="19.99">>, @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x00000007cb03c0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x00000007cb02a8 @error=nil, @name="Tee Shirts", @sku="Tee Shirts", @price="19.99", @currency="GBP", @quantity="1">]>, @description="King Clothing", @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x00000007e99498 @error=nil, @return_url="http://localhost:3000/orders/33/confirm", @cancel_url="http://localhost:3000/orders/33/cancel">, @logger=#<Logger:0x000000059cf4a0 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x000000059cf478 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x000000059cf428 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x000000059cf3b0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x000000059cf338>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x00000007e73dd8 @base=#<Payment:0x00000007ed7040 ...>, @messages={}>, @request_id="c24219c2-0c91-41a3-85fb-fb0dfbb55de1", @header={}, @id="PAY-5VX96240849909202KSQXFTI", @create_time="2014-12-29T15:27:09Z", @update_time="2014-12-29T15:27:10Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x00000007c93d38 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93b30 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x00000007c93950 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI/execute", @rel="execute", @method="POST">]>
+I, [2014-12-29T15:27:14.740359 #18196]  INFO -- : Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6EE62077X4574660J
+I, [2014-12-29T15:27:14.776361 #18196]  INFO -- : Completed 302 Found in 10099ms (ActiveRecord: 130.0ms)
+D, [2014-12-29T15:30:23.705426 #18196] DEBUG -- : 
+D, [2014-12-29T15:30:23.731428 #18196] DEBUG -- : 
+I, [2014-12-29T15:30:23.825433 #18196]  INFO -- : Started GET "/orders/33/confirm?paymentId=PAY-5VX96240849909202KSQXFTI&token=EC-6EE62077X4574660J&PayerID=2VZ7YQDDDPPC4" for 127.0.0.1 at 2014-12-29 15:30:23 +0000
+I, [2014-12-29T15:30:23.898438 #18196]  INFO -- : Processing by OrdersController#confirm as HTML
+I, [2014-12-29T15:30:23.984442 #18196]  INFO -- :   Parameters: {"paymentId"=>"PAY-5VX96240849909202KSQXFTI", "token"=>"EC-6EE62077X4574660J", "PayerID"=>"2VZ7YQDDDPPC4", "order_id"=>"33"}
+D, [2014-12-29T15:30:24.077448 #18196] DEBUG -- :   [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+D, [2014-12-29T15:30:24.191454 #18196] DEBUG -- :   [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'Ollie' LIMIT 1
+D, [2014-12-29T15:30:24.273459 #18196] DEBUG -- :   [1m[36mOrder Load (2.0ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", "33"]]
+I, [2014-12-29T15:30:29.545761 #18196]  INFO -- : Request[get]: https://api.sandbox.paypal.com/v1/payments/payment/PAY-5VX96240849909202KSQXFTI
+I, [2014-12-29T15:30:30.847835 #18196]  INFO -- : Response[200]: OK, Duration: 1.266s
+D, [2014-12-29T15:30:33.537989 #18196] DEBUG -- :   [1m[35m (1.0ms)[0m  begin transaction
+D, [2014-12-29T15:30:33.661996 #18196] DEBUG -- :   [1m[36mSQL (6.0ms)[0m  [1mUPDATE "orders" SET "shipping_address1" = ?, "updated_at" = ? WHERE "orders"."id" = 33[0m  [["shipping_address1", "1 Main Terrace"], ["updated_at", Mon, 29 Dec 2014 15:30:33 UTC +00:00]]
+D, [2014-12-29T15:30:33.798004 #18196] DEBUG -- :   [1m[35m (101.0ms)[0m  commit transaction
+D, [2014-12-29T15:30:33.869008 #18196] DEBUG -- :   [1m[36mCart Load (2.0ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 29]]
+D, [2014-12-29T15:30:33.904010 #18196] DEBUG -- :   [1m[35m (2.0ms)[0m  begin transaction
+D, [2014-12-29T15:30:33.989015 #18196] DEBUG -- :   [1m[36mLineItem Load (2.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 29]]
+D, [2014-12-29T15:30:34.044018 #18196] DEBUG -- :   [1m[35mSQL (4.0ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = ?  [["id", 29]]
+D, [2014-12-29T15:30:34.217028 #18196] DEBUG -- :   [1m[36m (132.0ms)[0m  [1mcommit transaction[0m
+I, [2014-12-29T15:31:14.147312 #18196]  INFO -- :   Rendered order_notifier/received.html.erb (5.0ms)
+D, [2014-12-29T15:31:14.252318 #18196] DEBUG -- :   [1m[35mLineItem Load (3.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?  [["order_id", 33]]
+D, [2014-12-29T15:31:14.366324 #18196] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+I, [2014-12-29T15:31:14.406326 #18196]  INFO -- :   Rendered line_items/_line_item.text.erb (99.0ms)
+I, [2014-12-29T15:31:14.451329 #18196]  INFO -- :   Rendered order_notifier/received.text.erb (246.0ms)
+I, [2014-12-29T15:31:19.296606 #18196]  INFO -- : 
+Sent mail to simon.king65@gmail.com (878.1ms)
+D, [2014-12-29T15:31:19.814636 #18196] DEBUG -- : Date: Mon, 29 Dec 2014 15:31:18 +0000
+From: Simon King <simon.king65@gmail.com>
+To: simon.king65@gmail.com
+Message-ID: <54a173c68437b_47143df2b7499124@Simon-PC.mail>
+Subject: King Clothing Order Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54a173c27c97c_47143df2b749904c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54a173c27c97c_47143df2b749904c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Dear s
+
+Thank you for your recent order from King Clothing.
+
+You ordered the following items:
+
+ 1 x Camo Print Tee
+We'll send you a separate e-mail when your order ships.
+----==_mimepart_54a173c27c97c_47143df2b749904c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>OrderNotifier#received</h1>
+
+<p>
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+</p>
+
+----==_mimepart_54a173c27c97c_47143df2b749904c--
+
+I, [2014-12-29T15:31:19.992646 #18196]  INFO -- :   Rendered orders/_form.html.erb (98.0ms)
+I, [2014-12-29T15:31:20.055650 #18196]  INFO -- :   Rendered orders/confirm.html.erb within layouts/application (158.0ms)
+I, [2014-12-29T15:31:20.229659 #18196]  INFO -- : Completed 200 OK in 56201ms (Views: 367.0ms | ActiveRecord: 261.0ms)
+D, [2014-12-29T15:31:20.587680 #18196] DEBUG -- : 
+D, [2014-12-29T15:31:20.599681 #18196] DEBUG -- : 
+I, [2014-12-29T15:31:20.636683 #18196]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2014-12-29 15:31:20 +0000
+D, [2014-12-29T15:31:20.706687 #18196] DEBUG -- : 
+D, [2014-12-29T15:31:20.719687 #18196] DEBUG -- : 
+I, [2014-12-29T15:31:20.758690 #18196]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2014-12-29 15:31:20 +0000
+D, [2014-12-29T15:31:20.830694 #18196] DEBUG -- : 
+D, [2014-12-29T15:31:20.844695 #18196] DEBUG -- : 
+I, [2014-12-29T15:31:20.879697 #18196]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-29 15:31:20 +0000
+D, [2014-12-29T15:39:22.472865 #18196] DEBUG -- : 
+D, [2014-12-29T15:39:22.491866 #18196] DEBUG -- : 
+I, [2014-12-29T15:39:22.546869 #18196]  INFO -- : Started POST "/orders/26/execute/26/2VZ7YQDDDPPC4" for 127.0.0.1 at 2014-12-29 15:39:22 +0000
+I, [2014-12-29T15:39:22.641875 #18196]  INFO -- : Processing by OrdersController#execute as HTML
+I, [2014-12-29T15:39:22.715879 #18196]  INFO -- :   Parameters: {"authenticity_token"=>"zNmHvl/+ueeUW4bTUOPgbphWtn05CsBGvH9XCGaUnCI=", "order_id"=>"26", "payer_id"=>"2VZ7YQDDDPPC4"}
+D, [2014-12-29T15:39:22.793883 #18196] DEBUG -- :   [1m[35mOrder Load (2.0ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", "26"]]
+I, [2014-12-29T15:41:46.539105 #18196]  INFO -- : Request[get]: https://api.sandbox.paypal.com/v1/payments/payment/PAY-96X78531KG7448150KSLJAPA
+I, [2014-12-29T15:41:47.753175 #18196]  INFO -- : Response[400]: Bad Request, Duration: 1.172s
+I, [2014-12-29T15:41:47.816178 #18196]  INFO -- : PayPal-Request-Id: 76ef19d3-61ab-4d8c-a4a4-24b0b47fd305
+I, [2014-12-29T15:41:47.872181 #18196]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment//execute
+I, [2014-12-29T15:41:48.767233 #18196]  INFO -- : Response[500]: Internal Server Error, Duration: 0.846s
+I, [2014-12-29T15:41:48.813235 #18196]  INFO -- : Completed 500 Internal Server Error in 146052ms
+F, [2014-12-29T15:41:48.952243 #18196] FATAL -- : 
+PayPal::SDK::Core::Exceptions::ServerError (Failed.  Response code = 500.  Response message = Internal Server Error.):
+  app/models/order.rb:61:in `execute'
+  app/controllers/orders_controller.rb:78:in `execute'
+
+
+I, [2014-12-29T15:41:49.363267 #18196]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+I, [2014-12-29T15:41:49.527276 #18196]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (16.0ms)
+I, [2014-12-29T15:41:49.695286 #18196]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+I, [2014-12-29T15:41:49.790291 #18196]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (487.0ms)
