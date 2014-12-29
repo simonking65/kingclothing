@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
     
     order = Order.find(params[:order_id])
     debugger  
-    if order.execute(params["PayerID"])
+    if order.execute(params["payer_id"])
               Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(order).deliver
@@ -93,9 +93,9 @@ class OrdersController < ApplicationController
     debugger
     @payer_id = params["PayerID"]
       if order.confirm(params["PayerID"])
-              Cart.destroy(session[:cart_id])
-        session[:cart_id] = nil
-        OrderNotifier.received(order).deliver
+            #  Cart.destroy(session[:cart_id])
+       # session[:cart_id] = nil
+      #  OrderNotifier.received(order).deliver
         #format.html { redirect_to store_url, notice: 'Thank you for your order.' }
         #format.json { render :show, status: :created, location: @order }
       #redirect_to store_url, :notice => "Order[#{order.description}] placed successfully"
