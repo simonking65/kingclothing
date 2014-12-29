@@ -1,0 +1,8 @@
+<h1>Confirming order</h1>
+
+<%= render 'form' %>
+
+
+<%= button_to 'Purchase', order_execute_order_url(@order.id, @order.id, @payer_id) %>
+<%= link_to 'Show', @order %> |
+<%= link_to 'Back', orders_path %>

@@ -74,6 +74,7 @@ class OrdersController < ApplicationController
   def execute
     
     order = Order.find(params[:order_id])
+    debugger  
     if order.execute(params["PayerID"])
               Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
@@ -90,6 +91,7 @@ class OrdersController < ApplicationController
     order = Order.find(params[:order_id])
     @order = order
     debugger
+    @payer_id = params["PayerID"]
       if order.confirm(params["PayerID"])
               Cart.destroy(session[:cart_id])
         session[:cart_id] = nil

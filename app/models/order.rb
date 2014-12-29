@@ -56,7 +56,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
 
   def execute(payer_id)
   	
-    if payment.present?
+    #if payment.present?
        
       if payment.execute(:payer_id => payer_id)
       self.state = payment.state
@@ -66,10 +66,10 @@ attr_accessor :return_url, :cancel_url, :payment_method
         errors.add :description, payment.error.inspect
         false
       end
-    else
-      errors.add :description, payment.error.inspect
-      false
-    end
+    #else
+    #  errors.add :description, payment.error.inspect
+    #  false
+    #end
   end
 
   def confirm(payer_id)
