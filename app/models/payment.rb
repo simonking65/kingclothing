@@ -39,16 +39,39 @@ class Payment < PayPal::SDK::REST::Payment
   def order=(order)
     self.intent = "sale"
     add_payment_method(order)
-    self.transactions = {
+    debugger
+    #self.transactions = {
+    #  :amount => {
+    #    :total => order.total_price,
+    #    :currency => "GBP" },
+    #  :item_list => {
+    #    :items => { :name => "Tee Shirts", :sku => "Tee Shirts", :price => 18.99, :currency => "GBP", :quantity => 1
+    #       }
+    #  },
+    #  #:description => order.description
+    #  :description => "King Clothing"
+    # }
+         self.transactions = {
       :amount => {
         :total => order.total_price,
         :currency => "GBP" },
-      :item_list => {
-        :items => { :name => "Tee Shirts", :sku => "Tee Shirts", :price => order.total_price, :currency => "GBP", :quantity => 1 }
-      },
+     # :item_list => {
+     #   :items => { :name => "Tee Shirts", :sku => "Tee Shirts", :price => 18.99, :currency => "GBP", :quantity => 1
+     #      }
+     # },
       #:description => order.description
       :description => "King Clothing"
      }
+     self.transactions[0].item_list.items.merge!( { :name => "penknife", :sku => "PK1", :price => 19.99, :currency => "GBP", :quantity => 1 })
+     self.transactions[0].item_list.items.merge!( { :name => "tee shirt", :sku => "ts1", :price => 18.99, :currency => "GBP", :quantity => 1 })
+     
+     #self.transactions << { :name => "penknife", :sku => "PK1", :price => 2, :currency => "GBP", :quantity => 1 }
+#     self.transactions[0] << { :item_list => 
+ #       { :items => { :name => "penknife", :sku => "PK1", :price => 14.99, :currency => "GBP", :quantity => 1 }
+   #    }, 
+    #   :description => "King Clothing" 
+    #  }
+     debugger
      self.redirect_urls = {
        :return_url => order.return_url.sub(/:order_id/, order.id.to_s),
        :cancel_url => order.cancel_url.sub(/:order_id/, order.id.to_s)

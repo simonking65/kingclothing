@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   skip_before_action :authorize, only: [:new, :create, :execute, :cancel]
   include CurrentCart
-  before_action :set_cart, only: [:new, :create]
+  before_action :set_cart, only: [:new, :create, :ppcheckout]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -81,7 +81,7 @@ class OrdersController < ApplicationController
         OrderNotifier.received(order).deliver
         #format.html { redirect_to store_url, notice: 'Thank you for your order.' }
         #format.json { render :show, status: :created, location: @order }
-      redirect_to store_url, :notice => "Order[#{order.description}] placed successfully"
+      redirect_to store_url, :notice => "Order placed successfully"
     else
       redirect_to store_url, :alert => order.payment.error.inspect
     end
@@ -137,6 +137,47 @@ class OrdersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def ppcheckout
+    @order = Order.new
+    @order.add_line_items_from_cart(@cart)
+    @order.payment_method = 'paypal'
+  #@order.attributes = params[:order]
+  
+    @order.return_url = order_confirm_url(":order_id")
+    @order.cancel_url = order_cancel_url(":order_id")
+    #respond_to do |format|
+
+ #   logger.info "just about to payment_method and save"
+    logger.info @order.inspect
+      if @order.payment_method
+     debugger
+        if  @order.save(validate: false)
+          
+          logger.info "about to approve url"
+          if @order.approve_url
+            
+            logger.info @order.approve_url.to_s
+            redirect_to @order.approve_url
+          else
+            redirect_to store_url, :notice => "Order[#{@order.description}] placed successfully"
+          end  
+        
+        else
+          logger.info "failed to order.save"
+          logger.info @order.error["message"]
+
+        end
+
+      else
+        logger.info "failed!!!"
+        format.html { render :new }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
+      end
+
+
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -4,7 +4,7 @@ class Order < ActiveRecord::Base
 
 	PAYMENT_TYPES = [ "Cheque", "Credit card", "Purchase order", "Paypal"]
 	validates :name, :address, :email, presence: true
-	validates :pay_type, inclusion: PAYMENT_TYPES
+	validates :payment_method, inclusion: PAYMENT_TYPES
 
 after_create :create_payment
 attr_accessor :return_url, :cancel_url, :payment_method
@@ -76,6 +76,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
     debugger
     if payment.present?
       debugger 
+      self.email = payment.payer.payer_info.email
       self.shipping_address1 = payment.payer.payer_info.shipping_address.line1
       save
       #return true
@@ -97,6 +98,11 @@ attr_accessor :return_url, :cancel_url, :payment_method
 		line_items.to_a.sum { |item| item.total_price }
 	end
 	
+  def total_items
+    debugger
+    line_items.count
+  end
+  
 	def subtotal
 		line_items.to_a.sum { |item| item.total_price }
 	end
