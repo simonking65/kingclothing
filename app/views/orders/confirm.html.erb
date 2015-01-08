@@ -4,7 +4,7 @@
 
 
 
-<%= button_to 'Purchase', order_execute_order_url(@order.id, @order.id, @payer_id) %>
+<%= button_to 'Purchase', order_execute_order_url(@order.id, @order.id, @payer_id, @payment_id) %>
 
 <%= link_to 'Show', @order %> |
 <%= link_to 'Back', orders_path %>

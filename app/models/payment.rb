@@ -64,9 +64,12 @@ class Payment < PayPal::SDK::REST::Payment
      }
 
      order.line_items.each do |item|
-     self.transactions[0].item_list.items.merge!( { :name => "penknife", :sku => "PK1", :price => item.productprice, :currency => "GBP", :quantity => item.quantity }) 
-     self.transactions[0].item_list.items.merge!( { :name => "penknife", :sku => "PK1", :price => 19.99, :currency => "GBP", :quantity => 1 })
-     self.transactions[0].item_list.items.merge!( { :name => "tee shirt", :sku => "ts1", :price => 18.99, :currency => "GBP", :quantity => 1 })
+
+        self.transactions[0].item_list.items.merge!( { :name => item.product.title, :sku => item.product.title, :price => item.productprice, :currency => "GBP", :quantity => item.quantity } )
+      end
+     #self.transactions[0].item_list.items.merge!( { :name => "penknife", :sku => "PK1", :price => 12.99, :currency => "GBP", :quantity => 1 })
+     #self.transactions[0].item_list.items.merge!( { :name => "tee shirt", :sku => "ts1", :price => 10.99, :currency => "GBP", :quantity => 1 })
+
      
      #self.transactions << { :name => "penknife", :sku => "PK1", :price => 2, :currency => "GBP", :quantity => 1 }
 #     self.transactions[0] << { :item_list => 

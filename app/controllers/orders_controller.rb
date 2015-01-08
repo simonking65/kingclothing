@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
     
     order = Order.find(params[:order_id])
     debugger  
-    if order.execute(params["payer_id"])
+    if order.execute(params["payer_id"], params["paymentId"])
               Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(order).deliver
@@ -91,8 +91,10 @@ class OrdersController < ApplicationController
     order = Order.find(params[:order_id])
     @order = order
     debugger
+    #@payment = Payment.find(params["paymentId"])
     @payer_id = params["PayerID"]
-      if order.confirm(params["PayerID"])
+    @payment_id = params["paymentId"]
+      if order.confirm(params["PayerID"], params["paymentId"])
             #  Cart.destroy(session[:cart_id])
        # session[:cart_id] = nil
       #  OrderNotifier.received(order).deliver
@@ -141,7 +143,7 @@ class OrdersController < ApplicationController
   def ppcheckout
     @order = Order.new
     @order.add_line_items_from_cart(@cart)
-    @order.payment_method = 'paypal'
+    @order.payment_method = "Paypal"
   #@order.attributes = params[:order]
   
     @order.return_url = order_confirm_url(":order_id")
@@ -150,10 +152,11 @@ class OrdersController < ApplicationController
 
  #   logger.info "just about to payment_method and save"
     logger.info @order.inspect
+    debugger
       if @order.payment_method
      debugger
         if  @order.save(validate: false)
-          
+          @order.update_column(:payment_method, "Paypal")
           logger.info "about to approve url"
           if @order.approve_url
             
@@ -187,6 +190,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :payment_method)
     end
 end
