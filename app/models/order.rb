@@ -82,6 +82,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
     debugger
     if payment = Payment.find(payment_id)
       debugger 
+      
       self.name = payment.payer.payer_info.first_name + " " + payment.payer.payer_info.last_name
       self.email = payment.payer.payer_info.email
       self.address = payment.payer.payer_info.shipping_address.line1
