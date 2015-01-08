@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   resources :orders do
     get :confirm
     #post :execute 
-    post 'execute/:order_id/:payer_id', to: 'orders#execute', as: :execute_order
+    post 'execute/:order_id/:payer_id/:payment_id', to: 'orders#execute', as: :execute_order
     get :cancel
   end
 

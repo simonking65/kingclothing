@@ -39,10 +39,13 @@ attr_accessor :return_url, :cancel_url, :payment_method
     #   raise ActiveRecord::Rollback, "Can't place the order"
     # end
     @payment = Payment.new( :order => self )
+    debugger
     if @payment.create
       self.payment_id = @payment.id
       self.state      = @payment.state
-      save
+      self.payment_method = "Paypal"
+      self.pay_type = "paypal"
+      save(validate: false)
       logger.info "@payment save just done"
       logger.info @payment.inspect
     else
@@ -54,14 +57,17 @@ attr_accessor :return_url, :cancel_url, :payment_method
     logger.info payment.inspect
   end
 
-  def execute(payer_id)
+  def execute(payer_id, payment_id)
   	
     #if payment.present?
-       
-      if payment.execute(:payer_id => payer_id)
-      self.state = payment.state
-      save
-
+      if payment = Payment.find(payment_id) 
+        if payment.execute(:payer_id => payer_id)
+          self.state = payment.state
+          save
+        else
+          errors.add :description, payment.error.inspect
+          false
+        end
       else
         errors.add :description, payment.error.inspect
         false
@@ -72,11 +78,13 @@ attr_accessor :return_url, :cancel_url, :payment_method
     #end
   end
 
-  def confirm(payer_id)
+  def confirm(payer_id, payment_id)
     debugger
-    if payment.present?
+    if payment = Payment.find(payment_id)
       debugger 
+      self.name = payment.payer.payer_info.first_name + " " + payment.payer.payer_info.last_name
       self.email = payment.payer.payer_info.email
+      self.address = payment.payer.payer_info.shipping_address.line1
       self.shipping_address1 = payment.payer.payer_info.shipping_address.line1
       save
       #return true
