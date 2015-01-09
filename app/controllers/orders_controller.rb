@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  skip_before_action :authorize, only: [:new, :create, :execute, :cancel]
+  skip_before_action :authorize, only: [:new, :create, :execute, :confirm, :cancel]
   include CurrentCart
   before_action :set_cart, only: [:new, :create, :ppcheckout]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
@@ -75,7 +75,7 @@ class OrdersController < ApplicationController
     
     order = Order.find(params[:order_id])
     debugger  
-    if order.execute(params["payer_id"], params["paymentId"])
+    if order.execute(params["payer_id"], params["payment_id"])
               Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(order).deliver

@@ -7,7 +7,7 @@ class Order < ActiveRecord::Base
 	validates :payment_method, inclusion: PAYMENT_TYPES
 
 after_create :create_payment
-attr_accessor :return_url, :cancel_url, :payment_method
+attr_accessor :return_url, :cancel_url
 	def add_line_items_from_cart(cart)
 		cart.line_items.each do |item|
 			item.cart_id = nil
