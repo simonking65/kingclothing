@@ -61,6 +61,7 @@ attr_accessor :return_url, :cancel_url
   	
     #if payment.present?
       if payment = Payment.find(payment_id) 
+        logger.info "found payment #########"
         if payment.execute(:payer_id => payer_id)
           self.state = payment.state
           save
