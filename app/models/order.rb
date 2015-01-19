@@ -7,7 +7,9 @@ class Order < ActiveRecord::Base
 	validates :payment_method, inclusion: PAYMENT_TYPES
 
 after_create :create_payment
-attr_accessor :return_url, :cancel_url, :payment_method
+#attr_accessor :return_url, :cancel_url, :payment_method
+attr_accessor :return_url, :cancel_url
+
 	def add_line_items_from_cart(cart)
 		cart.line_items.each do |item|
 			item.cart_id = nil
@@ -46,6 +48,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
       self.payment_method = "Paypal"
       self.pay_type = "paypal"
       save(validate: false)
+      self.update_column(:payment_method, "Paypal")
       logger.info "@payment save just done"
       logger.info @payment.inspect
     else
@@ -58,7 +61,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
   end
 
   def execute(payer_id, payment_id)
-  	
+  	debugger
     #if payment.present?
       if payment = Payment.find(payment_id) 
         if payment.execute(:payer_id => payer_id)
@@ -87,6 +90,7 @@ attr_accessor :return_url, :cancel_url, :payment_method
       self.email = payment.payer.payer_info.email
       self.address = payment.payer.payer_info.shipping_address.line1
       self.shipping_address1 = payment.payer.payer_info.shipping_address.line1
+      self.payment_method = "Paypal"
       save
       #return true
       #payment.execute(:payer_id => payer_id)
