@@ -9,7 +9,7 @@ class OrderNotifier < ActionMailer::Base
   def received(order)
     debugger
     @order = order
-
+ logger.info @order.inspect
     mail to: @order.email, subject: 'King Clothing Order Confirmation'
   end
 

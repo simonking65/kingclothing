@@ -23,7 +23,7 @@ end
 #gem 'minitest'
 #gem 'minitest'
 gem 'paypal-sdk-core', '~> 0.3.0',	:git => 'https://github.com/paypal/sdk-core-ruby.git'
-gem 'paypal-sdk-rest', '~> 0.9.1',	:git => 'https://github.com/paypal/rest-api-sdk-ruby.git'
+gem 'paypal-sdk-rest', '~> 0.10.0',	:git => 'https://github.com/paypal/rest-api-sdk-ruby.git'
 gem 'paypal-sdk-merchant'
 #gem 'activemerchant'
 #gem 'settingslogic'
