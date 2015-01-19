@@ -380,43 +380,80 @@ I, [2014-12-29T15:57:01.752411 #14508]  INFO -- :   Rendered line_items/_line_it
 I, [2014-12-29T15:57:01.791414 #14508]  INFO -- :   Rendered order_notifier/received.text.erb (234.0ms)
 I, [2014-12-29T15:57:23.988683 #14508]  INFO -- : 
 Sent mail to simon.king65@gmail.com (894.1ms)
-D, [2014-12-29T15:57:24.363705 #14508] DEBUG -- : Date: Mon, 29 Dec 2014 15:57:23 +0000
-From: Simon King <simon.king65@gmail.com>
-To: simon.king65@gmail.com
-Message-ID: <54a179e327764_38ac401599c3572c@Simon-PC.mail>
-Subject: King Clothing Order Confirmation
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_54a179cdcc728_38ac401599c3562d";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-
-----==_mimepart_54a179cdcc728_38ac401599c3562d
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-Dear s
-
-Thank you for your recent order from King Clothing.
-
-You ordered the following items:
-
- 1 x Camo Print Tee
-We'll send you a separate e-mail when your order ships.
-----==_mimepart_54a179cdcc728_38ac401599c3562d
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<h1>OrderNotifier#received</h1>
-
-<p>
-  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
-</p>
-
-----==_mimepart_54a179cdcc728_38ac401599c3562d--
+D, [2014-12-29T15:57:24.363705 #14508] DEBUG -- : Date: Mon, 29 Dec 2014 15:57:23 +0000
+
+From: Simon King <simon.king65@gmail.com>
+
+To: simon.king65@gmail.com
+
+Message-ID: <54a179e327764_38ac401599c3572c@Simon-PC.mail>
+
+Subject: King Clothing Order Confirmation
+
+Mime-Version: 1.0
+
+Content-Type: multipart/alternative;
+
+ boundary="--==_mimepart_54a179cdcc728_38ac401599c3562d";
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+----==_mimepart_54a179cdcc728_38ac401599c3562d
+
+Content-Type: text/plain;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear s
+
+
+
+Thank you for your recent order from King Clothing.
+
+
+
+You ordered the following items:
+
+
+
+ 1 x Camo Print Tee
+
+We'll send you a separate e-mail when your order ships.
+
+----==_mimepart_54a179cdcc728_38ac401599c3562d
+
+Content-Type: text/html;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+<h1>OrderNotifier#received</h1>
+
+
+
+<p>
+
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+
+</p>
+
+
+
+----==_mimepart_54a179cdcc728_38ac401599c3562d--
+
 
 I, [2014-12-29T15:57:37.612463 #14508]  INFO -- : Redirected to http://localhost:3000/
 I, [2014-12-29T15:57:37.666466 #14508]  INFO -- : Completed 302 Found in 70193ms (ActiveRecord: 265.0ms)
@@ -809,43 +846,80 @@ I, [2014-12-29T16:33:34.721448 #14508]  INFO -- :   Rendered line_items/_line_it
 I, [2014-12-29T16:33:34.756450 #14508]  INFO -- :   Rendered order_notifier/received.text.erb (210.0ms)
 I, [2014-12-29T16:33:35.781508 #14508]  INFO -- : 
 Sent mail to simon.king65@gmail.com (815.0ms)
-D, [2014-12-29T16:33:36.130528 #14508] DEBUG -- : Date: Mon, 29 Dec 2014 16:33:35 +0000
-From: Simon King <simon.king65@gmail.com>
-To: simon.king65@gmail.com
-Message-ID: <54a1825f3c69_38ac550733c359ef@Simon-PC.mail>
-Subject: King Clothing Order Confirmation
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_54a1825ec0bcc_38ac550733c35819";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-
-----==_mimepart_54a1825ec0bcc_38ac550733c35819
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-Dear s
-
-Thank you for your recent order from King Clothing.
-
-You ordered the following items:
-
- 1 x Camo Print Tee
-We'll send you a separate e-mail when your order ships.
-----==_mimepart_54a1825ec0bcc_38ac550733c35819
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<h1>OrderNotifier#received</h1>
-
-<p>
-  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
-</p>
-
-----==_mimepart_54a1825ec0bcc_38ac550733c35819--
+D, [2014-12-29T16:33:36.130528 #14508] DEBUG -- : Date: Mon, 29 Dec 2014 16:33:35 +0000
+
+From: Simon King <simon.king65@gmail.com>
+
+To: simon.king65@gmail.com
+
+Message-ID: <54a1825f3c69_38ac550733c359ef@Simon-PC.mail>
+
+Subject: King Clothing Order Confirmation
+
+Mime-Version: 1.0
+
+Content-Type: multipart/alternative;
+
+ boundary="--==_mimepart_54a1825ec0bcc_38ac550733c35819";
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+----==_mimepart_54a1825ec0bcc_38ac550733c35819
+
+Content-Type: text/plain;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear s
+
+
+
+Thank you for your recent order from King Clothing.
+
+
+
+You ordered the following items:
+
+
+
+ 1 x Camo Print Tee
+
+We'll send you a separate e-mail when your order ships.
+
+----==_mimepart_54a1825ec0bcc_38ac550733c35819
+
+Content-Type: text/html;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+<h1>OrderNotifier#received</h1>
+
+
+
+<p>
+
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+
+</p>
+
+
+
+----==_mimepart_54a1825ec0bcc_38ac550733c35819--
+
 
 I, [2014-12-29T16:33:36.171531 #14508]  INFO -- : Redirected to http://localhost:3000/
 I, [2014-12-29T16:33:36.209533 #14508]  INFO -- : Completed 302 Found in 14627ms (ActiveRecord: 297.0ms)
@@ -1224,43 +1298,80 @@ I, [2014-12-29T16:41:11.486155 #14508]  INFO -- :   Rendered line_items/_line_it
 I, [2014-12-29T16:41:11.530158 #14508]  INFO -- :   Rendered order_notifier/received.text.erb (285.0ms)
 I, [2014-12-29T16:41:13.313260 #14508]  INFO -- : 
 Sent mail to simon.king65@gmail.com (1522.1ms)
-D, [2014-12-29T16:41:13.710283 #14508] DEBUG -- : Date: Mon, 29 Dec 2014 16:41:11 +0000
-From: Simon King <simon.king65@gmail.com>
-To: simon.king65@gmail.com
-Message-ID: <54a18427d1841_38ac5051644361c0@Simon-PC.mail>
-Subject: King Clothing Order Confirmation
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_54a184278ab60_38ac50516443604a";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-
-----==_mimepart_54a184278ab60_38ac50516443604a
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-Dear s
-
-Thank you for your recent order from King Clothing.
-
-You ordered the following items:
-
- 1 x Camo Print Tee
-We'll send you a separate e-mail when your order ships.
-----==_mimepart_54a184278ab60_38ac50516443604a
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<h1>OrderNotifier#received</h1>
-
-<p>
-  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
-</p>
-
-----==_mimepart_54a184278ab60_38ac50516443604a--
+D, [2014-12-29T16:41:13.710283 #14508] DEBUG -- : Date: Mon, 29 Dec 2014 16:41:11 +0000
+
+From: Simon King <simon.king65@gmail.com>
+
+To: simon.king65@gmail.com
+
+Message-ID: <54a18427d1841_38ac5051644361c0@Simon-PC.mail>
+
+Subject: King Clothing Order Confirmation
+
+Mime-Version: 1.0
+
+Content-Type: multipart/alternative;
+
+ boundary="--==_mimepart_54a184278ab60_38ac50516443604a";
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+----==_mimepart_54a184278ab60_38ac50516443604a
+
+Content-Type: text/plain;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear s
+
+
+
+Thank you for your recent order from King Clothing.
+
+
+
+You ordered the following items:
+
+
+
+ 1 x Camo Print Tee
+
+We'll send you a separate e-mail when your order ships.
+
+----==_mimepart_54a184278ab60_38ac50516443604a
+
+Content-Type: text/html;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+<h1>OrderNotifier#received</h1>
+
+
+
+<p>
+
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+
+</p>
+
+
+
+----==_mimepart_54a184278ab60_38ac50516443604a--
+
 
 I, [2014-12-29T16:41:13.754285 #14508]  INFO -- : Redirected to http://localhost:3000/
 I, [2014-12-29T16:41:13.796287 #14508]  INFO -- : Completed 302 Found in 15375ms (ActiveRecord: 287.0ms)
@@ -2014,43 +2125,80 @@ I, [2014-12-29T21:48:29.987410 #17280]  INFO -- :   Rendered line_items/_line_it
 I, [2014-12-29T21:48:30.037411 #17280]  INFO -- :   Rendered order_notifier/received.text.erb (292.5ms)
 I, [2014-12-29T21:48:31.334931 #17280]  INFO -- : 
 Sent mail to simon.king65@gmail.com (1005.0ms)
-D, [2014-12-29T21:48:31.774937 #17280] DEBUG -- : Date: Mon, 29 Dec 2014 21:48:30 +0000
-From: Simon King <simon.king65@gmail.com>
-To: simon.king65@gmail.com
-Message-ID: <54a1cc2e65e89_43803fd270038560@Simon-PC.mail>
-Subject: King Clothing Order Confirmation
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_54a1cc2e14bb0_43803fd270038464";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-
-----==_mimepart_54a1cc2e14bb0_43803fd270038464
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-Dear s
-
-Thank you for your recent order from King Clothing.
-
-You ordered the following items:
-
- 1 x Camo Print Tee
-We'll send you a separate e-mail when your order ships.
-----==_mimepart_54a1cc2e14bb0_43803fd270038464
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<h1>OrderNotifier#received</h1>
-
-<p>
-  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
-</p>
-
-----==_mimepart_54a1cc2e14bb0_43803fd270038464--
+D, [2014-12-29T21:48:31.774937 #17280] DEBUG -- : Date: Mon, 29 Dec 2014 21:48:30 +0000
+
+From: Simon King <simon.king65@gmail.com>
+
+To: simon.king65@gmail.com
+
+Message-ID: <54a1cc2e65e89_43803fd270038560@Simon-PC.mail>
+
+Subject: King Clothing Order Confirmation
+
+Mime-Version: 1.0
+
+Content-Type: multipart/alternative;
+
+ boundary="--==_mimepart_54a1cc2e14bb0_43803fd270038464";
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+----==_mimepart_54a1cc2e14bb0_43803fd270038464
+
+Content-Type: text/plain;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear s
+
+
+
+Thank you for your recent order from King Clothing.
+
+
+
+You ordered the following items:
+
+
+
+ 1 x Camo Print Tee
+
+We'll send you a separate e-mail when your order ships.
+
+----==_mimepart_54a1cc2e14bb0_43803fd270038464
+
+Content-Type: text/html;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+<h1>OrderNotifier#received</h1>
+
+
+
+<p>
+
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+
+</p>
+
+
+
+----==_mimepart_54a1cc2e14bb0_43803fd270038464--
+
 
 I, [2014-12-29T21:48:31.824938 #17280]  INFO -- : Redirected to http://localhost:3000/
 I, [2014-12-29T21:48:31.879939 #17280]  INFO -- : Completed 302 Found in 17122ms (ActiveRecord: 267.5ms)
@@ -2822,43 +2970,80 @@ I, [2015-01-01T10:04:16.920715 #10344]  INFO -- :   Rendered line_items/_line_it
 I, [2015-01-01T10:04:16.965718 #10344]  INFO -- :   Rendered order_notifier/received.text.erb (803.0ms)
 I, [2015-01-01T10:04:18.150786 #10344]  INFO -- : 
 Sent mail to s (900.1ms)
-D, [2015-01-01T10:04:18.666815 #10344] DEBUG -- : Date: Thu, 01 Jan 2015 10:04:17 +0000
-From: Simon King <simon.king65@gmail.com>
-To: s
-Message-ID: <54a51ba15b3ed_28684f4b218225fc@Simon-PC.mail>
-Subject: King Clothing Order Confirmation
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_54a51ba150f1_28684f4b218224d6";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-
-----==_mimepart_54a51ba150f1_28684f4b218224d6
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-Dear s
-
-Thank you for your recent order from King Clothing.
-
-You ordered the following items:
-
- 1 x Camo Print Tee
-We'll send you a separate e-mail when your order ships.
-----==_mimepart_54a51ba150f1_28684f4b218224d6
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<h1>OrderNotifier#received</h1>
-
-<p>
-  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
-</p>
-
-----==_mimepart_54a51ba150f1_28684f4b218224d6--
+D, [2015-01-01T10:04:18.666815 #10344] DEBUG -- : Date: Thu, 01 Jan 2015 10:04:17 +0000
+
+From: Simon King <simon.king65@gmail.com>
+
+To: s
+
+Message-ID: <54a51ba15b3ed_28684f4b218225fc@Simon-PC.mail>
+
+Subject: King Clothing Order Confirmation
+
+Mime-Version: 1.0
+
+Content-Type: multipart/alternative;
+
+ boundary="--==_mimepart_54a51ba150f1_28684f4b218224d6";
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+----==_mimepart_54a51ba150f1_28684f4b218224d6
+
+Content-Type: text/plain;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear s
+
+
+
+Thank you for your recent order from King Clothing.
+
+
+
+You ordered the following items:
+
+
+
+ 1 x Camo Print Tee
+
+We'll send you a separate e-mail when your order ships.
+
+----==_mimepart_54a51ba150f1_28684f4b218224d6
+
+Content-Type: text/html;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+<h1>OrderNotifier#received</h1>
+
+
+
+<p>
+
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+
+</p>
+
+
+
+----==_mimepart_54a51ba150f1_28684f4b218224d6--
+
 
 I, [2015-01-01T10:04:18.721818 #10344]  INFO -- : Redirected to http://localhost:3000/
 I, [2015-01-01T10:04:18.779822 #10344]  INFO -- : Completed 302 Found in 32977ms (ActiveRecord: 290.0ms)
@@ -4066,42 +4251,78 @@ I, [2015-01-01T17:25:03.557328 #10344]  INFO -- :   Rendered line_items/_line_it
 I, [2015-01-01T17:25:03.603331 #10344]  INFO -- :   Rendered order_notifier/received.text.erb (1119.1ms)
 I, [2015-01-01T17:25:07.013526 #10344]  INFO -- : 
 Sent mail to  (1710.1ms)
-D, [2015-01-01T17:25:07.286542 #10344] DEBUG -- : Date: Thu, 01 Jan 2015 17:25:05 +0000
-From: Simon King <simon.king65@gmail.com>
-Message-ID: <54a582f1c84ea_2868262d5702275f@Simon-PC.mail>
-Subject: King Clothing Order Confirmation
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_54a582f0715fc_2868262d570226eb";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-
-----==_mimepart_54a582f0715fc_2868262d570226eb
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-Dear 
-
-Thank you for your recent order from King Clothing.
-
-You ordered the following items:
-
- 1 x Camo Print Tee
-We'll send you a separate e-mail when your order ships.
-----==_mimepart_54a582f0715fc_2868262d570226eb
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<h1>OrderNotifier#received</h1>
-
-<p>
-  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
-</p>
-
-----==_mimepart_54a582f0715fc_2868262d570226eb--
+D, [2015-01-01T17:25:07.286542 #10344] DEBUG -- : Date: Thu, 01 Jan 2015 17:25:05 +0000
+
+From: Simon King <simon.king65@gmail.com>
+
+Message-ID: <54a582f1c84ea_2868262d5702275f@Simon-PC.mail>
+
+Subject: King Clothing Order Confirmation
+
+Mime-Version: 1.0
+
+Content-Type: multipart/alternative;
+
+ boundary="--==_mimepart_54a582f0715fc_2868262d570226eb";
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+----==_mimepart_54a582f0715fc_2868262d570226eb
+
+Content-Type: text/plain;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear 
+
+
+
+Thank you for your recent order from King Clothing.
+
+
+
+You ordered the following items:
+
+
+
+ 1 x Camo Print Tee
+
+We'll send you a separate e-mail when your order ships.
+
+----==_mimepart_54a582f0715fc_2868262d570226eb
+
+Content-Type: text/html;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+<h1>OrderNotifier#received</h1>
+
+
+
+<p>
+
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+
+</p>
+
+
+
+----==_mimepart_54a582f0715fc_2868262d570226eb--
+
 
 I, [2015-01-01T17:25:07.601560 #10344]  INFO -- : Redirected to http://localhost:3000/
 I, [2015-01-01T17:25:07.633561 #10344]  INFO -- : Completed 302 Found in 23180024ms (ActiveRecord: 424.0ms)
@@ -12198,6 +12419,7 @@ D, [2015-01-08T07:57:48.956699 #32115] DEBUG -- :   [1m[35mLineItem Load (0.6m
 I, [2015-01-08T07:57:48.958779 #32115]  INFO -- :   Rendered collection (0.3ms)
 I, [2015-01-08T07:57:48.983470 #32115]  INFO -- :   Rendered carts/_cart.html.erb (34.5ms)
 I, [2015-01-08T07:57:48.993643 #32115]  INFO -- : Completed 200 OK in 355ms (Views: 305.3ms | ActiveRecord: 5.4ms)
+<<<<<<< HEAD
 D, [2015-01-08T20:41:25.773603 #2104] DEBUG -- : 
 D, [2015-01-08T20:41:25.799604 #2104] DEBUG -- : 
 I, [2015-01-08T20:41:25.849607 #2104]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-08 20:41:25 +0000
@@ -14442,43 +14664,80 @@ I, [2015-01-09T07:25:44.577578 #7440]  INFO -- :   Rendered line_items/_line_ite
 I, [2015-01-09T07:25:44.619580 #7440]  INFO -- :   Rendered order_notifier/received.text.erb (284.0ms)
 I, [2015-01-09T07:25:45.885653 #7440]  INFO -- : 
 Sent mail to simon.king65-buyer@gmail.com (936.1ms)
-D, [2015-01-09T07:25:46.339679 #7440] DEBUG -- : Date: Fri, 09 Jan 2015 07:25:45 +0000
-From: Simon King <simon.king65@gmail.com>
-To: simon.king65-buyer@gmail.com
-Message-ID: <54af8279aa55_1d1048238b4774cb@Simon-PC.mail>
-Subject: King Clothing Order Confirmation
-Mime-Version: 1.0
-Content-Type: multipart/alternative;
- boundary="--==_mimepart_54af8278a2fbf_1d1048238b4773ed";
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-
-----==_mimepart_54af8278a2fbf_1d1048238b4773ed
-Content-Type: text/plain;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-Dear Test Buyer
-
-Thank you for your recent order from King Clothing.
-
-You ordered the following items:
-
- 1 x Camo Print Tee
-We'll send you a separate e-mail when your order ships.
-----==_mimepart_54af8278a2fbf_1d1048238b4773ed
-Content-Type: text/html;
- charset=UTF-8
-Content-Transfer-Encoding: 7bit
-
-<h1>OrderNotifier#received</h1>
-
-<p>
-  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
-</p>
-
-----==_mimepart_54af8278a2fbf_1d1048238b4773ed--
+D, [2015-01-09T07:25:46.339679 #7440] DEBUG -- : Date: Fri, 09 Jan 2015 07:25:45 +0000
+
+From: Simon King <simon.king65@gmail.com>
+
+To: simon.king65-buyer@gmail.com
+
+Message-ID: <54af8279aa55_1d1048238b4774cb@Simon-PC.mail>
+
+Subject: King Clothing Order Confirmation
+
+Mime-Version: 1.0
+
+Content-Type: multipart/alternative;
+
+ boundary="--==_mimepart_54af8278a2fbf_1d1048238b4773ed";
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+----==_mimepart_54af8278a2fbf_1d1048238b4773ed
+
+Content-Type: text/plain;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+Dear Test Buyer
+
+
+
+Thank you for your recent order from King Clothing.
+
+
+
+You ordered the following items:
+
+
+
+ 1 x Camo Print Tee
+
+We'll send you a separate e-mail when your order ships.
+
+----==_mimepart_54af8278a2fbf_1d1048238b4773ed
+
+Content-Type: text/html;
+
+ charset=UTF-8
+
+Content-Transfer-Encoding: 7bit
+
+
+
+<h1>OrderNotifier#received</h1>
+
+
+
+<p>
+
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+
+</p>
+
+
+
+----==_mimepart_54af8278a2fbf_1d1048238b4773ed--
+
 
 I, [2015-01-09T07:25:46.379681 #7440]  INFO -- : Redirected to http://localhost:3000/
 I, [2015-01-09T07:25:46.426684 #7440]  INFO -- : Completed 302 Found in 618017ms (ActiveRecord: 218.0ms)
@@ -14874,3 +15133,806 @@ I, [2015-01-09T07:48:25.821563 #7440]  INFO -- : Started GET "/assets/est%202014
 D, [2015-01-09T07:48:25.893567 #7440] DEBUG -- : 
 D, [2015-01-09T07:48:25.915568 #7440] DEBUG -- : 
 I, [2015-01-09T07:48:25.973572 #7440]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-01-09 07:48:25 +0000
+=======
+D, [2015-01-09T22:56:51.331605 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:51.344782 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:51.348066 #33792]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-09 22:56:51 +0000
+D, [2015-01-09T22:56:52.291673 #33792] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-01-09T22:56:52.607054 #33792]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-01-09T22:56:52.820715 #33792] DEBUG -- :   [1m[35mCart Load (21.9ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-01-09T22:56:52.915545 #33792] DEBUG -- :   [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1[0m
+I, [2015-01-09T22:56:52.976775 #33792]  INFO -- : Cache digest for store/index.html: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-01-09T22:56:53.011410 #33792]  INFO -- : Read fragment views/store/products/2-20141022062504570899000/a93d4e2e981ab3dfce98a095c3b6c059 (23.1ms)
+I, [2015-01-09T22:56:53.011658 #33792]  INFO -- :   Rendered store/index.html.erb within layouts/application (112.9ms)
+D, [2015-01-09T22:56:53.599724 #33792] DEBUG -- :   [1m[35mLineItem Exists (19.3ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-01-09T22:56:53.720083 #33792] DEBUG -- :   [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-01-09T22:56:53.720417 #33792]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-01-09T22:56:53.880758 #33792]  INFO -- :   Rendered carts/_cart.html.erb (162.6ms)
+I, [2015-01-09T22:56:53.882016 #33792]  INFO -- : Completed 200 OK in 1275ms (Views: 1022.9ms | ActiveRecord: 43.4ms)
+D, [2015-01-09T22:56:57.570663 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:57.611982 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:57.612356 #33792]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:57 +0000
+D, [2015-01-09T22:56:57.624382 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:57.624462 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:57.624670 #33792]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:57 +0000
+D, [2015-01-09T22:56:57.634404 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:57.634589 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:57.634776 #33792]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:57 +0000
+D, [2015-01-09T22:56:57.887227 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:57.887312 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:57.887488 #33792]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:57 +0000
+D, [2015-01-09T22:56:57.894629 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:57.894705 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:57.894908 #33792]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:57 +0000
+D, [2015-01-09T22:56:57.901986 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:57.902091 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:57.902286 #33792]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:57 +0000
+D, [2015-01-09T22:56:57.909482 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:57.909559 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:57.909749 #33792]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:57 +0000
+D, [2015-01-09T22:56:58.074953 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.075050 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.075289 #33792]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.088189 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.091446 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.091981 #33792]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.337855 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.337937 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.338158 #33792]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.345073 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.345152 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.345340 #33792]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.353953 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.354079 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.354270 #33792]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.403186 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.403265 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.403529 #33792]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.458340 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.458429 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.458699 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.598913 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.599117 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.599348 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.943144 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.943233 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.943438 #33792]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.953530 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.953626 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.953831 #33792]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.962612 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.962692 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.962896 #33792]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.973361 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.974010 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.974245 #33792]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.982935 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.983017 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.983255 #33792]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:58.992883 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:58.993026 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:58.993314 #33792]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:58 +0000
+D, [2015-01-09T22:56:59.012768 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.012861 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.013064 #33792]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:56:59.023608 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.023730 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.023969 #33792]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:56:59.142648 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.142728 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.142904 #33792]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:56:59.153597 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.153685 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.153882 #33792]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:56:59.247521 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.247598 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.247776 #33792]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:56:59.254722 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.254800 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.254968 #33792]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:56:59.323650 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.323728 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.323929 #33792]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:56:59.372278 #33792] DEBUG -- : 
+D, [2015-01-09T22:56:59.372459 #33792] DEBUG -- : 
+I, [2015-01-09T22:56:59.372573 #33792]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2015-01-09 22:56:59 +0000
+D, [2015-01-09T22:57:01.281588 #33792] DEBUG -- : 
+D, [2015-01-09T22:57:01.281673 #33792] DEBUG -- : 
+I, [2015-01-09T22:57:01.282082 #33792]  INFO -- : Started GET "/assets/kingclothingnyc.png" for 127.0.0.1 at 2015-01-09 22:57:01 +0000
+D, [2015-01-09T22:57:21.967107 #33792] DEBUG -- : 
+D, [2015-01-09T22:57:21.980206 #33792] DEBUG -- : 
+I, [2015-01-09T22:57:21.980523 #33792]  INFO -- : Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-01-09 22:57:21 +0000
+I, [2015-01-09T22:57:22.003597 #33792]  INFO -- : Processing by LineItemsController#create as JS
+I, [2015-01-09T22:57:22.018166 #33792]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+D, [2015-01-09T22:57:22.020515 #33792] DEBUG -- :   [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-01-09T22:57:22.021657 #33792] DEBUG -- :   [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "1"]]
+D, [2015-01-09T22:57:22.031036 #33792] DEBUG -- :   [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 1 LIMIT 1  [["cart_id", 53]]
+D, [2015-01-09T22:57:22.134597 #33792] DEBUG -- :   [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2015-01-09T22:57:22.179677 #33792] DEBUG -- :   [1m[35m (0.2ms)[0m  begin transaction
+D, [2015-01-09T22:57:22.248734 #33792] DEBUG -- :   [1m[36mSQL (47.8ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 53], ["created_at", Fri, 09 Jan 2015 22:57:22 UTC +00:00], ["product_id", 1], ["productprice", #<BigDecimal:7fe34f9488d0,'0.1299E2',18(36)>], ["size", "extra small"], ["updated_at", Fri, 09 Jan 2015 22:57:22 UTC +00:00]]
+D, [2015-01-09T22:57:22.264248 #33792] DEBUG -- :   [1m[35m (14.9ms)[0m  commit transaction
+D, [2015-01-09T22:57:22.299193 #33792] DEBUG -- :   [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-01-09T22:57:22.357287 #33792]  INFO -- :   Rendered line_items/_line_item.html.erb (25.2ms)
+I, [2015-01-09T22:57:22.359544 #33792]  INFO -- :   Rendered carts/_cart.html.erb (62.7ms)
+I, [2015-01-09T22:57:22.360162 #33792]  INFO -- :   Rendered line_items/create.js.erb (75.6ms)
+I, [2015-01-09T22:57:22.360497 #33792]  INFO -- : Completed 200 OK in 342ms (Views: 95.5ms | ActiveRecord: 64.1ms)
+D, [2015-01-09T22:57:24.204260 #33792] DEBUG -- : 
+D, [2015-01-09T22:57:24.204385 #33792] DEBUG -- : 
+I, [2015-01-09T22:57:24.204762 #33792]  INFO -- : Started POST "/line_items?product_id=2" for 127.0.0.1 at 2015-01-09 22:57:24 +0000
+I, [2015-01-09T22:57:24.211184 #33792]  INFO -- : Processing by LineItemsController#create as JS
+I, [2015-01-09T22:57:24.211287 #33792]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"2"}
+D, [2015-01-09T22:57:24.212962 #33792] DEBUG -- :   [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-01-09T22:57:24.214502 #33792] DEBUG -- :   [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", "2"]]
+D, [2015-01-09T22:57:24.215882 #33792] DEBUG -- :   [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 2 LIMIT 1  [["cart_id", 53]]
+D, [2015-01-09T22:57:24.217263 #33792] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+D, [2015-01-09T22:57:24.217788 #33792] DEBUG -- :   [1m[35m (0.1ms)[0m  begin transaction
+D, [2015-01-09T22:57:24.219499 #33792] DEBUG -- :   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 53], ["created_at", Fri, 09 Jan 2015 22:57:24 UTC +00:00], ["product_id", 2], ["productprice", #<BigDecimal:7fe34c755f08,'0.1099E2',18(36)>], ["size", "extra small"], ["updated_at", Fri, 09 Jan 2015 22:57:24 UTC +00:00]]
+D, [2015-01-09T22:57:24.222967 #33792] DEBUG -- :   [1m[35m (3.0ms)[0m  commit transaction
+D, [2015-01-09T22:57:24.235042 #33792] DEBUG -- :   [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+D, [2015-01-09T22:57:24.250794 #33792] DEBUG -- :   [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+I, [2015-01-09T22:57:24.252297 #33792]  INFO -- :   Rendered line_items/_line_item.html.erb (14.3ms)
+I, [2015-01-09T22:57:24.253960 #33792]  INFO -- :   Rendered carts/_cart.html.erb (21.1ms)
+I, [2015-01-09T22:57:24.254264 #33792]  INFO -- :   Rendered line_items/create.js.erb (22.5ms)
+I, [2015-01-09T22:57:24.254560 #33792]  INFO -- : Completed 200 OK in 43ms (Views: 30.6ms | ActiveRecord: 4.9ms)
+D, [2015-01-09T22:57:39.244723 #33792] DEBUG -- : 
+D, [2015-01-09T22:57:39.244802 #33792] DEBUG -- : 
+I, [2015-01-09T22:57:39.244959 #33792]  INFO -- : Started GET "/orders/ppcheckout" for 127.0.0.1 at 2015-01-09 22:57:39 +0000
+I, [2015-01-09T22:57:39.261653 #33792]  INFO -- : Processing by OrdersController#ppcheckout as HTML
+D, [2015-01-09T22:57:39.301685 #33792] DEBUG -- :   [1m[36mUser Load (20.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+D, [2015-01-09T22:57:39.319619 #33792] DEBUG -- :   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'Ollie' LIMIT 1
+D, [2015-01-09T22:57:39.320794 #33792] DEBUG -- :   [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 53]]
+D, [2015-01-09T22:57:39.341868 #33792] DEBUG -- :   [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
+I, [2015-01-09T22:57:39.384727 #33792]  INFO -- : #<Order id: nil, name: nil, address: nil, email: nil, pay_type: nil, created_at: nil, updated_at: nil, payment_method: "Paypal", payment_id: nil, state: nil, amount: nil, description: nil, shipping_address1: nil>
+D, [2015-01-09T22:57:56.137121 #33792] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+D, [2015-01-09T22:57:56.262670 #33792] DEBUG -- :   [1m[35mSQL (93.9ms)[0m  INSERT INTO "orders" ("created_at", "payment_method", "updated_at") VALUES (?, ?, ?)  [["created_at", Fri, 09 Jan 2015 22:57:56 UTC +00:00], ["payment_method", "Paypal"], ["updated_at", Fri, 09 Jan 2015 22:57:56 UTC +00:00]]
+D, [2015-01-09T22:57:56.282464 #33792] DEBUG -- :   [1m[36mSQL (1.4ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 145[0m  [["cart_id", nil], ["order_id", 79], ["updated_at", Fri, 09 Jan 2015 22:57:56 UTC +00:00]]
+D, [2015-01-09T22:57:56.294840 #33792] DEBUG -- :   [1m[35mSQL (1.9ms)[0m  UPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 146  [["cart_id", nil], ["order_id", 79], ["updated_at", Fri, 09 Jan 2015 22:57:56 UTC +00:00]]
+I, [2015-01-09T22:57:56.296321 #33792]  INFO -- : about to @payment.create
+D, [2015-01-09T22:57:57.998580 #33792] DEBUG -- :   [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+D, [2015-01-09T22:57:58.006122 #33792] DEBUG -- :   [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 2]]
+I, [2015-01-09T22:57:59.478727 #33792]  INFO -- : in order=
+I, [2015-01-09T22:58:14.711012 #33792]  INFO -- : in payment.create
+I, [2015-01-09T22:58:14.717363 #33792]  INFO -- : {"intent"=>"sale", "payer"=>{"payment_method"=>"paypal"}, "transactions"=>[{"amount"=>{"currency"=>"GBP", "total"=>"23.98"}, "description"=>"King Clothing", "item_list"=>{"items"=>[{"quantity"=>"1", "name"=>"camo print tee", "price"=>"12.99", "currency"=>"GBP", "sku"=>"camo print tee"}, {"quantity"=>"1", "name"=>"est 2014 tee", "price"=>"10.99", "currency"=>"GBP", "sku"=>"est 2014 tee"}]}}], "redirect_urls"=>{"return_url"=>"http://localhost:3000/orders/79/confirm", "cancel_url"=>"http://localhost:3000/orders/79/cancel"}}
+I, [2015-01-09T22:58:14.719837 #33792]  INFO -- : #<ActiveModel::Errors:0x007fe34c08cfa0 @base=#<Payment:0x007fe34e184820 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34e17dcc8 @error=nil, @payment_method="paypal">, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34bf089e0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34bf021d0 @error=nil, @total="23.98", @currency="GBP">, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34bef2578 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34bee8190 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34bec6630 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34c31b488 @error=nil, @return_url="http://localhost:3000/orders/79/confirm", @cancel_url="http://localhost:3000/orders/79/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe34c08cfa0 ...>>, @messages={}>
+I, [2015-01-09T22:58:14.720401 #33792]  INFO -- : got past invalid
+I, [2015-01-09T22:58:14.894099 #33792]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/oauth2/token
+I, [2015-01-09T22:58:17.170502 #33792]  INFO -- : Response[200]: OK, Duration: 2.276s
+I, [2015-01-09T22:58:17.185467 #33792]  INFO -- : PayPal-Request-Id: 37fd826f-b818-4784-a08b-52ffa164abf7
+I, [2015-01-09T22:58:17.186166 #33792]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment
+I, [2015-01-09T22:58:18.705257 #33792]  INFO -- : Response[201]: Created, Duration: 1.518s
+I, [2015-01-09T22:58:18.710601 #33792]  INFO -- : back from super
+I, [2015-01-09T22:58:18.718602 #33792]  INFO -- : {"id"=>"PAY-0YF71008GL126062HKSYF2CQ", "intent"=>"sale", "payer"=>{"payment_method"=>"paypal"}, "transactions"=>[{"amount"=>{"currency"=>"GBP", "total"=>"23.98", "details"=>{"subtotal"=>"23.98"}}, "description"=>"King Clothing", "item_list"=>{"items"=>[{"quantity"=>"1", "name"=>"camo print tee", "price"=>"12.99", "currency"=>"GBP", "sku"=>"camo print tee"}, {"quantity"=>"1", "name"=>"est 2014 tee", "price"=>"10.99", "currency"=>"GBP", "sku"=>"est 2014 tee"}]}}], "state"=>"created", "redirect_urls"=>{"return_url"=>"http://localhost:3000/orders/79/confirm", "cancel_url"=>"http://localhost:3000/orders/79/cancel"}, "create_time"=>"2015-01-09T22:58:18Z", "update_time"=>"2015-01-09T22:58:18Z", "links"=>[{"href"=>"https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ", "rel"=>"self", "method"=>"GET"}, {"href"=>"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A", "rel"=>"approval_url", "method"=>"REDIRECT"}, {"href"=>"https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ/execute", "rel"=>"execute", "method"=>"POST"}]}
+D, [2015-01-09T22:58:27.291840 #33792] DEBUG -- :   [1m[36mSQL (2.9ms)[0m  [1mUPDATE "orders" SET "payment_method" = ?, "created_at" = ?, "updated_at" = ?, "id" = ?, "payment_id" = ?, "state" = ?, "pay_type" = ? WHERE "orders"."id" = 79[0m  [["payment_method", "Paypal"], ["created_at", Fri, 09 Jan 2015 22:57:56 UTC +00:00], ["updated_at", Fri, 09 Jan 2015 22:57:56 UTC +00:00], ["id", 79], ["payment_id", "PAY-0YF71008GL126062HKSYF2CQ"], ["state", "created"], ["pay_type", "paypal"]]
+I, [2015-01-09T22:58:27.295703 #33792]  INFO -- : @payment save just done
+I, [2015-01-09T22:58:27.297398 #33792]  INFO -- : #<Payment:0x007fe34e184820 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34e402250 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34e401a58 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34e4015d0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34e400ae0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34e400658 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34fc8b7b8 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34fc8a890 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc89d50 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc83ef0 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34c31b488 @error=nil, @return_url="http://localhost:3000/orders/79/confirm", @cancel_url="http://localhost:3000/orders/79/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe34c08cfa0 @base=#<Payment:0x007fe34e184820 ...>, @messages={}>, @request_id="37fd826f-b818-4784-a08b-52ffa164abf7", @header={}, @id="PAY-0YF71008GL126062HKSYF2CQ", @create_time="2015-01-09T22:58:18Z", @update_time="2015-01-09T22:58:18Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc81498 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7be80 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7aa08 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T22:58:27.298677 #33792]  INFO -- : #<Payment:0x007fe34e184820 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34e402250 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34e401a58 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34e4015d0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34e400ae0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34e400658 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34fc8b7b8 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34fc8a890 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc89d50 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc83ef0 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34c31b488 @error=nil, @return_url="http://localhost:3000/orders/79/confirm", @cancel_url="http://localhost:3000/orders/79/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe34c08cfa0 @base=#<Payment:0x007fe34e184820 ...>, @messages={}>, @request_id="37fd826f-b818-4784-a08b-52ffa164abf7", @header={}, @id="PAY-0YF71008GL126062HKSYF2CQ", @create_time="2015-01-09T22:58:18Z", @update_time="2015-01-09T22:58:18Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc81498 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7be80 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7aa08 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ/execute", @rel="execute", @method="POST">]>
+D, [2015-01-09T22:58:27.302804 #33792] DEBUG -- :   [1m[35m (3.0ms)[0m  commit transaction
+D, [2015-01-09T22:58:27.311070 #33792] DEBUG -- :   [1m[36mSQL (2.1ms)[0m  [1mUPDATE "orders" SET "payment_method" = 'Paypal' WHERE "orders"."id" = 79[0m
+I, [2015-01-09T22:58:27.313788 #33792]  INFO -- : about to approve url
+I, [2015-01-09T22:58:27.315596 #33792]  INFO -- : #<Payment:0x007fe34e184820 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34e402250 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34e401a58 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34e4015d0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34e400ae0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34e400658 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34fc8b7b8 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34fc8a890 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc89d50 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc83ef0 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34c31b488 @error=nil, @return_url="http://localhost:3000/orders/79/confirm", @cancel_url="http://localhost:3000/orders/79/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe34c08cfa0 @base=#<Payment:0x007fe34e184820 ...>, @messages={}>, @request_id="37fd826f-b818-4784-a08b-52ffa164abf7", @header={}, @id="PAY-0YF71008GL126062HKSYF2CQ", @create_time="2015-01-09T22:58:18Z", @update_time="2015-01-09T22:58:18Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc81498 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7be80 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7aa08 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T22:58:27.316901 #33792]  INFO -- : #<Payment:0x007fe34e184820 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34e402250 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34e401a58 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34e4015d0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34e400ae0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34e400658 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34fc8b7b8 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34fc8a890 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc89d50 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc83ef0 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34c31b488 @error=nil, @return_url="http://localhost:3000/orders/79/confirm", @cancel_url="http://localhost:3000/orders/79/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe34c08cfa0 @base=#<Payment:0x007fe34e184820 ...>, @messages={}>, @request_id="37fd826f-b818-4784-a08b-52ffa164abf7", @header={}, @id="PAY-0YF71008GL126062HKSYF2CQ", @create_time="2015-01-09T22:58:18Z", @update_time="2015-01-09T22:58:18Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc81498 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7be80 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7aa08 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T22:58:27.317530 #33792]  INFO -- : https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A
+I, [2015-01-09T22:58:27.318752 #33792]  INFO -- : #<Payment:0x007fe34e184820 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34e402250 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34e401a58 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34e4015d0 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34e400ae0 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34e400658 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34fc8b7b8 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34fc8a890 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc89d50 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc83ef0 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34c31b488 @error=nil, @return_url="http://localhost:3000/orders/79/confirm", @cancel_url="http://localhost:3000/orders/79/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe34c08cfa0 @base=#<Payment:0x007fe34e184820 ...>, @messages={}>, @request_id="37fd826f-b818-4784-a08b-52ffa164abf7", @header={}, @id="PAY-0YF71008GL126062HKSYF2CQ", @create_time="2015-01-09T22:58:18Z", @update_time="2015-01-09T22:58:18Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc81498 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7be80 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34fc7aa08 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T22:58:27.321050 #33792]  INFO -- : Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-72L604176R928652A
+I, [2015-01-09T22:58:27.323457 #33792]  INFO -- : Completed 403 Forbidden in 48061ms (ActiveRecord: 129.2ms)
+D, [2015-01-09T22:59:11.084901 #33792] DEBUG -- : 
+D, [2015-01-09T22:59:11.119865 #33792] DEBUG -- : 
+I, [2015-01-09T22:59:11.125260 #33792]  INFO -- : Started GET "/orders/79/confirm?paymentId=PAY-0YF71008GL126062HKSYF2CQ&token=EC-72L604176R928652A&PayerID=2VZ7YQDDDPPC4" for 127.0.0.1 at 2015-01-09 22:59:11 +0000
+I, [2015-01-09T22:59:11.155397 #33792]  INFO -- : Processing by OrdersController#confirm as HTML
+I, [2015-01-09T22:59:11.155932 #33792]  INFO -- :   Parameters: {"paymentId"=>"PAY-0YF71008GL126062HKSYF2CQ", "token"=>"EC-72L604176R928652A", "PayerID"=>"2VZ7YQDDDPPC4", "order_id"=>"79"}
+D, [2015-01-09T22:59:11.162784 #33792] DEBUG -- :   [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+D, [2015-01-09T22:59:11.169218 #33792] DEBUG -- :   [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'Ollie' LIMIT 1[0m
+D, [2015-01-09T22:59:11.174703 #33792] DEBUG -- :   [1m[35mOrder Load (0.9ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", "79"]]
+I, [2015-01-09T22:59:52.003505 #33792]  INFO -- : Request[get]: https://api.sandbox.paypal.com/v1/payments/payment/PAY-0YF71008GL126062HKSYF2CQ
+I, [2015-01-09T22:59:53.722685 #33792]  INFO -- : Response[200]: OK, Duration: 1.718s
+D, [2015-01-09T23:00:07.899310 #33792] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+D, [2015-01-09T23:00:07.915180 #33792] DEBUG -- :   [1m[35mSQL (4.8ms)[0m  UPDATE "orders" SET "name" = ?, "email" = ?, "address" = ?, "shipping_address1" = ?, "updated_at" = ? WHERE "orders"."id" = 79  [["name", "Test Buyer"], ["email", "simon.king65-buyer@gmail.com"], ["address", "1 Main Terrace"], ["shipping_address1", "1 Main Terrace"], ["updated_at", Fri, 09 Jan 2015 23:00:07 UTC +00:00]]
+D, [2015-01-09T23:00:07.919438 #33792] DEBUG -- :   [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+I, [2015-01-09T23:00:09.874015 #33792]  INFO -- :   Rendered orders/_form.html.erb (101.6ms)
+I, [2015-01-09T23:00:09.889464 #33792]  INFO -- :   Rendered orders/confirm.html.erb within layouts/application (134.4ms)
+I, [2015-01-09T23:00:13.883729 #33792]  INFO -- : Completed 200 OK in 62727ms (Views: 275.0ms | ActiveRecord: 9.5ms)
+D, [2015-01-09T23:00:14.035682 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.036109 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.036955 #33792]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.083667 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.091375 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.092270 #33792]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.123362 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.128685 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.143771 #33792]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.161595 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.162036 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.162931 #33792]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.188898 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.189395 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.190282 #33792]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.214641 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.215203 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.216135 #33792]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.240758 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.241293 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.242345 #33792]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.263513 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.264177 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.265360 #33792]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.322102 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.322610 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.323650 #33792]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.339772 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.340452 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.341477 #33792]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.359082 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.359613 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.360920 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.401715 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.402223 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.403300 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.432310 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.432823 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.441656 #33792]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.457601 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.458151 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.459080 #33792]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.476342 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.476779 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.477772 #33792]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.505683 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.506112 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.511578 #33792]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.533059 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.533597 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.534624 #33792]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.579398 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.580096 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.581189 #33792]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.609104 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.609659 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.613243 #33792]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.638192 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.639198 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.647254 #33792]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.688493 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.689193 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.690278 #33792]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.715077 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.715608 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.717187 #33792]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.741454 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.741979 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.742949 #33792]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.760944 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.761655 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.762922 #33792]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.788957 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.789461 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.790494 #33792]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.808581 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.809081 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.810059 #33792]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.838340 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.838907 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.839849 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.858449 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.859030 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.859717 #33792]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.924501 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.924936 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.925955 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.955920 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.956470 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:14.957413 #33792]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:14 +0000
+D, [2015-01-09T23:00:14.999284 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:14.999807 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.000744 #33792]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.056123 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.057828 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.067594 #33792]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.108559 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.109035 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.110083 #33792]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.138874 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.139364 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.140243 #33792]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.171414 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.171919 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.172821 #33792]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.205051 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.205477 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.206529 #33792]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.244629 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.245770 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.246792 #33792]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.279711 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.280254 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.281440 #33792]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.313348 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.314504 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.315847 #33792]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.356588 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.357152 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.358115 #33792]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.387601 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.388090 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.389048 #33792]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:15.436447 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:15.437004 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:15.438148 #33792]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-01-09 23:00:15 +0000
+D, [2015-01-09T23:00:19.896895 #33792] DEBUG -- : 
+D, [2015-01-09T23:00:19.897574 #33792] DEBUG -- : 
+I, [2015-01-09T23:00:19.898398 #33792]  INFO -- : Started POST "/orders/79/execute/79/2VZ7YQDDDPPC4/PAY-0YF71008GL126062HKSYF2CQ" for 127.0.0.1 at 2015-01-09 23:00:19 +0000
+I, [2015-01-09T23:00:19.918594 #33792]  INFO -- : Processing by OrdersController#execute as HTML
+I, [2015-01-09T23:00:19.919542 #33792]  INFO -- :   Parameters: {"authenticity_token"=>"ohbtEjIJsyqL+SAcUq0N+GSOROzNN7MrL8IuyZOU47c=", "order_id"=>"79", "payer_id"=>"2VZ7YQDDDPPC4", "payment_id"=>"PAY-0YF71008GL126062HKSYF2CQ"}
+D, [2015-01-09T23:00:19.929411 #33792] DEBUG -- :   [1m[35mOrder Load (0.7ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", "79"]]
+I, [2015-01-09T23:00:36.716991 #33792]  INFO -- : Completed 500 Internal Server Error in 16796ms
+F, [2015-01-09T23:00:36.733189 #33792] FATAL -- : 
+ArgumentError (id required):
+  app/models/order.rb:63:in `execute'
+  app/controllers/orders_controller.rb:78:in `execute'
+
+
+I, [2015-01-09T23:00:36.879821 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+I, [2015-01-09T23:00:36.900005 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.6ms)
+I, [2015-01-09T23:00:36.918776 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+I, [2015-01-09T23:00:36.919905 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.1ms)
+D, [2015-01-09T23:02:04.424012 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:04.448113 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:04.449659 #33792]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-09 23:02:04 +0000
+I, [2015-01-09T23:02:04.663967 #33792]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-01-09T23:02:04.673285 #33792] DEBUG -- :   [1m[36mCart Load (0.7ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 53]]
+D, [2015-01-09T23:02:04.724127 #33792] DEBUG -- :   [1m[35mProduct Load (0.9ms)[0m  SELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1
+I, [2015-01-09T23:02:04.742254 #33792]  INFO -- : Read fragment views/store/products/2-20141022062504570899000/a93d4e2e981ab3dfce98a095c3b6c059 (13.9ms)
+I, [2015-01-09T23:02:04.743605 #33792]  INFO -- :   Rendered store/index.html.erb within layouts/application (24.6ms)
+D, [2015-01-09T23:02:04.812051 #33792] DEBUG -- :   [1m[36mLineItem Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 53]]
+D, [2015-01-09T23:02:04.841636 #33792] DEBUG -- :   [1m[35mLineItem Load (0.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
+I, [2015-01-09T23:02:04.843759 #33792]  INFO -- :   Rendered collection (0.3ms)
+I, [2015-01-09T23:02:04.859828 #33792]  INFO -- :   Rendered carts/_cart.html.erb (22.9ms)
+I, [2015-01-09T23:02:04.871911 #33792]  INFO -- : Completed 200 OK in 207ms (Views: 192.2ms | ActiveRecord: 2.9ms)
+D, [2015-01-09T23:02:05.192833 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.209254 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.219851 #33792]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.237113 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.237812 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.239236 #33792]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.255278 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.255755 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.256624 #33792]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.273230 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.289168 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.290109 #33792]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.315050 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.323548 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.324568 #33792]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.341708 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.343184 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.344473 #33792]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.369838 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.371108 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.380285 #33792]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.397416 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.398554 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.399659 #33792]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.424010 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.424456 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.426163 #33792]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.449940 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.450471 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.451447 #33792]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.476757 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.477760 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.478853 #33792]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.503712 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.504248 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.505339 #33792]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.546941 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.556367 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.557436 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.574241 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.575410 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.578032 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.603432 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.604082 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.605221 #33792]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.631726 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.632971 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.635454 #33792]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.692030 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.692620 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.693652 #33792]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.724694 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.725692 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.734287 #33792]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.753385 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.753940 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.755213 #33792]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.780485 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.781028 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.782883 #33792]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.808434 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.808874 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.809789 #33792]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.838001 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.838445 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.839478 #33792]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.865435 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.865985 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.866927 #33792]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.884100 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.884699 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.885733 #33792]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.905472 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.906014 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.906997 #33792]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.924008 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.924562 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.925510 #33792]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.944594 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.945114 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.945863 #33792]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:05.988218 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:05.988726 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:05.989474 #33792]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-01-09 23:02:05 +0000
+D, [2015-01-09T23:02:06.020291 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:06.020798 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:06.021555 #33792]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2015-01-09 23:02:06 +0000
+D, [2015-01-09T23:02:16.840570 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:16.841098 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:16.844067 #33792]  INFO -- : Started POST "/line_items?product_id=1" for 127.0.0.1 at 2015-01-09 23:02:16 +0000
+I, [2015-01-09T23:02:16.869254 #33792]  INFO -- : Processing by LineItemsController#create as JS
+I, [2015-01-09T23:02:16.869925 #33792]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+D, [2015-01-09T23:02:16.881737 #33792] DEBUG -- :   [1m[36mCart Load (0.8ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 53]]
+D, [2015-01-09T23:02:16.888682 #33792] DEBUG -- :   [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "1"]]
+D, [2015-01-09T23:02:16.899229 #33792] DEBUG -- :   [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 1 LIMIT 1[0m  [["cart_id", 53]]
+D, [2015-01-09T23:02:16.913980 #33792] DEBUG -- :   [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+D, [2015-01-09T23:02:16.919212 #33792] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+D, [2015-01-09T23:02:17.002972 #33792] DEBUG -- :   [1m[35mSQL (69.7ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["cart_id", 53], ["created_at", Fri, 09 Jan 2015 23:02:16 UTC +00:00], ["product_id", 1], ["productprice", #<BigDecimal:7fe34fc6a928,'0.1299E2',18(36)>], ["size", "extra small"], ["updated_at", Fri, 09 Jan 2015 23:02:16 UTC +00:00]]
+D, [2015-01-09T23:02:17.011092 #33792] DEBUG -- :   [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+D, [2015-01-09T23:02:17.046731 #33792] DEBUG -- :   [1m[35mLineItem Load (0.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
+I, [2015-01-09T23:02:17.079357 #33792]  INFO -- :   Rendered line_items/_line_item.html.erb (6.6ms)
+I, [2015-01-09T23:02:17.095922 #33792]  INFO -- :   Rendered carts/_cart.html.erb (54.0ms)
+I, [2015-01-09T23:02:17.097996 #33792]  INFO -- :   Rendered line_items/create.js.erb (60.1ms)
+I, [2015-01-09T23:02:17.099991 #33792]  INFO -- : Completed 200 OK in 229ms (Views: 85.0ms | ActiveRecord: 77.1ms)
+D, [2015-01-09T23:02:18.092424 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:18.093019 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:18.094083 #33792]  INFO -- : Started POST "/line_items?product_id=2" for 127.0.0.1 at 2015-01-09 23:02:18 +0000
+I, [2015-01-09T23:02:18.114997 #33792]  INFO -- : Processing by LineItemsController#create as JS
+I, [2015-01-09T23:02:18.115740 #33792]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"2"}
+D, [2015-01-09T23:02:18.125421 #33792] DEBUG -- :   [1m[36mCart Load (0.7ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 53]]
+D, [2015-01-09T23:02:18.136584 #33792] DEBUG -- :   [1m[35mProduct Load (0.6ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", "2"]]
+D, [2015-01-09T23:02:18.149367 #33792] DEBUG -- :   [1m[36mLineItem Load (0.6ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ? AND "line_items"."product_id" = 2 LIMIT 1[0m  [["cart_id", 53]]
+D, [2015-01-09T23:02:18.163653 #33792] DEBUG -- :   [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 2]]
+D, [2015-01-09T23:02:18.168700 #33792] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+D, [2015-01-09T23:02:18.183070 #33792] DEBUG -- :   [1m[35mSQL (2.3ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "product_id", "productprice", "size", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["cart_id", 53], ["created_at", Fri, 09 Jan 2015 23:02:18 UTC +00:00], ["product_id", 2], ["productprice", #<BigDecimal:7fe34e678318,'0.1099E2',18(36)>], ["size", "extra small"], ["updated_at", Fri, 09 Jan 2015 23:02:18 UTC +00:00]]
+D, [2015-01-09T23:02:18.189880 #33792] DEBUG -- :   [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+D, [2015-01-09T23:02:18.210703 #33792] DEBUG -- :   [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
+D, [2015-01-09T23:02:18.231143 #33792] DEBUG -- :   [1m[36mProduct Load (0.7ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+I, [2015-01-09T23:02:18.245032 #33792]  INFO -- :   Rendered line_items/_line_item.html.erb (22.3ms)
+I, [2015-01-09T23:02:18.260798 #33792]  INFO -- :   Rendered carts/_cart.html.erb (58.2ms)
+I, [2015-01-09T23:02:18.263076 #33792]  INFO -- :   Rendered line_items/create.js.erb (63.8ms)
+I, [2015-01-09T23:02:18.265041 #33792]  INFO -- : Completed 200 OK in 148ms (Views: 69.9ms | ActiveRecord: 10.5ms)
+D, [2015-01-09T23:02:19.567572 #33792] DEBUG -- : 
+D, [2015-01-09T23:02:19.568469 #33792] DEBUG -- : 
+I, [2015-01-09T23:02:19.570146 #33792]  INFO -- : Started GET "/orders/ppcheckout" for 127.0.0.1 at 2015-01-09 23:02:19 +0000
+I, [2015-01-09T23:02:19.602501 #33792]  INFO -- : Processing by OrdersController#ppcheckout as HTML
+D, [2015-01-09T23:02:19.612275 #33792] DEBUG -- :   [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+D, [2015-01-09T23:02:19.619115 #33792] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'Ollie' LIMIT 1[0m
+D, [2015-01-09T23:02:19.625876 #33792] DEBUG -- :   [1m[35mCart Load (0.6ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-01-09T23:02:19.636808 #33792] DEBUG -- :   [1m[36mLineItem Load (0.7ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-01-09T23:02:19.648450 #33792]  INFO -- : #<Order id: nil, name: nil, address: nil, email: nil, pay_type: nil, created_at: nil, updated_at: nil, payment_method: "Paypal", payment_id: nil, state: nil, amount: nil, description: nil, shipping_address1: nil>
+D, [2015-01-09T23:02:39.828356 #33792] DEBUG -- :   [1m[35m (0.8ms)[0m  begin transaction
+D, [2015-01-09T23:02:39.846462 #33792] DEBUG -- :   [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "orders" ("created_at", "payment_method", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Fri, 09 Jan 2015 23:02:39 UTC +00:00], ["payment_method", "Paypal"], ["updated_at", Fri, 09 Jan 2015 23:02:39 UTC +00:00]]
+D, [2015-01-09T23:02:39.862751 #33792] DEBUG -- :   [1m[35mSQL (1.6ms)[0m  UPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 147  [["cart_id", nil], ["order_id", 80], ["updated_at", Fri, 09 Jan 2015 23:02:39 UTC +00:00]]
+D, [2015-01-09T23:02:39.878619 #33792] DEBUG -- :   [1m[36mSQL (1.4ms)[0m  [1mUPDATE "line_items" SET "cart_id" = ?, "order_id" = ?, "updated_at" = ? WHERE "line_items"."id" = 148[0m  [["cart_id", nil], ["order_id", 80], ["updated_at", Fri, 09 Jan 2015 23:02:39 UTC +00:00]]
+I, [2015-01-09T23:02:39.880240 #33792]  INFO -- : about to @payment.create
+D, [2015-01-09T23:02:40.975269 #33792] DEBUG -- :   [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+D, [2015-01-09T23:02:40.986367 #33792] DEBUG -- :   [1m[36mProduct Load (1.2ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+I, [2015-01-09T23:02:41.898253 #33792]  INFO -- : in order=
+I, [2015-01-09T23:02:42.786344 #33792]  INFO -- : in payment.create
+I, [2015-01-09T23:02:42.794191 #33792]  INFO -- : {"intent"=>"sale", "payer"=>{"payment_method"=>"paypal"}, "transactions"=>[{"amount"=>{"currency"=>"GBP", "total"=>"23.98"}, "description"=>"King Clothing", "item_list"=>{"items"=>[{"quantity"=>"1", "name"=>"camo print tee", "price"=>"12.99", "currency"=>"GBP", "sku"=>"camo print tee"}, {"quantity"=>"1", "name"=>"est 2014 tee", "price"=>"10.99", "currency"=>"GBP", "sku"=>"est 2014 tee"}]}}], "redirect_urls"=>{"return_url"=>"http://localhost:3000/orders/80/confirm", "cancel_url"=>"http://localhost:3000/orders/80/cancel"}}
+I, [2015-01-09T23:02:42.796670 #33792]  INFO -- : #<ActiveModel::Errors:0x007fe35000b1b8 @base=#<Payment:0x007fe34fae4068 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe350063610 @error=nil, @payment_method="paypal">, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34fc38798 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34fc381a8 @error=nil, @total="23.98", @currency="GBP">, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe3500a9ed0 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc1b0f8 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34fc12cc8 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34fb981d0 @error=nil, @return_url="http://localhost:3000/orders/80/confirm", @cancel_url="http://localhost:3000/orders/80/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe35000b1b8 ...>>, @messages={}>
+I, [2015-01-09T23:02:42.797381 #33792]  INFO -- : got past invalid
+I, [2015-01-09T23:02:42.823176 #33792]  INFO -- : PayPal-Request-Id: 9908bcc3-0992-426f-9b48-97f61f13ef96
+I, [2015-01-09T23:02:42.823901 #33792]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment
+I, [2015-01-09T23:02:44.742126 #33792]  INFO -- : Response[201]: Created, Duration: 1.917s
+I, [2015-01-09T23:02:44.749026 #33792]  INFO -- : back from super
+I, [2015-01-09T23:02:44.759207 #33792]  INFO -- : {"id"=>"PAY-5ER69471JR052021WKSYF4FA", "intent"=>"sale", "payer"=>{"payment_method"=>"paypal"}, "transactions"=>[{"amount"=>{"currency"=>"GBP", "total"=>"23.98", "details"=>{"subtotal"=>"23.98"}}, "description"=>"King Clothing", "item_list"=>{"items"=>[{"quantity"=>"1", "name"=>"camo print tee", "price"=>"12.99", "currency"=>"GBP", "sku"=>"camo print tee"}, {"quantity"=>"1", "name"=>"est 2014 tee", "price"=>"10.99", "currency"=>"GBP", "sku"=>"est 2014 tee"}]}}], "state"=>"created", "redirect_urls"=>{"return_url"=>"http://localhost:3000/orders/80/confirm", "cancel_url"=>"http://localhost:3000/orders/80/cancel"}, "create_time"=>"2015-01-09T23:02:44Z", "update_time"=>"2015-01-09T23:02:44Z", "links"=>[{"href"=>"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA", "rel"=>"self", "method"=>"GET"}, {"href"=>"https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C", "rel"=>"approval_url", "method"=>"REDIRECT"}, {"href"=>"https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA/execute", "rel"=>"execute", "method"=>"POST"}]}
+D, [2015-01-09T23:02:44.776987 #33792] DEBUG -- :   [1m[35mSQL (2.6ms)[0m  UPDATE "orders" SET "payment_method" = ?, "created_at" = ?, "updated_at" = ?, "id" = ?, "payment_id" = ?, "state" = ?, "pay_type" = ? WHERE "orders"."id" = 80  [["payment_method", "Paypal"], ["created_at", Fri, 09 Jan 2015 23:02:39 UTC +00:00], ["updated_at", Fri, 09 Jan 2015 23:02:39 UTC +00:00], ["id", 80], ["payment_id", "PAY-5ER69471JR052021WKSYF4FA"], ["state", "created"], ["pay_type", "paypal"]]
+I, [2015-01-09T23:02:44.780361 #33792]  INFO -- : @payment save just done
+I, [2015-01-09T23:02:44.782388 #33792]  INFO -- : #<Payment:0x007fe34fae4068 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34f8eb1f8 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34f8ea6e0 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34f8ea118 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34f8e8f98 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34f8e8a48 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34c78f5a0 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34c78e218 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34c78d200 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34c786b80 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34fb981d0 @error=nil, @return_url="http://localhost:3000/orders/80/confirm", @cancel_url="http://localhost:3000/orders/80/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe35000b1b8 @base=#<Payment:0x007fe34fae4068 ...>, @messages={}>, @request_id="9908bcc3-0992-426f-9b48-97f61f13ef96", @header={}, @id="PAY-5ER69471JR052021WKSYF4FA", @create_time="2015-01-09T23:02:44Z", @update_time="2015-01-09T23:02:44Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e39d0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e22d8 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e0500 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T23:02:44.783618 #33792]  INFO -- : #<Payment:0x007fe34fae4068 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34f8eb1f8 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34f8ea6e0 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34f8ea118 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34f8e8f98 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34f8e8a48 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34c78f5a0 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34c78e218 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34c78d200 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34c786b80 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34fb981d0 @error=nil, @return_url="http://localhost:3000/orders/80/confirm", @cancel_url="http://localhost:3000/orders/80/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe35000b1b8 @base=#<Payment:0x007fe34fae4068 ...>, @messages={}>, @request_id="9908bcc3-0992-426f-9b48-97f61f13ef96", @header={}, @id="PAY-5ER69471JR052021WKSYF4FA", @create_time="2015-01-09T23:02:44Z", @update_time="2015-01-09T23:02:44Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e39d0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e22d8 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e0500 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA/execute", @rel="execute", @method="POST">]>
+D, [2015-01-09T23:02:44.810153 #33792] DEBUG -- :   [1m[36m (24.9ms)[0m  [1mcommit transaction[0m
+D, [2015-01-09T23:02:44.847184 #33792] DEBUG -- :   [1m[35mSQL (31.6ms)[0m  UPDATE "orders" SET "payment_method" = 'Paypal' WHERE "orders"."id" = 80
+I, [2015-01-09T23:02:44.848438 #33792]  INFO -- : about to approve url
+I, [2015-01-09T23:02:44.850807 #33792]  INFO -- : #<Payment:0x007fe34fae4068 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34f8eb1f8 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34f8ea6e0 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34f8ea118 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34f8e8f98 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34f8e8a48 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34c78f5a0 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34c78e218 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34c78d200 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34c786b80 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34fb981d0 @error=nil, @return_url="http://localhost:3000/orders/80/confirm", @cancel_url="http://localhost:3000/orders/80/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe35000b1b8 @base=#<Payment:0x007fe34fae4068 ...>, @messages={}>, @request_id="9908bcc3-0992-426f-9b48-97f61f13ef96", @header={}, @id="PAY-5ER69471JR052021WKSYF4FA", @create_time="2015-01-09T23:02:44Z", @update_time="2015-01-09T23:02:44Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e39d0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e22d8 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e0500 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T23:02:44.852666 #33792]  INFO -- : #<Payment:0x007fe34fae4068 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34f8eb1f8 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34f8ea6e0 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34f8ea118 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34f8e8f98 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34f8e8a48 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34c78f5a0 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34c78e218 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34c78d200 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34c786b80 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34fb981d0 @error=nil, @return_url="http://localhost:3000/orders/80/confirm", @cancel_url="http://localhost:3000/orders/80/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe35000b1b8 @base=#<Payment:0x007fe34fae4068 ...>, @messages={}>, @request_id="9908bcc3-0992-426f-9b48-97f61f13ef96", @header={}, @id="PAY-5ER69471JR052021WKSYF4FA", @create_time="2015-01-09T23:02:44Z", @update_time="2015-01-09T23:02:44Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e39d0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e22d8 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e0500 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T23:02:44.853666 #33792]  INFO -- : https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C
+I, [2015-01-09T23:02:44.855430 #33792]  INFO -- : #<Payment:0x007fe34fae4068 @error=nil, @intent="sale", @payer=#<PayPal::SDK::REST::DataTypes::Payer:0x007fe34f8eb1f8 @error=nil, @payment_method="paypal", @payer_info=#<PayPal::SDK::REST::DataTypes::PayerInfo:0x007fe34f8ea6e0 @error=nil, @shipping_address=#<PayPal::SDK::REST::DataTypes::ShippingAddress:0x007fe34f8ea118 @error=nil>>>, @transactions=[#<PayPal::SDK::REST::DataTypes::Transaction:0x007fe34f8e8f98 @error=nil, @amount=#<PayPal::SDK::REST::DataTypes::Amount:0x007fe34f8e8a48 @error=nil, @total="23.98", @currency="GBP", @details=#<PayPal::SDK::REST::DataTypes::Details:0x007fe34c78f5a0 @error=nil, @subtotal="23.98">>, @description="King Clothing", @item_list=#<PayPal::SDK::REST::DataTypes::ItemList:0x007fe34c78e218 @error=nil, @items=[#<PayPal::SDK::REST::DataTypes::Item:0x007fe34c78d200 @error=nil, @name="camo print tee", @sku="camo print tee", @price="12.99", @currency="GBP", @quantity="1">, #<PayPal::SDK::REST::DataTypes::Item:0x007fe34c786b80 @error=nil, @name="est 2014 tee", @sku="est 2014 tee", @price="10.99", @currency="GBP", @quantity="1">]>, @related_resources=[]>], @redirect_urls=#<PayPal::SDK::REST::DataTypes::RedirectUrls:0x007fe34fb981d0 @error=nil, @return_url="http://localhost:3000/orders/80/confirm", @cancel_url="http://localhost:3000/orders/80/cancel">, @logger=#<Logger:0x007fe34e039290 @progname=nil, @level=0, @default_formatter=#<Logger::Formatter:0x007fe34e039218 @datetime_format=nil>, @formatter=nil, @logdev=#<Logger::LogDevice:0x007fe34e0391c8 @shift_size=1048576, @shift_age=0, @filename="Application.log", @dev=#<File:Application.log>, @mutex=#<Logger::LogDevice::LogDeviceMutex:0x007fe34e0391a0 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Mutex:0x007fe34e039128>>>>, @validation_context=nil, @errors=#<ActiveModel::Errors:0x007fe35000b1b8 @base=#<Payment:0x007fe34fae4068 ...>, @messages={}>, @request_id="9908bcc3-0992-426f-9b48-97f61f13ef96", @header={}, @id="PAY-5ER69471JR052021WKSYF4FA", @create_time="2015-01-09T23:02:44Z", @update_time="2015-01-09T23:02:44Z", @state="created", @links=[#<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e39d0 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA", @rel="self", @method="GET">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e22d8 @error=nil, @href="https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C", @rel="approval_url", @method="REDIRECT">, #<PayPal::SDK::REST::DataTypes::Links:0x007fe34f8e0500 @error=nil, @href="https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA/execute", @rel="execute", @method="POST">]>
+I, [2015-01-09T23:02:44.858432 #33792]  INFO -- : Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-7BF355839X765515C
+I, [2015-01-09T23:02:44.861631 #33792]  INFO -- : Completed 403 Forbidden in 25258ms (ActiveRecord: 69.9ms)
+D, [2015-01-09T23:03:21.639831 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:21.659421 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:21.661042 #33792]  INFO -- : Started GET "/orders/80/confirm?paymentId=PAY-5ER69471JR052021WKSYF4FA&token=EC-7BF355839X765515C&PayerID=2VZ7YQDDDPPC4" for 127.0.0.1 at 2015-01-09 23:03:21 +0000
+I, [2015-01-09T23:03:21.676346 #33792]  INFO -- : Processing by OrdersController#confirm as HTML
+I, [2015-01-09T23:03:21.683054 #33792]  INFO -- :   Parameters: {"paymentId"=>"PAY-5ER69471JR052021WKSYF4FA", "token"=>"EC-7BF355839X765515C", "PayerID"=>"2VZ7YQDDDPPC4", "order_id"=>"80"}
+D, [2015-01-09T23:03:21.697024 #33792] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+D, [2015-01-09T23:03:21.703435 #33792] DEBUG -- :   [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'Ollie' LIMIT 1
+D, [2015-01-09T23:03:21.708941 #33792] DEBUG -- :   [1m[36mOrder Load (0.6ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", "80"]]
+I, [2015-01-09T23:03:35.605135 #33792]  INFO -- : Request[get]: https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA
+I, [2015-01-09T23:03:37.369239 #33792]  INFO -- : Response[200]: OK, Duration: 1.763s
+D, [2015-01-09T23:03:41.066324 #33792] DEBUG -- :   [1m[35m (0.9ms)[0m  begin transaction
+D, [2015-01-09T23:03:41.078353 #33792] DEBUG -- :   [1m[36mSQL (2.1ms)[0m  [1mUPDATE "orders" SET "name" = ?, "email" = ?, "address" = ?, "shipping_address1" = ?, "updated_at" = ? WHERE "orders"."id" = 80[0m  [["name", "Test Buyer"], ["email", "simon.king65-buyer@gmail.com"], ["address", "1 Main Terrace"], ["shipping_address1", "1 Main Terrace"], ["updated_at", Fri, 09 Jan 2015 23:03:41 UTC +00:00]]
+D, [2015-01-09T23:03:41.084671 #33792] DEBUG -- :   [1m[35m (4.2ms)[0m  commit transaction
+I, [2015-01-09T23:03:41.229813 #33792]  INFO -- :   Rendered orders/_form.html.erb (42.8ms)
+I, [2015-01-09T23:03:41.235413 #33792]  INFO -- :   Rendered orders/confirm.html.erb within layouts/application (76.5ms)
+I, [2015-01-09T23:03:41.294937 #33792]  INFO -- : Completed 200 OK in 19611ms (Views: 208.1ms | ActiveRecord: 9.1ms)
+D, [2015-01-09T23:03:41.455980 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.456416 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.457225 #33792]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.493339 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.493835 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.494756 #33792]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.709815 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.710185 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.711241 #33792]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.742734 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.759989 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.761163 #33792]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.779003 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.779431 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.780407 #33792]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.832724 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.833195 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.834173 #33792]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.857823 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.858773 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.859667 #33792]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.887291 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.893417 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.894394 #33792]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.915498 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.916081 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.917235 #33792]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.936058 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.936570 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.937653 #33792]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.964503 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.965290 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.966460 #33792]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:41.991758 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:41.992278 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:41.993278 #33792]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:41 +0000
+D, [2015-01-09T23:03:42.034334 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.034901 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.036084 #33792]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.074843 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.075362 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.076431 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.101066 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.108170 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.109374 #33792]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.143228 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.143757 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.144711 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.174450 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.174894 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.176208 #33792]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.201173 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.201680 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.210781 #33792]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.228173 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.228876 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.229871 #33792]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.255189 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.255632 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.256803 #33792]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.275320 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.275944 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.277048 #33792]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.310549 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.311146 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.312063 #33792]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.338139 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.338633 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.339554 #33792]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.365761 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.366340 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.367550 #33792]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.384496 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.385115 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.386140 #33792]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.406143 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.406633 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.407600 #33792]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.428524 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.429148 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.430285 #33792]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:42.454107 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:42.454538 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:42.455344 #33792]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-01-09 23:03:42 +0000
+D, [2015-01-09T23:03:59.346079 #33792] DEBUG -- : 
+D, [2015-01-09T23:03:59.346549 #33792] DEBUG -- : 
+I, [2015-01-09T23:03:59.347368 #33792]  INFO -- : Started POST "/orders/80/execute/80/2VZ7YQDDDPPC4/PAY-5ER69471JR052021WKSYF4FA" for 127.0.0.1 at 2015-01-09 23:03:59 +0000
+I, [2015-01-09T23:03:59.365121 #33792]  INFO -- : Processing by OrdersController#execute as HTML
+I, [2015-01-09T23:03:59.365971 #33792]  INFO -- :   Parameters: {"authenticity_token"=>"ohbtEjIJsyqL+SAcUq0N+GSOROzNN7MrL8IuyZOU47c=", "order_id"=>"80", "payer_id"=>"2VZ7YQDDDPPC4", "payment_id"=>"PAY-5ER69471JR052021WKSYF4FA"}
+D, [2015-01-09T23:03:59.377115 #33792] DEBUG -- :   [1m[36mOrder Load (0.7ms)[0m  [1mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1[0m  [["id", "80"]]
+I, [2015-01-09T23:04:27.041314 #33792]  INFO -- : Completed 500 Internal Server Error in 27672ms
+F, [2015-01-09T23:04:27.056699 #33792] FATAL -- : 
+ArgumentError (id required):
+  app/models/order.rb:63:in `execute'
+  app/controllers/orders_controller.rb:78:in `execute'
+
+
+I, [2015-01-09T23:04:27.148546 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+I, [2015-01-09T23:04:27.164334 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.7ms)
+I, [2015-01-09T23:04:27.178371 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+I, [2015-01-09T23:04:27.179561 #33792]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.5ms)
+D, [2015-01-09T23:04:40.412742 #33792] DEBUG -- : 
+D, [2015-01-09T23:04:40.413121 #33792] DEBUG -- : 
+I, [2015-01-09T23:04:40.413815 #33792]  INFO -- : Started POST "/orders/80/execute/80/2VZ7YQDDDPPC4/PAY-5ER69471JR052021WKSYF4FA" for 127.0.0.1 at 2015-01-09 23:04:40 +0000
+I, [2015-01-09T23:04:41.797000 #33792]  INFO -- : Processing by OrdersController#execute as HTML
+I, [2015-01-09T23:04:41.797730 #33792]  INFO -- :   Parameters: {"authenticity_token"=>"ohbtEjIJsyqL+SAcUq0N+GSOROzNN7MrL8IuyZOU47c=", "order_id"=>"80", "payer_id"=>"2VZ7YQDDDPPC4", "payment_id"=>"PAY-5ER69471JR052021WKSYF4FA"}
+D, [2015-01-09T23:04:41.851443 #33792] DEBUG -- :   [1m[35mOrder Load (11.2ms)[0m  SELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT 1  [["id", "80"]]
+I, [2015-01-09T23:04:53.634455 #33792]  INFO -- : Request[get]: https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA
+I, [2015-01-09T23:04:56.421865 #33792]  INFO -- : Response[200]: OK, Duration: 2.787s
+I, [2015-01-09T23:04:56.430909 #33792]  INFO -- : PayPal-Request-Id: 341d0610-0700-401f-92f2-f67ec2bd954e
+I, [2015-01-09T23:04:56.431372 #33792]  INFO -- : Request[post]: https://api.sandbox.paypal.com/v1/payments/payment/PAY-5ER69471JR052021WKSYF4FA/execute
+I, [2015-01-09T23:04:58.780762 #33792]  INFO -- : Response[200]: OK, Duration: 2.349s
+W, [2015-01-09T23:04:58.784534 #33792]  WARN -- : undefined method `fee=' for #<PayPal::SDK::REST::DataTypes::Details:0x007fe34faa0d40>
+D, [2015-01-09T23:04:58.792079 #33792] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+D, [2015-01-09T23:04:58.804472 #33792] DEBUG -- :   [1m[35mSQL (1.3ms)[0m  UPDATE "orders" SET "state" = ?, "updated_at" = ? WHERE "orders"."id" = 80  [["state", "approved"], ["updated_at", Fri, 09 Jan 2015 23:04:58 UTC +00:00]]
+D, [2015-01-09T23:04:58.812789 #33792] DEBUG -- :   [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+D, [2015-01-09T23:05:05.845772 #33792] DEBUG -- :   [1m[35mCart Load (0.7ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-01-09T23:05:05.869582 #33792] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+D, [2015-01-09T23:05:05.904805 #33792] DEBUG -- :   [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
+D, [2015-01-09T23:05:05.909295 #33792] DEBUG -- :   [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = ?[0m  [["id", 53]]
+D, [2015-01-09T23:05:05.913231 #33792] DEBUG -- :   [1m[35m (2.7ms)[0m  commit transaction
+I, [2015-01-09T23:05:10.682541 #33792]  INFO -- :   Rendered order_notifier/received.html.erb (2.7ms)
+D, [2015-01-09T23:05:10.698880 #33792] DEBUG -- :   [1m[36mLineItem Load (0.9ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."order_id" = ?[0m  [["order_id", 80]]
+D, [2015-01-09T23:05:10.840048 #33792] DEBUG -- :   [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+D, [2015-01-09T23:05:10.895824 #33792] DEBUG -- :   [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 2]]
+I, [2015-01-09T23:05:10.898010 #33792]  INFO -- :   Rendered line_items/_line_item.text.erb (98.9ms)
+I, [2015-01-09T23:05:10.898864 #33792]  INFO -- :   Rendered order_notifier/received.text.erb (211.8ms)
+I, [2015-01-09T23:05:11.915439 #33792]  INFO -- : 
+Sent mail to simon.king65-buyer@gmail.com (928.0ms)
+D, [2015-01-09T23:05:11.916392 #33792] DEBUG -- : Date: Fri, 09 Jan 2015 23:05:11 +0000
+From: Simon King <simon.king65@gmail.com>
+To: simon.king65-buyer@gmail.com
+Message-ID: <54b05ea7b9ec_84003ff1a7cfd2ac239cb@Ben-Kings-MacBook.local.mail>
+Subject: King Clothing Order Confirmation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_54b05ea6e134a_84003ff1a7cfd2ac238e9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_54b05ea6e134a_84003ff1a7cfd2ac238e9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Dear Test Buyer
+
+Thank you for your recent order from King Clothing.
+
+You ordered the following items:
+
+ 1 x camo print tee 1 x est 2014 tee
+We'll send you a separate e-mail when your order ships.
+----==_mimepart_54b05ea6e134a_84003ff1a7cfd2ac238e9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>OrderNotifier#received</h1>
+
+<p>
+  , thank you for your order, we will email you again once your order has been despatched. We hope you enjoy wearing your King Clothing brand tee-shirt.
+</p>
+
+----==_mimepart_54b05ea6e134a_84003ff1a7cfd2ac238e9--
+
+I, [2015-01-09T23:05:11.920424 #33792]  INFO -- : Redirected to http://localhost:3000/
+I, [2015-01-09T23:05:11.922555 #33792]  INFO -- : Completed 302 Found in 30124ms (ActiveRecord: 35.8ms)
+D, [2015-01-09T23:05:11.941923 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:11.942349 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:11.942961 #33792]  INFO -- : Started GET "/" for 127.0.0.1 at 2015-01-09 23:05:11 +0000
+I, [2015-01-09T23:05:11.980484 #33792]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-01-09T23:05:11.987027 #33792] DEBUG -- :   [1m[35m (0.4ms)[0m  begin transaction
+D, [2015-01-09T23:05:11.998497 #33792] DEBUG -- :   [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Fri, 09 Jan 2015 23:05:11 UTC +00:00], ["updated_at", Fri, 09 Jan 2015 23:05:11 UTC +00:00]]
+D, [2015-01-09T23:05:12.003945 #33792] DEBUG -- :   [1m[35m (3.0ms)[0m  commit transaction
+D, [2015-01-09T23:05:12.071056 #33792] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1[0m
+I, [2015-01-09T23:05:12.080601 #33792]  INFO -- : Read fragment views/store/products/2-20141022062504570899000/a93d4e2e981ab3dfce98a095c3b6c059 (1.4ms)
+I, [2015-01-09T23:05:12.081676 #33792]  INFO -- :   Rendered store/index.html.erb within layouts/application (15.8ms)
+D, [2015-01-09T23:05:12.137003 #33792] DEBUG -- :   [1m[35mLineItem Exists (0.7ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 54]]
+D, [2015-01-09T23:05:12.167746 #33792] DEBUG -- :   [1m[36mLineItem Load (0.7ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 54]]
+I, [2015-01-09T23:05:12.169947 #33792]  INFO -- :   Rendered collection (0.3ms)
+I, [2015-01-09T23:05:12.205817 #33792]  INFO -- :   Rendered carts/_cart.html.erb (43.2ms)
+I, [2015-01-09T23:05:12.215233 #33792]  INFO -- : Completed 200 OK in 234ms (Views: 205.7ms | ActiveRecord: 7.3ms)
+D, [2015-01-09T23:05:12.285277 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.285989 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.287418 #33792]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.371769 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.372375 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.373381 #33792]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.393498 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.393981 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.394957 #33792]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.421944 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.422611 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.424147 #33792]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.458633 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.459168 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.460145 #33792]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.479436 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.479949 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.481295 #33792]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.524559 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.525143 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.526113 #33792]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.551265 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.551796 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.560673 #33792]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.584047 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.597853 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.598939 #33792]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.630433 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.630927 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.632575 #33792]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.673666 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.674198 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.675231 #33792]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.700515 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.700953 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.702310 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.723153 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.723752 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.725378 #33792]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.774720 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.775354 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.776669 #33792]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.793588 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.794191 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.795766 #33792]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.820224 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.840851 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.841902 #33792]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.858098 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.858642 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.859672 #33792]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.880959 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.881558 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.882747 #33792]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.933676 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.942377 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.943418 #33792]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.973770 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.974618 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:12.975796 #33792]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:12 +0000
+D, [2015-01-09T23:05:12.995389 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:12.995919 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.013705 #33792]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.031764 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.032346 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.033653 #33792]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.059008 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.059514 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.060568 #33792]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.078632 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.079281 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.081018 #33792]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.097852 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.098412 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.099613 #33792]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.117262 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.117763 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.118871 #33792]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.144867 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.145367 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.146089 #33792]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.182053 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.182539 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.192964 #33792]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+D, [2015-01-09T23:05:13.215177 #33792] DEBUG -- : 
+D, [2015-01-09T23:05:13.215785 #33792] DEBUG -- : 
+I, [2015-01-09T23:05:13.216684 #33792]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2015-01-09 23:05:13 +0000
+>>>>>>> 01e1325fe7803e4b91881cec2cc7987e330f4956
