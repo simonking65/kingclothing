@@ -36,8 +36,20 @@ Kingclothing::Application.configure do
 #end
 
 #Kingclothing.Application.configure do
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.perform_deliveries = true
+  #   config.action_mailer.smtp_settings = { 
+  #   :tls => true,
+  #   :address => "smtp.gmail.com", 
+  #   :port => 587,
+  #   :authentication => :plain, 
+  #   :user_name => "simon.king65@gmail.com", 
+  #   :password => "teddy1067",
+  #   :enable_starttls_auto => true 
+  # } 
+    config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = { 
     :tls => true,
     :address => "smtp.gmail.com", 
@@ -45,8 +57,8 @@ Kingclothing::Application.configure do
     :authentication => :plain, 
     :user_name => "simon.king65@gmail.com", 
     :password => "teddy1067",
-    :enable_starttls_auto => true 
-  } 
+    :enable_starttls_auto => true
+  }
     # Force ActiveMerchant into test mode
   #config.after_initialize do
    # ActiveMerchant::Billing::Base.mode = :test
