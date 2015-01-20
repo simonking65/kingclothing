@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/paypal/rest-api-sdk-ruby.git
-  revision: cf0da0683d9b4d359c686253373aa991f0e63e68
+  revision: 565369451f8362e9637aa078e56d88173ade0cba
   specs:
-    paypal-sdk-rest (0.7.3)
+    paypal-sdk-rest (0.10.0)
       paypal-sdk-core (~> 0.3.1)
       uuidtools (~> 2.1)
 
@@ -153,7 +153,7 @@ DEPENDENCIES
   jquery-ui-rails
   paypal-sdk-core (~> 0.3.0)!
   paypal-sdk-merchant
-  paypal-sdk-rest (~> 0.7.0)!
+  paypal-sdk-rest (~> 0.10.0)!
   pg
   rails (= 4.0.0)
   sass-rails (~> 4.0.3)
