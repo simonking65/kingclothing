@@ -39,7 +39,7 @@ attr_accessor :return_url, :cancel_url
     #   raise ActiveRecord::Rollback, "Can't place the order"
     # end
     @payment = Payment.new( :order => self )
-    debugger
+#    debugger
     if @payment.create
       self.payment_id = @payment.id
       self.state      = @payment.state
@@ -59,7 +59,7 @@ attr_accessor :return_url, :cancel_url
   end
 
   def execute(payer_id, payment_id)
-  	debugger
+  	#debugger
     #if payment.present?
       if payment = Payment.find(payment_id) 
         logger.info "found payment #########"
@@ -81,9 +81,9 @@ attr_accessor :return_url, :cancel_url
   end
 
   def confirm(payer_id, payment_id)
-    debugger
+   # debugger
     if payment = Payment.find(payment_id)
-      debugger 
+     # debugger 
       
       self.name = payment.payer.payer_info.first_name + " " + payment.payer.payer_info.last_name
       self.email = payment.payer.payer_info.email
@@ -111,7 +111,7 @@ attr_accessor :return_url, :cancel_url
 	end
 	
   def total_items
-    debugger
+   # debugger
     line_items.count
   end
   

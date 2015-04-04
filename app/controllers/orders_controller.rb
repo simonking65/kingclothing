@@ -74,7 +74,7 @@ class OrdersController < ApplicationController
   def execute
     
     order = Order.find(params[:order_id])
-    debugger  
+  #  debugger  
     if order.execute(params["payer_id"], params["payment_id"])
               Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
@@ -90,7 +90,7 @@ class OrdersController < ApplicationController
   def confirm
     order = Order.find(params[:order_id])
     @order = order
-    debugger
+   # debugger
     #@payment = Payment.find(params["paymentId"])
     @payer_id = params["PayerID"]
     @payment_id = params["paymentId"]
@@ -152,9 +152,9 @@ class OrdersController < ApplicationController
 
  #   logger.info "just about to payment_method and save"
     logger.info @order.inspect
-    debugger
+   # debugger
       if @order.payment_method
-     debugger
+    # debugger
         if  @order.save(validate: false)
           @order.update_column(:payment_method, "Paypal")
           logger.info "about to approve url"
