@@ -10,4 +10,7 @@ class StoreController < ApplicationController
   def showcase
   	@products = Product.order(:title)
   end
+ def showcase2
+  	@products = Product.order(:title)
+  end  
 end

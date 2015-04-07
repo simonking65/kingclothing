@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get 'showcase' => 'store#showcase'
   
+  get 'showcase2' => 'store#showcase2'
+
   resources :users
 
   resources :orders do

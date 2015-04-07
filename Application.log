@@ -12418,4 +12418,401 @@ D, [2015-01-08T07:57:48.912694 #32115] DEBUG -- :   [1m[36mLineItem Exists (0.
 D, [2015-01-08T07:57:48.956699 #32115] DEBUG -- :   [1m[35mLineItem Load (0.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
 I, [2015-01-08T07:57:48.958779 #32115]  INFO -- :   Rendered collection (0.3ms)
 I, [2015-01-08T07:57:48.983470 #32115]  INFO -- :   Rendered carts/_cart.html.erb (34.5ms)
-I, [2015-01-08T07:57:48.993643 #32115]  INFO -- : Completed 200 OK in 355ms (Views: 305.3ms | ActiveRecord: 5.4ms)
+I, [2015-01-08T07:57:48.993643 #32115]  INFO -- : Completed 200 OK in 355ms (Views: 305.3ms | ActiveRecord: 5.4ms)D, [2015-04-07T07:30:17.806271 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:17.806362 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:17.806781 #11528]  INFO -- : Started GET "/showcase2" for 127.0.0.1 at 2015-04-07 07:30:17 +0100
+D, [2015-04-07T07:30:18.401233 #11528] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-07T07:30:18.479114 #11528]  INFO -- : Processing by StoreController#showcase2 as HTML
+D, [2015-04-07T07:30:18.530292 #11528] DEBUG -- :   [1m[35mCart Load (3.5ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 60]]
+I, [2015-04-07T07:30:18.582836 #11528]  INFO -- : Completed 500 Internal Server Error in 103ms
+F, [2015-04-07T07:30:18.586351 #11528] FATAL -- : 
+ActionView::MissingTemplate (Missing template store/showcase2, application/showcase2 with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/benking/workspace/kingclothing/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:413:in `_run__1289046475120510407__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1521881185254198210__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-07T07:30:18.628376 #11528]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (13.7ms)
+D, [2015-04-07T07:30:55.702276 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:55.702356 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:55.702576 #11528]  INFO -- : Started GET "/showcase" for 127.0.0.1 at 2015-04-07 07:30:55 +0100
+I, [2015-04-07T07:30:55.708804 #11528]  INFO -- : Processing by StoreController#showcase as HTML
+D, [2015-04-07T07:30:55.710202 #11528] DEBUG -- :   [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 60]]
+D, [2015-04-07T07:30:55.715393 #11528] DEBUG -- :   [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1
+I, [2015-04-07T07:30:55.754564 #11528]  INFO -- : Cache digest for store/showcase.html: a9bf555fa13cd1bcc7e38d92e3656606
+I, [2015-04-07T07:30:55.756036 #11528]  INFO -- : Read fragment views/store/products/2-20141022062504570899000/a9bf555fa13cd1bcc7e38d92e3656606 (0.2ms)
+D, [2015-04-07T07:30:55.756760 #11528] DEBUG -- :   [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".title ASC[0m
+I, [2015-04-07T07:30:55.757362 #11528]  INFO -- : Read fragment views/entry/products/1-20141022062440617569000/a9bf555fa13cd1bcc7e38d92e3656606 (0.1ms)
+I, [2015-04-07T07:30:55.871333 #11528]  INFO -- : Write fragment views/entry/products/1-20141022062440617569000/a9bf555fa13cd1bcc7e38d92e3656606 (2.0ms)
+I, [2015-04-07T07:30:55.872038 #11528]  INFO -- : Read fragment views/entry/products/2-20141022062504570899000/a9bf555fa13cd1bcc7e38d92e3656606 (0.1ms)
+I, [2015-04-07T07:30:55.875997 #11528]  INFO -- : Write fragment views/entry/products/2-20141022062504570899000/a9bf555fa13cd1bcc7e38d92e3656606 (1.8ms)
+I, [2015-04-07T07:30:55.877864 #11528]  INFO -- : Write fragment views/store/products/2-20141022062504570899000/a9bf555fa13cd1bcc7e38d92e3656606 (1.5ms)
+I, [2015-04-07T07:30:55.878105 #11528]  INFO -- :   Rendered store/showcase.html.erb within layouts/application (165.2ms)
+D, [2015-04-07T07:30:56.163350 #11528] DEBUG -- :   [1m[35mLineItem Exists (0.3ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 60]]
+D, [2015-04-07T07:30:56.196235 #11528] DEBUG -- :   [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 60]]
+D, [2015-04-07T07:30:56.264137 #11528] DEBUG -- :   [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+I, [2015-04-07T07:30:56.265511 #11528]  INFO -- :   Rendered line_items/_line_item.html.erb (25.4ms)
+I, [2015-04-07T07:30:56.269825 #11528]  INFO -- :   Rendered carts/_cart.html.erb (76.1ms)
+I, [2015-04-07T07:30:56.270408 #11528]  INFO -- : Completed 200 OK in 561ms (Views: 556.3ms | ActiveRecord: 3.4ms)
+D, [2015-04-07T07:30:56.397651 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.397905 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.398147 #11528]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.445923 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.446084 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.446798 #11528]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.459254 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.459335 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.459536 #11528]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.467093 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.467175 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.467406 #11528]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.476126 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.476450 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.476922 #11528]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.488376 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.488454 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.488634 #11528]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.524831 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.525342 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.525793 #11528]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.541917 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.547969 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.552941 #11528]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.571202 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.571988 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.572510 #11528]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.582975 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.583116 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.583643 #11528]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.591560 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.591699 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.592066 #11528]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.614077 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.614222 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.614503 #11528]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.627492 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.627596 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.627860 #11528]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.660470 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.660810 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.661223 #11528]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.669542 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.669633 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.669835 #11528]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.695422 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.695506 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.695796 #11528]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.704547 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.704625 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.708796 #11528]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.768471 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.768564 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.768830 #11528]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.779582 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.783237 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.783692 #11528]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.807498 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.807578 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.807775 #11528]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.836291 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.836374 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.836575 #11528]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.847710 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.847836 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.848045 #11528]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.858590 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.858670 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.861062 #11528]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.875597 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.875728 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.875971 #11528]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.882755 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.882887 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.883011 #11528]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.922703 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.923010 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.923476 #11528]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.934086 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.934211 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.934463 #11528]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:56.964636 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:56.964767 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:56.964947 #11528]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-04-07 07:30:56 +0100
+D, [2015-04-07T07:30:57.006210 #11528] DEBUG -- : 
+D, [2015-04-07T07:30:57.006291 #11528] DEBUG -- : 
+I, [2015-04-07T07:30:57.006452 #11528]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2015-04-07 07:30:57 +0100
+D, [2015-04-07T07:38:00.573957 #11528] DEBUG -- : 
+D, [2015-04-07T07:38:00.574037 #11528] DEBUG -- : 
+I, [2015-04-07T07:38:00.574156 #11528]  INFO -- : Started GET "/showcase2" for 127.0.0.1 at 2015-04-07 07:38:00 +0100
+I, [2015-04-07T07:38:00.578807 #11528]  INFO -- : Processing by StoreController#showcase2 as HTML
+D, [2015-04-07T07:38:00.580580 #11528] DEBUG -- :   [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 60]]
+I, [2015-04-07T07:38:00.583492 #11528]  INFO -- : Completed 500 Internal Server Error in 4ms
+F, [2015-04-07T07:38:00.588674 #11528] FATAL -- : 
+ActionView::MissingTemplate (Missing template store/showcase2, application/showcase2 with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/benking/workspace/kingclothing/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:413:in `_run__1289046475120510407__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1521881185254198210__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/benking/.rvm/rubies/ruby-2.1.5/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-07T07:38:00.606216 #11528]  INFO -- :   Rendered /Users/benking/.rvm/gems/ruby-2.1.5/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+D, [2015-04-07T07:40:17.122634 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.122713 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.122828 #11528]  INFO -- : Started GET "/showcase2" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+I, [2015-04-07T07:40:17.127188 #11528]  INFO -- : Processing by StoreController#showcase2 as HTML
+D, [2015-04-07T07:40:17.128359 #11528] DEBUG -- :   [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 60]]
+I, [2015-04-07T07:40:17.133598 #11528]  INFO -- :   Rendered store/showcase2.html.erb within layouts/application (0.8ms)
+D, [2015-04-07T07:40:17.146458 #11528] DEBUG -- :   [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 60]]
+D, [2015-04-07T07:40:17.148063 #11528] DEBUG -- :   [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 60]]
+D, [2015-04-07T07:40:17.150018 #11528] DEBUG -- :   [1m[36mProduct Load (0.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+I, [2015-04-07T07:40:17.151021 #11528]  INFO -- :   Rendered line_items/_line_item.html.erb (1.9ms)
+I, [2015-04-07T07:40:17.152645 #11528]  INFO -- :   Rendered carts/_cart.html.erb (5.1ms)
+I, [2015-04-07T07:40:17.153017 #11528]  INFO -- : Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+D, [2015-04-07T07:40:17.335238 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.335324 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.339957 #11528]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.347990 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.348103 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.348403 #11528]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.359467 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.359550 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.359796 #11528]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.387550 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.387636 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.387845 #11528]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.394085 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.396944 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.397220 #11528]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.405499 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.405575 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.405780 #11528]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.435543 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.435643 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.435837 #11528]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.450561 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.450643 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.450864 #11528]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.457693 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.466451 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.466684 #11528]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.472444 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.472533 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.472811 #11528]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.482136 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.482276 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.482471 #11528]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.488344 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.488434 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.488633 #11528]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.493760 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.493902 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.494129 #11528]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.553342 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.553428 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.553639 #11528]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.572901 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.572982 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.573270 #11528]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.597435 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.597531 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.597748 #11528]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.605323 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.605415 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.605647 #11528]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.618025 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.649108 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.649431 #11528]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.660311 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.660391 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.660805 #11528]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.666357 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.666454 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.666660 #11528]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.675237 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.675315 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.675504 #11528]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.708395 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.708490 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.737142 #11528]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.748048 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.748140 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.748351 #11528]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.755603 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.755849 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.756084 #11528]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.762056 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.762137 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.762420 #11528]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.768338 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.768613 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.775962 #11528]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+D, [2015-04-07T07:40:17.782767 #11528] DEBUG -- : 
+D, [2015-04-07T07:40:17.782860 #11528] DEBUG -- : 
+I, [2015-04-07T07:40:17.783078 #11528]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
