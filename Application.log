@@ -12418,6 +12418,7 @@ D, [2015-01-08T07:57:48.912694 #32115] DEBUG -- :   [1m[36mLineItem Exists (0.
 D, [2015-01-08T07:57:48.956699 #32115] DEBUG -- :   [1m[35mLineItem Load (0.6ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
 I, [2015-01-08T07:57:48.958779 #32115]  INFO -- :   Rendered collection (0.3ms)
 I, [2015-01-08T07:57:48.983470 #32115]  INFO -- :   Rendered carts/_cart.html.erb (34.5ms)
+<<<<<<< HEAD
 I, [2015-01-08T07:57:48.993643 #32115]  INFO -- : Completed 200 OK in 355ms (Views: 305.3ms | ActiveRecord: 5.4ms)D, [2015-04-07T07:30:17.806271 #11528] DEBUG -- : 
 D, [2015-04-07T07:30:17.806362 #11528] DEBUG -- : 
 I, [2015-04-07T07:30:17.806781 #11528]  INFO -- : Started GET "/showcase2" for 127.0.0.1 at 2015-04-07 07:30:17 +0100
@@ -12816,3 +12817,245 @@ I, [2015-04-07T07:40:17.775962 #11528]  INFO -- : Started GET "/assets/king%20lo
 D, [2015-04-07T07:40:17.782767 #11528] DEBUG -- : 
 D, [2015-04-07T07:40:17.782860 #11528] DEBUG -- : 
 I, [2015-04-07T07:40:17.783078 #11528]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-07 07:40:17 +0100
+=======
+I, [2015-01-08T07:57:48.993643 #32115]  INFO -- : Completed 200 OK in 355ms (Views: 305.3ms | ActiveRecord: 5.4ms)D, [2015-04-07T07:36:15.240595 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:15.289598 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:15.346601 #4512]  INFO -- : Started GET "/showcase" for 127.0.0.1 at 2015-04-07 07:36:15 +0100
+D, [2015-04-07T07:36:18.433778 #4512] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-07T07:36:18.827800 #4512]  INFO -- : Processing by StoreController#showcase as HTML
+D, [2015-04-07T07:36:19.070814 #4512] DEBUG -- :   [1m[35mCart Load (47.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 44]]
+D, [2015-04-07T07:36:19.433835 #4512] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1[0m
+I, [2015-04-07T07:36:19.592844 #4512]  INFO -- : Cache digest for store/showcase.html: a9bf555fa13cd1bcc7e38d92e3656606
+I, [2015-04-07T07:36:19.670848 #4512]  INFO -- : Read fragment views/store/products/1-20150404161604586241000/a9bf555fa13cd1bcc7e38d92e3656606 (0.0ms)
+D, [2015-04-07T07:36:19.741853 #4512] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" ORDER BY "products".title ASC
+I, [2015-04-07T07:36:19.817857 #4512]  INFO -- : Read fragment views/entry/products/1-20150404161604586241000/a9bf555fa13cd1bcc7e38d92e3656606 (0.0ms)
+I, [2015-04-07T07:36:20.273883 #4512]  INFO -- : Write fragment views/entry/products/1-20150404161604586241000/a9bf555fa13cd1bcc7e38d92e3656606 (28.0ms)
+I, [2015-04-07T07:36:20.350887 #4512]  INFO -- : Read fragment views/entry/products/2-20141107200509060857000/a9bf555fa13cd1bcc7e38d92e3656606 (1.0ms)
+I, [2015-04-07T07:36:20.457893 #4512]  INFO -- : Write fragment views/entry/products/2-20141107200509060857000/a9bf555fa13cd1bcc7e38d92e3656606 (23.0ms)
+I, [2015-04-07T07:36:20.560899 #4512]  INFO -- : Write fragment views/store/products/1-20150404161604586241000/a9bf555fa13cd1bcc7e38d92e3656606 (26.0ms)
+I, [2015-04-07T07:36:20.619903 #4512]  INFO -- :   Rendered store/showcase.html.erb within layouts/application (1244.1ms)
+D, [2015-04-07T07:36:23.177049 #4512] DEBUG -- :   [1m[36mLineItem Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 44]]
+D, [2015-04-07T07:36:23.587072 #4512] DEBUG -- :   [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 44]]
+D, [2015-04-07T07:36:23.858088 #4512] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1[0m  [["id", 1]]
+I, [2015-04-07T07:36:23.910091 #4512]  INFO -- :   Rendered line_items/_line_item.html.erb (191.0ms)
+I, [2015-04-07T07:36:23.960094 #4512]  INFO -- :   Rendered carts/_cart.html.erb (415.0ms)
+I, [2015-04-07T07:36:24.016097 #4512]  INFO -- : Completed 200 OK in 5133ms (Views: 4815.3ms | ActiveRecord: 58.0ms)
+D, [2015-04-07T07:36:25.052156 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.071157 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:25.126160 #4512]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:25.188164 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.208165 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:25.260168 #4512]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:25.312171 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.332172 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:25.386175 #4512]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:25.438178 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.459180 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:25.510182 #4512]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:25.561185 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.580186 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:25.631189 #4512]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:25.686193 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.706194 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:25.759197 #4512]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:25.813200 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.835201 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:25.890204 #4512]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:25.944207 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:25.964208 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:26.021212 #4512]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:25 +0100
+D, [2015-04-07T07:36:26.073215 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:26.096216 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:26.149219 #4512]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:26 +0100
+D, [2015-04-07T07:36:26.203222 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:26.226223 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:26.281227 #4512]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:26 +0100
+D, [2015-04-07T07:36:26.331229 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:26.352231 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:26.410234 #4512]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-07 07:36:26 +0100
+D, [2015-04-07T07:36:26.586244 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:26.605245 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:26.655248 #4512]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:26 +0100
+D, [2015-04-07T07:36:26.712251 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:26.730252 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:26.782255 #4512]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:26 +0100
+D, [2015-04-07T07:36:26.840259 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:26.859260 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:26.919263 #4512]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:26 +0100
+D, [2015-04-07T07:36:26.982267 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.001268 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.054271 #4512]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:27.123275 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.145276 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.198279 #4512]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:27.255282 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.274283 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.326286 #4512]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:27.375289 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.399291 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.450293 #4512]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:27.499296 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.519297 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.574301 #4512]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:27.623303 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.646305 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.703308 #4512]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:27.752311 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.774312 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.829315 #4512]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:27.880318 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:27.902319 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:27.955322 #4512]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:27 +0100
+D, [2015-04-07T07:36:28.005325 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:28.026326 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:28.083330 #4512]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:28 +0100
+D, [2015-04-07T07:36:28.132332 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:28.153334 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:28.208337 #4512]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:28 +0100
+D, [2015-04-07T07:36:28.259340 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:28.278341 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:28.334344 #4512]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:28 +0100
+D, [2015-04-07T07:36:28.385347 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:28.406348 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:28.458351 #4512]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-07 07:36:28 +0100
+D, [2015-04-07T07:36:28.572358 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:28.592359 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:28.640361 #4512]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-04-07 07:36:28 +0100
+D, [2015-04-07T07:36:28.703365 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:28.726366 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:28.783370 #4512]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-04-07 07:36:28 +0100
+D, [2015-04-07T07:36:28.840373 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:28.863374 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:28.912377 #4512]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2015-04-07 07:36:28 +0100
+D, [2015-04-07T07:36:34.977724 #4512] DEBUG -- : 
+D, [2015-04-07T07:36:34.999725 #4512] DEBUG -- : 
+I, [2015-04-07T07:36:35.047728 #4512]  INFO -- : Started GET "/showcase2" for 127.0.0.1 at 2015-04-07 07:36:35 +0100
+F, [2015-04-07T07:36:35.590759 #4512] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/showcase2"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:23:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-07T07:36:36.003783 #4512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+I, [2015-04-07T07:36:36.206794 #4512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (18.0ms)
+I, [2015-04-07T07:36:36.410806 #4512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (60.0ms)
+I, [2015-04-07T07:36:36.499811 #4512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (640.0ms)
+D, [2015-04-07T07:37:11.689824 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:11.713825 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:11.772829 #4512]  INFO -- : Started GET "/showcase2" for 127.0.0.1 at 2015-04-07 07:37:11 +0100
+I, [2015-04-07T07:37:12.160851 #4512]  INFO -- : Processing by StoreController#showcase2 as HTML
+D, [2015-04-07T07:37:12.255856 #4512] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 44]]
+D, [2015-04-07T07:37:12.390864 #4512] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT "products".* FROM "products" ORDER BY "products".updated_at DESC LIMIT 1[0m
+I, [2015-04-07T07:37:12.505870 #4512]  INFO -- : Cache digest for store/showcase2.html: a9bf555fa13cd1bcc7e38d92e3656606
+I, [2015-04-07T07:37:12.583875 #4512]  INFO -- : Read fragment views/store/products/1-20150404161604586241000/a9bf555fa13cd1bcc7e38d92e3656606 (1.0ms)
+I, [2015-04-07T07:37:12.641878 #4512]  INFO -- :   Rendered store/showcase2.html.erb within layouts/application (273.0ms)
+D, [2015-04-07T07:37:12.783886 #4512] DEBUG -- :   [1m[35mLineItem Exists (1.0ms)[0m  SELECT 1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 44]]
+D, [2015-04-07T07:37:12.878892 #4512] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 44]]
+D, [2015-04-07T07:37:13.043901 #4512] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT "products".* FROM "products" WHERE "products"."id" = ? ORDER BY "products"."id" ASC LIMIT 1  [["id", 1]]
+I, [2015-04-07T07:37:13.096904 #4512]  INFO -- :   Rendered line_items/_line_item.html.erb (97.0ms)
+I, [2015-04-07T07:37:13.150907 #4512]  INFO -- :   Rendered carts/_cart.html.erb (316.0ms)
+I, [2015-04-07T07:37:13.208911 #4512]  INFO -- : Completed 200 OK in 991ms (Views: 844.0ms | ActiveRecord: 13.0ms)
+D, [2015-04-07T07:37:13.510928 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:13.533929 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:13.599933 #4512]  INFO -- : Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:13 +0100
+D, [2015-04-07T07:37:13.644936 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:13.669937 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:13.736941 #4512]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:13 +0100
+D, [2015-04-07T07:37:13.782943 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:13.805945 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:13.871949 #4512]  INFO -- : Started GET "/assets/line_items.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:13 +0100
+D, [2015-04-07T07:37:13.918951 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:13.943953 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.007956 #4512]  INFO -- : Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:13 +0100
+D, [2015-04-07T07:37:14.048959 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.071960 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.133964 #4512]  INFO -- : Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:14.178966 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.201967 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.266971 #4512]  INFO -- : Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:14.311974 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.336975 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.401979 #4512]  INFO -- : Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:14.445981 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.470983 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.536987 #4512]  INFO -- : Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:14.579989 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.601990 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.657994 #4512]  INFO -- : Started GET "/assets/store.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:14.700996 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.722997 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.778000 #4512]  INFO -- : Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:14.820003 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.840004 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:14.895007 #4512]  INFO -- : Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:14.938010 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:14.958011 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.011014 #4512]  INFO -- : Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:14 +0100
+D, [2015-04-07T07:37:15.059016 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.077018 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.133021 #4512]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:15.178023 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.200025 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.262028 #4512]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:15.305031 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.325032 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.381035 #4512]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:15.430038 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.447039 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.499042 #4512]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:15.555045 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.578046 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.631049 #4512]  INFO -- : Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:15.674052 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.694053 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.747056 #4512]  INFO -- : Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:15.793058 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.812060 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.865063 #4512]  INFO -- : Started GET "/assets/line_items.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:15.910065 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:15.930066 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:15.983069 #4512]  INFO -- : Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:15 +0100
+D, [2015-04-07T07:37:16.026072 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.045073 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.098076 #4512]  INFO -- : Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:16.146079 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.165080 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.219083 #4512]  INFO -- : Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:16.266086 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.285087 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.340090 #4512]  INFO -- : Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:16.385092 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.406094 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.460097 #4512]  INFO -- : Started GET "/assets/store.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:16.504099 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.524100 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.579103 #4512]  INFO -- : Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:16.620106 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.641107 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.695110 #4512]  INFO -- : Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:16.781115 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.802116 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.859119 #4512]  INFO -- : Started GET "/assets/king%20logos.png" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:16.908122 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:16.934124 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:16.983127 #4512]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-04-07 07:37:16 +0100
+D, [2015-04-07T07:37:17.020129 #4512] DEBUG -- : 
+D, [2015-04-07T07:37:17.038130 #4512] DEBUG -- : 
+I, [2015-04-07T07:37:17.085132 #4512]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for 127.0.0.1 at 2015-04-07 07:37:17 +0100
+>>>>>>> 55325cd48269be21a07de44c3772d503e4878935

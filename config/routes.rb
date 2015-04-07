@@ -27,8 +27,10 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
 
   get 'showcase' => 'store#showcase'
-  
+
   get 'showcase2' => 'store#showcase2'
+  
+
 
   resources :users
 
