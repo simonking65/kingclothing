@@ -27,9 +27,9 @@ class PaypalExpressController < ApplicationController
             :PaymentAction => "Sale"}]
         }
         })
-      debugger
+#      debugger
       @set_express_checkout_response = @api.set_express_checkout(@set_express_checkout)
- debugger
+# debugger
    # total_as_cents, setup_purchase_params = get_setup_purchase_params @cart, request
    # setup_response = @gateway.setup_purchase(total_as_cents, setup_purchase_params)
    # debugger

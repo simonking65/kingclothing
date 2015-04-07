@@ -39,7 +39,7 @@ class Payment < PayPal::SDK::REST::Payment
   def order=(order)
     self.intent = "sale"
     add_payment_method(order)
-    debugger
+#    debugger
     #self.transactions = {
     #  :amount => {
     #    :total => order.total_price,
@@ -77,7 +77,7 @@ class Payment < PayPal::SDK::REST::Payment
    #    }, 
     #   :description => "King Clothing" 
     #  }
-     debugger
+   #  debugger
      self.redirect_urls = {
        :return_url => order.return_url.sub(/:order_id/, order.id.to_s),
        :cancel_url => order.cancel_url.sub(/:order_id/, order.id.to_s)

@@ -16,11 +16,11 @@
 
 
 #banner {
-  background-image: url(image_path("kingclothingnyc.png"));
+  
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #3EA0FF;
   text-align: center;
 
   img {
@@ -61,6 +61,8 @@
       font-size: small;
     }
 
+
+
     #cart {
       font-size: smaller;
       color: white;
@@ -74,6 +76,7 @@
     
     ul {
       padding: 0;
+      display: inline;
       li {
         list-style: none;
         a {
@@ -83,6 +86,15 @@
       }
     }
   }
+
+form {
+  display: inline;
+}
+
+.button_to div {
+  display: inline;
+}
+
 }
 
 .kingclothing_form {
@@ -118,4 +130,33 @@
       display: none
     }
   }
+}
+
+
+
+.main_menu, .admin_menu {
+  li {
+    display: inline-block;
+    padding: 3px;
+
+    a {
+      color: white;
+      }
+    }
+ 
+}
+
+
+.main_menu, .admin_menu, .menu ul {
+  
+  width: 50%;
+  
+  display: inline;
+  
+}
+
+
+.button_to, .menu input {
+  display: inline;
+  padding: 25px;
 }

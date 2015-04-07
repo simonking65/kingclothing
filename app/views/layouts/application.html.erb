@@ -12,6 +12,22 @@
 		<%= @page_title || "King Clothing" %>
 	</div>
 	<div id="columns">
+		<div id="menu">
+			<ul class="main_menu">
+				<li><%= link_to "Home", store_path %></li>
+				<li><%= link_to "Questions", questions_path %></li>
+				<li><%= link_to "News", news_path %></li>
+				<li><%= link_to "Contact", contact_path %></li>
+			</ul>
+		<% if session[:user_id] %>
+				<ul class="admin_menu">
+					<li><%= link_to 'Orders', orders_path %></li>
+					<li><%= link_to 'Products', products_path %></li>
+					<li><%= link_to 'Users', users_path %></li>
+				</ul>
+				<%= button_to 'Logout', logout_path, method: :delete , :html => {:class => "menu" } %>
+			<% end %>
+		</div>
 		<div id="side">
 			<% if @cart %>
 				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
@@ -19,21 +35,8 @@
 				<% end %>
 			<% end %>
 			
-			<ul>
-				<li><%= link_to "Home", store_path %></li>
-				<li><%= link_to "Questions", questions_path %></li>
-				<li><%= link_to "News", news_path %></li>
-				<li><%= link_to "Contact", contact_path %></li>
-			</ul>
-
-			<% if session[:user_id] %>
-				<ul>
-					<li><%= link_to 'Orders', orders_path %></li>
-					<li><%= link_to 'Products', products_path %></li>
-					<li><%= link_to 'Users', users_path %></li>
-				</ul>
-				<%= button_to 'Logout', logout_path, method: :delete %>
-			<% end %>
+			
+	
 		</div>
 		<div id="main">
 			<%= yield %>
