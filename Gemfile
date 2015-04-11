@@ -6,20 +6,21 @@ source 'https://rubygems.org'
 
 
 ruby '2.1.5'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.0' 
 group :development, :test do
 # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
 	gem 'byebug'
-
+ 
 
 end
 
 
 #gem 'protected_attributes'
 group :production do
-	gem 'mysql2'
-	gem 'rack', '1.6.0'
+	gem 'pg'
+	#gem 'rack', '1.6.0'
+
 end
 #gem 'minitest'
 #gem 'minitest'
