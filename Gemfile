@@ -18,7 +18,7 @@ end
 
 #gem 'protected_attributes'
 group :production do
-	gem 'pg'
+	gem 'mysql2'
 end
 #gem 'minitest'
 #gem 'minitest'
