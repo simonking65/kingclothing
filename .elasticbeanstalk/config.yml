@@ -1,6 +1,6 @@
 branch-defaults:
   redesign:
-    environment: null
+    environment: kingclothing-env
 global:
   application_name: kingclothing
   default_ec2_keyname: null
