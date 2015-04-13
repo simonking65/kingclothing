@@ -18,7 +18,7 @@ end
 
 #gem 'protected_attributes'
 group :production do
-	gem 'pg'
+	gem 'mysql2'
 	#gem 'rack', '1.6.0'
 
 end
