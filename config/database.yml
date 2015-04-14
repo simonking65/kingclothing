@@ -25,9 +25,9 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: <%= ENV['RDS_DB_NAME'] %>
-  username: <%= ENV['RDS_USERNAME'] %>
-  password: <%= ENV['RDS_PASSWORD'] %>
-  host: <%= ENV['RDS_HOSTNAME'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  database: mypg
+  username: simonking65
+  password: Thomas1076
+  host: mypginstance.cgnwndolek45.eu-west-1.rds.amazonaws.com
+  port: 5432
   
