@@ -26,8 +26,8 @@ production:
   adapter: postgresql
   encoding: utf8
   database: mypg
-  username: simon1
-  password: xgX$D3vJe*m)
+  username: simonking65
+  password: thomas1068
   host: mypginstance.cgnwndolek45.eu-west-1.rds.amazonaws.com
   port: 5432
   
