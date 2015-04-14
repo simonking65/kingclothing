@@ -6,7 +6,7 @@ source 'https://rubygems.org'
 
 
 ruby '2.1.5'
-gem 'rails', '4.0.0'
+gem 'rails', '4.2.0'
 group :development, :test do
 # Use sqlite3 as the database for Active Record
 	gem 'sqlite3'
@@ -22,8 +22,11 @@ group :production do
 end
 #gem 'minitest'
 #gem 'minitest'
-gem 'paypal-sdk-core', '~> 0.3.0',	:git => 'https://github.com/paypal/sdk-core-ruby.git'
-gem 'paypal-sdk-rest', '~> 0.10.0',	:git => 'https://github.com/paypal/rest-api-sdk-ruby.git'
+#gem 'paypal-sdk-core', '~> 0.3.0',	:git => 'https://github.com/paypal/sdk-core-ruby.git'
+#gem 'paypal-sdk-rest', '~> 0.10.0',	:git => 'https://github.com/paypal/rest-api-sdk-ruby.git'
+
+gem 'paypal-sdk-core'
+gem 'paypal-sdk-rest'
 gem 'paypal-sdk-merchant'
 #gem 'activemerchant'
 #gem 'settingslogic'
