@@ -17590,3 +17590,1198 @@ I, [2015-04-11T09:19:06.450628 #7728]  INFO -- : Started GET "/assets/nyc%20tee.
 D, [2015-04-11T09:19:06.496631 #7728] DEBUG -- : 
 D, [2015-04-11T09:19:06.520632 #7728] DEBUG -- : 
 I, [2015-04-11T09:19:06.594637 #7728]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for 127.0.0.1 at 2015-04-11 09:19:06 +0100
+D, [2015-04-13T22:24:32.588753 #11988] DEBUG -- : 
+D, [2015-04-13T22:24:32.639755 #11988] DEBUG -- : 
+I, [2015-04-13T22:24:32.672757 #11988]  INFO -- : Started GET "/" for ::1 at 2015-04-13 22:24:32 +0100
+D, [2015-04-13T22:24:35.193902 #11988] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+F, [2015-04-13T22:24:35.765934 #11988] FATAL -- : 
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.0) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.0) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-13T22:24:36.058951 #11988]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-13T22:24:36.137956 #11988]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+I, [2015-04-13T22:24:36.276964 #11988]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+I, [2015-04-13T22:24:36.341967 #11988]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (343.0ms)
+D, [2015-04-13T22:26:18.176792 #12824] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-13T22:26:18.210794 #12824]  INFO -- : Migrating to AddShippingAddressToOrder (20141217002244)
+D, [2015-04-13T22:26:18.223795 #12824] DEBUG -- :   [1m[35m (1.0ms)[0m  begin transaction
+D, [2015-04-13T22:26:18.410805 #12824] DEBUG -- :   [1m[36m (123.0ms)[0m  [1mALTER TABLE "orders" ADD "shipping_address1" varchar[0m
+E, [2015-04-13T22:26:18.412805 #12824] ERROR -- : SQLite3::SQLException: duplicate column name: shipping_address1: ALTER TABLE "orders" ADD "shipping_address1" varchar
+D, [2015-04-13T22:26:18.413805 #12824] DEBUG -- :   [1m[35m (1.0ms)[0m  rollback transaction
+D, [2015-04-13T22:32:28.617980 #15028] DEBUG -- : 
+D, [2015-04-13T22:32:28.635981 #15028] DEBUG -- : 
+I, [2015-04-13T22:32:28.669983 #15028]  INFO -- : Started GET "/" for ::1 at 2015-04-13 22:32:28 +0100
+D, [2015-04-13T22:32:29.682041 #15028] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-13T22:32:30.211071 #15028]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-13T22:32:30.536090 #15028] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", nil]]
+D, [2015-04-13T22:32:30.575092 #15028] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2015-04-13T22:32:30.674097 #15028] DEBUG -- :   [1m[35mSQL (5.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-13 21:32:30.596093"], ["updated_at", "2015-04-13 21:32:30.596093"]]
+D, [2015-04-13T22:32:30.858108 #15028] DEBUG -- :   [1m[36m (152.0ms)[0m  [1mcommit transaction[0m
+D, [2015-04-13T22:32:31.225129 #15028] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+D, [2015-04-13T22:32:31.344136 #15028] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-13T22:32:31.470143 #15028]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (56.0ms)
+I, [2015-04-13T22:32:31.510145 #15028]  INFO -- :   Rendered store/index.html.erb within layouts/application (311.0ms)
+I, [2015-04-13T22:32:54.498460 #15028]  INFO -- : Completed 500 Internal Server Error in 24258ms
+F, [2015-04-13T22:32:54.786477 #15028] FATAL -- : 
+ActionView::Template::Error (TypeError: Object doesn't support this property or method
+  (in C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__220166591_71269900'
+
+
+I, [2015-04-13T22:32:56.017547 #15028]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-04-13T22:32:56.146554 #15028]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.0ms)
+I, [2015-04-13T22:32:56.281562 #15028]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+I, [2015-04-13T22:32:56.359567 #15028]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (361.0ms)
+D, [2015-04-14T06:36:25.463065 #16080] DEBUG -- : 
+D, [2015-04-14T06:36:25.510067 #16080] DEBUG -- : 
+I, [2015-04-14T06:36:25.544069 #16080]  INFO -- : Started GET "/" for ::1 at 2015-04-14 06:36:25 +0100
+D, [2015-04-14T06:36:33.431520 #16080] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-14T06:36:34.154562 #16080]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T06:36:35.058613 #16080] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", nil]]
+D, [2015-04-14T06:36:35.107616 #16080] DEBUG -- :   [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+D, [2015-04-14T06:36:35.255625 #16080] DEBUG -- :   [1m[35mSQL (4.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-14 05:36:35.139618"], ["updated_at", "2015-04-14 05:36:35.139618"]]
+D, [2015-04-14T06:36:35.536641 #16080] DEBUG -- :   [1m[36m (249.0ms)[0m  [1mcommit transaction[0m
+D, [2015-04-14T06:36:36.463694 #16080] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+D, [2015-04-14T06:36:36.593701 #16080] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T06:36:36.834715 #16080]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (143.0ms)
+I, [2015-04-14T06:36:36.874717 #16080]  INFO -- :   Rendered store/index.html.erb within layouts/application (515.0ms)
+I, [2015-04-14T06:37:04.349289 #16080]  INFO -- : Completed 500 Internal Server Error in 30142ms
+F, [2015-04-14T06:37:04.623304 #16080] FATAL -- : 
+ActionView::Template::Error (TypeError: Object doesn't support this property or method
+  (in C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1040210198_71195080'
+
+
+I, [2015-04-14T06:37:06.163393 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-04-14T06:37:06.394406 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (24.0ms)
+I, [2015-04-14T06:37:06.583417 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+I, [2015-04-14T06:37:06.665421 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (625.0ms)
+D, [2015-04-14T06:37:06.764427 #16080] DEBUG -- : 
+D, [2015-04-14T06:37:06.780428 #16080] DEBUG -- : 
+I, [2015-04-14T06:37:06.814430 #16080]  INFO -- : Started GET "/" for ::1 at 2015-04-14 06:37:06 +0100
+I, [2015-04-14T06:37:06.874433 #16080]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T06:37:06.942437 #16080] DEBUG -- :   [1m[36mCart Load (0.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", nil]]
+D, [2015-04-14T06:37:06.977439 #16080] DEBUG -- :   [1m[35m (1.0ms)[0m  begin transaction
+D, [2015-04-14T06:37:07.096446 #16080] DEBUG -- :   [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-14 05:37:06.978439"], ["updated_at", "2015-04-14 05:37:06.978439"]]
+D, [2015-04-14T06:37:07.346460 #16080] DEBUG -- :   [1m[35m (219.0ms)[0m  commit transaction
+D, [2015-04-14T06:37:07.427465 #16080] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-14T06:37:07.477468 #16080] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T06:37:07.554472 #16080]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (2.0ms)
+I, [2015-04-14T06:37:07.602475 #16080]  INFO -- :   Rendered store/index.html.erb within layouts/application (196.0ms)
+I, [2015-04-14T06:37:25.224483 #16080]  INFO -- : Completed 500 Internal Server Error in 18315ms
+F, [2015-04-14T06:37:25.600504 #16080] FATAL -- : 
+ActionView::Template::Error (TypeError: Object doesn't support this property or method
+  (in C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1040210198_71195080'
+
+
+I, [2015-04-14T06:37:26.738569 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-04-14T06:37:26.853576 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+I, [2015-04-14T06:37:26.967582 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+I, [2015-04-14T06:37:27.031586 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (322.0ms)
+D, [2015-04-14T06:37:49.290859 #16080] DEBUG -- : 
+D, [2015-04-14T06:37:49.328861 #16080] DEBUG -- : 
+I, [2015-04-14T06:37:49.411866 #16080]  INFO -- : Started GET "/news" for ::1 at 2015-04-14 06:37:49 +0100
+I, [2015-04-14T06:37:49.576876 #16080]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-04-14T06:37:49.870892 #16080]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (14.0ms)
+I, [2015-04-14T06:38:07.678911 #16080]  INFO -- : Completed 500 Internal Server Error in 18067ms
+F, [2015-04-14T06:38:08.041932 #16080] FATAL -- : 
+ActionView::Template::Error (TypeError: Object doesn't support this property or method
+  (in C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/turbolinks-2.5.3/lib/assets/javascripts/turbolinks.js.coffee)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___1040210198_71195080'
+
+
+I, [2015-04-14T06:38:09.165996 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-14T06:38:09.302004 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.0ms)
+I, [2015-04-14T06:38:09.408010 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+I, [2015-04-14T06:38:09.479014 #16080]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (349.0ms)
+D, [2015-04-14T06:44:46.103700 #14788] DEBUG -- : 
+D, [2015-04-14T06:44:46.127701 #14788] DEBUG -- : 
+I, [2015-04-14T06:44:46.165703 #14788]  INFO -- : Started GET "/" for ::1 at 2015-04-14 06:44:46 +0100
+D, [2015-04-14T06:44:56.137274 #14788] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-14T06:44:56.872316 #14788]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T06:44:57.415347 #14788] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", nil]]
+D, [2015-04-14T06:44:57.463349 #14788] DEBUG -- :   [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+D, [2015-04-14T06:44:57.700363 #14788] DEBUG -- :   [1m[35mSQL (4.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-14 05:44:57.597357"], ["updated_at", "2015-04-14 05:44:57.597357"]]
+D, [2015-04-14T06:44:58.242394 #14788] DEBUG -- :   [1m[36m (499.0ms)[0m  [1mcommit transaction[0m
+D, [2015-04-14T06:44:59.450463 #14788] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+D, [2015-04-14T06:44:59.647474 #14788] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T06:44:59.814484 #14788]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (108.0ms)
+I, [2015-04-14T06:44:59.865487 #14788]  INFO -- :   Rendered store/index.html.erb within layouts/application (562.0ms)
+I, [2015-04-14T06:45:02.723650 #14788]  INFO -- : Completed 500 Internal Server Error in 5814ms
+F, [2015-04-14T06:45:03.056669 #14788] FATAL -- : 
+ActionView::Template::Error (couldn't find file 'turbolinks'
+  (in C:/Users/Simon/rails_projects/kingclothing/app/assets/javascripts/application.js:16)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___951511238_70316820'
+
+
+I, [2015-04-14T06:45:04.175733 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-04-14T06:45:04.379745 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.0ms)
+I, [2015-04-14T06:45:04.517753 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+I, [2015-04-14T06:45:04.605758 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (541.0ms)
+D, [2015-04-14T06:45:04.637760 #14788] DEBUG -- : 
+D, [2015-04-14T06:45:04.660761 #14788] DEBUG -- : 
+I, [2015-04-14T06:45:04.710764 #14788]  INFO -- : Started GET "/" for ::1 at 2015-04-14 06:45:04 +0100
+I, [2015-04-14T06:45:04.788768 #14788]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T06:45:04.858772 #14788] DEBUG -- :   [1m[36mCart Load (1.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", nil]]
+D, [2015-04-14T06:45:04.898775 #14788] DEBUG -- :   [1m[35m (1.0ms)[0m  begin transaction
+D, [2015-04-14T06:45:05.012781 #14788] DEBUG -- :   [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-04-14 05:45:04.900775"], ["updated_at", "2015-04-14 05:45:04.900775"]]
+D, [2015-04-14T06:45:05.473808 #14788] DEBUG -- :   [1m[35m (422.0ms)[0m  commit transaction
+D, [2015-04-14T06:45:05.561813 #14788] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-14T06:45:05.629816 #14788] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T06:45:05.701821 #14788]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (2.0ms)
+I, [2015-04-14T06:45:05.783825 #14788]  INFO -- :   Rendered store/index.html.erb within layouts/application (216.0ms)
+I, [2015-04-14T06:45:06.162847 #14788]  INFO -- : Completed 500 Internal Server Error in 1331ms
+F, [2015-04-14T06:45:06.540869 #14788] FATAL -- : 
+ActionView::Template::Error (couldn't find file 'turbolinks'
+  (in C:/Users/Simon/rails_projects/kingclothing/app/assets/javascripts/application.js:16)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___951511238_70316820'
+
+
+I, [2015-04-14T06:45:07.474922 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-14T06:45:07.621930 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.0ms)
+I, [2015-04-14T06:45:07.758938 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+I, [2015-04-14T06:45:07.855944 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (411.0ms)
+D, [2015-04-14T06:45:58.667850 #14788] DEBUG -- : 
+D, [2015-04-14T06:45:58.688851 #14788] DEBUG -- : 
+I, [2015-04-14T06:45:58.730854 #14788]  INFO -- : Started GET "/" for ::1 at 2015-04-14 06:45:58 +0100
+I, [2015-04-14T06:45:58.832860 #14788]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T06:45:58.899863 #14788] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", nil]]
+D, [2015-04-14T06:45:58.936865 #14788] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2015-04-14T06:45:59.038871 #14788] DEBUG -- :   [1m[35mSQL (5.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-14 05:45:58.937866"], ["updated_at", "2015-04-14 05:45:58.937866"]]
+D, [2015-04-14T06:45:59.274885 #14788] DEBUG -- :   [1m[36m (199.0ms)[0m  [1mcommit transaction[0m
+D, [2015-04-14T06:45:59.349889 #14788] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+D, [2015-04-14T06:45:59.410893 #14788] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T06:45:59.469896 #14788]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (2.0ms)
+I, [2015-04-14T06:45:59.527899 #14788]  INFO -- :   Rendered store/index.html.erb within layouts/application (182.0ms)
+I, [2015-04-14T06:46:03.145106 #14788]  INFO -- : Completed 500 Internal Server Error in 4274ms
+F, [2015-04-14T06:46:03.513127 #14788] FATAL -- : 
+ActionView::Template::Error (TypeError: Object doesn't support this property or method
+  (in C:/Users/Simon/rails_projects/kingclothing/app/assets/javascripts/admin.js.coffee)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___951511238_70316820'
+
+
+I, [2015-04-14T06:46:04.703195 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-14T06:46:04.836203 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.0ms)
+I, [2015-04-14T06:46:04.969210 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+I, [2015-04-14T06:46:05.069216 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (381.0ms)
+D, [2015-04-14T06:48:52.467791 #14788] DEBUG -- : 
+D, [2015-04-14T06:48:52.490792 #14788] DEBUG -- : 
+I, [2015-04-14T06:48:52.537795 #14788]  INFO -- : Started GET "/news" for ::1 at 2015-04-14 06:48:52 +0100
+I, [2015-04-14T06:48:52.702804 #14788]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-04-14T06:48:52.801810 #14788]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (3.0ms)
+I, [2015-04-14T06:48:54.472906 #14788]  INFO -- : Completed 500 Internal Server Error in 1730ms
+F, [2015-04-14T06:48:54.912931 #14788] FATAL -- : 
+ActionView::Template::Error (TypeError: Object doesn't support this property or method
+  (in C:/Users/Simon/rails_projects/kingclothing/app/assets/javascripts/admin.js.coffee)):
+    3: <head>
+    4:   <title>Kingclothing</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    8: <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    9: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___951511238_70316820'
+
+
+I, [2015-04-14T06:48:55.936989 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-04-14T06:48:56.071997 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.0ms)
+I, [2015-04-14T06:48:56.200004 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+I, [2015-04-14T06:48:56.290009 #14788]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (385.0ms)
+D, [2015-04-14T07:04:53.283746 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:53.307748 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:53.357751 #6516]  INFO -- : Started GET "/news" for ::1 at 2015-04-14 07:04:53 +0100
+D, [2015-04-14T07:04:54.240801 #6516] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-14T07:04:54.454813 #6516]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-04-14T07:04:54.574820 #6516]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (9.0ms)
+I, [2015-04-14T07:04:55.100850 #6516]  INFO -- : Completed 200 OK in 594ms (Views: 593.0ms | ActiveRecord: 0.0ms)
+D, [2015-04-14T07:04:55.949899 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:55.968900 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.018903 #6516]  INFO -- : Started GET "/assets/admin.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.114908 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:56.138910 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.187913 #6516]  INFO -- : Started GET "/assets/carts.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.248916 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:56.267917 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.323920 #6516]  INFO -- : Started GET "/assets/line_items.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.374923 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:56.394924 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.436927 #6516]  INFO -- : Started GET "/assets/orders.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.483929 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:56.505931 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.557934 #6516]  INFO -- : Started GET "/assets/products.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.608937 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:56.634938 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.693941 #6516]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.739944 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:56.758945 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.809948 #6516]  INFO -- : Started GET "/assets/sessions.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.858951 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:56.877952 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:56.928955 #6516]  INFO -- : Started GET "/assets/static_pages.css?body=1" for ::1 at 2015-04-14 07:04:56 +0100
+D, [2015-04-14T07:04:56.984958 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:57.009960 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:57.066963 #6516]  INFO -- : Started GET "/assets/store.css?body=1" for ::1 at 2015-04-14 07:04:57 +0100
+D, [2015-04-14T07:04:57.118966 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:57.139967 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:57.185970 #6516]  INFO -- : Started GET "/assets/users.css?body=1" for ::1 at 2015-04-14 07:04:57 +0100
+D, [2015-04-14T07:04:57.240973 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:57.262974 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:57.318977 #6516]  INFO -- : Started GET "/assets/application.css?body=1" for ::1 at 2015-04-14 07:04:57 +0100
+D, [2015-04-14T07:04:57.403982 #6516] DEBUG -- : 
+D, [2015-04-14T07:04:57.420983 #6516] DEBUG -- : 
+I, [2015-04-14T07:04:57.469986 #6516]  INFO -- : Started GET "/assets/king%20logos.png" for ::1 at 2015-04-14 07:04:57 +0100
+D, [2015-04-14T07:05:05.547448 #6516] DEBUG -- : 
+D, [2015-04-14T07:05:05.573449 #6516] DEBUG -- : 
+I, [2015-04-14T07:05:05.622452 #6516]  INFO -- : Started GET "/" for ::1 at 2015-04-14 07:05:05 +0100
+I, [2015-04-14T07:05:05.709457 #6516]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T07:05:05.864466 #6516] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", nil]]
+D, [2015-04-14T07:05:05.915469 #6516] DEBUG -- :   [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+D, [2015-04-14T07:05:06.042476 #6516] DEBUG -- :   [1m[35mSQL (5.0ms)[0m  INSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-04-14 06:05:05.926470"], ["updated_at", "2015-04-14 06:05:05.926470"]]
+D, [2015-04-14T07:05:06.200485 #6516] DEBUG -- :   [1m[36m (117.0ms)[0m  [1mcommit transaction[0m
+D, [2015-04-14T07:05:06.315492 #6516] DEBUG -- :   [1m[35mProduct Load (1.0ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+D, [2015-04-14T07:05:06.407497 #6516] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T07:05:06.486502 #6516]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (1.0ms)
+I, [2015-04-14T07:05:06.542505 #6516]  INFO -- :   Rendered store/index.html.erb within layouts/application (248.0ms)
+D, [2015-04-14T07:05:07.244545 #6516] DEBUG -- :   [1m[36mLineItem Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 53]]
+D, [2015-04-14T07:05:07.400554 #6516] DEBUG -- :   [1m[35mLineItem Load (1.0ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 53]]
+I, [2015-04-14T07:05:07.437556 #6516]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-14T07:05:07.840579 #6516]  INFO -- :   Rendered carts/_cart.html.erb (481.0ms)
+I, [2015-04-14T07:05:07.897582 #6516]  INFO -- : Completed 200 OK in 2132ms (Views: 1614.1ms | ActiveRecord: 133.0ms)
+D, [2015-04-14T07:05:08.290605 #6516] DEBUG -- : 
+D, [2015-04-14T07:05:08.322607 #6516] DEBUG -- : 
+I, [2015-04-14T07:05:08.374610 #6516]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-04-14 07:05:08 +0100
+D, [2015-04-14T07:05:08.429613 #6516] DEBUG -- : 
+D, [2015-04-14T07:05:08.468615 #6516] DEBUG -- : 
+I, [2015-04-14T07:05:08.567621 #6516]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-04-14 07:05:08 +0100
+D, [2015-04-14T07:05:08.617623 #6516] DEBUG -- : 
+D, [2015-04-14T07:05:08.636625 #6516] DEBUG -- : 
+I, [2015-04-14T07:05:08.735630 #6516]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for ::1 at 2015-04-14 07:05:08 +0100
+D, [2015-04-14T07:05:13.146883 #6516] DEBUG -- : 
+D, [2015-04-14T07:05:13.282890 #6516] DEBUG -- : 
+I, [2015-04-14T07:05:13.666912 #6516]  INFO -- : Started POST "/line_items?product_id=3" for ::1 at 2015-04-14 07:05:13 +0100
+I, [2015-04-14T07:05:14.141939 #6516]  INFO -- : Processing by LineItemsController#create as HTML
+I, [2015-04-14T07:05:14.632968 #6516]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"3"}
+W, [2015-04-14T07:05:14.947986 #6516]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-04-14T07:05:15.262003 #6516]  INFO -- : Completed 422 Unprocessable Entity in 315ms
+F, [2015-04-14T07:05:19.589251 #6516] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-14T07:05:20.039277 #6516]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-04-14T07:05:20.177285 #6516]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.0ms)
+I, [2015-04-14T07:05:20.333294 #6516]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+I, [2015-04-14T07:05:20.435299 #6516]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (419.0ms)
+D, [2015-04-14T07:12:25.696623 #15388] DEBUG -- : 
+D, [2015-04-14T07:12:25.722624 #15388] DEBUG -- : 
+I, [2015-04-14T07:12:25.768627 #15388]  INFO -- : Started GET "/" for ::1 at 2015-04-14 07:12:25 +0100
+D, [2015-04-14T07:12:26.654678 #15388] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-14T07:12:26.865690 #15388]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T07:12:27.058701 #15388] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-04-14T07:12:27.224710 #15388] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-14T07:12:27.317716 #15388] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T07:12:27.396720 #15388]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (1.0ms)
+I, [2015-04-14T07:12:27.450723 #15388]  INFO -- :   Rendered store/index.html.erb within layouts/application (262.0ms)
+D, [2015-04-14T07:12:28.088760 #15388] DEBUG -- :   [1m[35mLineItem Exists (0.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-04-14T07:12:28.219767 #15388] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-04-14T07:12:28.259770 #15388]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-14T07:12:28.368776 #15388]  INFO -- :   Rendered carts/_cart.html.erb (219.0ms)
+I, [2015-04-14T07:12:28.425779 #15388]  INFO -- : Completed 200 OK in 1505ms (Views: 1280.1ms | ActiveRecord: 8.0ms)
+D, [2015-04-14T07:12:28.455781 #15388] DEBUG -- : 
+D, [2015-04-14T07:12:28.478782 #15388] DEBUG -- : 
+I, [2015-04-14T07:12:28.526785 #15388]  INFO -- : Started GET "/" for ::1 at 2015-04-14 07:12:28 +0100
+I, [2015-04-14T07:12:28.594789 #15388]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T07:12:28.655792 #15388] DEBUG -- :   [1m[35mCart Load (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-04-14T07:12:28.736797 #15388] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-14T07:12:28.797800 #15388] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T07:12:28.858804 #15388]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (2.0ms)
+I, [2015-04-14T07:12:28.909807 #15388]  INFO -- :   Rendered store/index.html.erb within layouts/application (190.0ms)
+D, [2015-04-14T07:12:29.342831 #15388] DEBUG -- :   [1m[35mLineItem Exists (1.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-04-14T07:12:29.421836 #15388] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-04-14T07:12:29.453838 #15388]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-14T07:12:29.497840 #15388]  INFO -- :   Rendered carts/_cart.html.erb (109.0ms)
+I, [2015-04-14T07:12:29.545843 #15388]  INFO -- : Completed 200 OK in 903ms (Views: 838.0ms | ActiveRecord: 3.0ms)
+D, [2015-04-14T07:12:29.922865 #15388] DEBUG -- : 
+D, [2015-04-14T07:12:29.944866 #15388] DEBUG -- : 
+I, [2015-04-14T07:12:30.008870 #15388]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-04-14 07:12:30 +0100
+D, [2015-04-14T07:12:30.066873 #15388] DEBUG -- : 
+D, [2015-04-14T07:12:30.089874 #15388] DEBUG -- : 
+I, [2015-04-14T07:12:30.122876 #15388]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-04-14 07:12:30 +0100
+D, [2015-04-14T07:12:33.978097 #15388] DEBUG -- : 
+D, [2015-04-14T07:12:33.997098 #15388] DEBUG -- : 
+I, [2015-04-14T07:12:34.045100 #15388]  INFO -- : Started POST "/line_items?product_id=1" for ::1 at 2015-04-14 07:12:34 +0100
+I, [2015-04-14T07:12:34.126105 #15388]  INFO -- : Processing by LineItemsController#create as HTML
+I, [2015-04-14T07:12:34.189109 #15388]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+W, [2015-04-14T07:12:34.225111 #15388]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-04-14T07:12:34.266113 #15388]  INFO -- : Completed 422 Unprocessable Entity in 37ms
+F, [2015-04-14T07:12:36.750255 #15388] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-14T07:12:37.131277 #15388]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-14T07:12:37.266285 #15388]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+I, [2015-04-14T07:12:37.402292 #15388]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+I, [2015-04-14T07:12:37.505298 #15388]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (401.0ms)
+D, [2015-04-14T07:18:40.147040 #13512] DEBUG -- : 
+D, [2015-04-14T07:18:40.162041 #13512] DEBUG -- : 
+I, [2015-04-14T07:18:40.201043 #13512]  INFO -- : Started POST "/line_items?product_id=1" for ::1 at 2015-04-14 07:18:40 +0100
+D, [2015-04-14T07:18:40.752075 #13512] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-14T07:18:41.058092 #13512]  INFO -- : Processing by LineItemsController#create as HTML
+I, [2015-04-14T07:18:41.103095 #13512]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+W, [2015-04-14T07:18:41.128096 #13512]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-04-14T07:18:41.155098 #13512]  INFO -- : Completed 422 Unprocessable Entity in 25ms
+F, [2015-04-14T07:18:42.799192 #13512] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-14T07:18:43.044206 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+I, [2015-04-14T07:18:43.145212 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+I, [2015-04-14T07:18:43.268219 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (23.0ms)
+I, [2015-04-14T07:18:43.360224 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (305.0ms)
+D, [2015-04-14T07:18:55.103896 #13512] DEBUG -- : 
+D, [2015-04-14T07:18:55.127897 #13512] DEBUG -- : 
+I, [2015-04-14T07:18:55.173900 #13512]  INFO -- : Started GET "/" for ::1 at 2015-04-14 07:18:55 +0100
+I, [2015-04-14T07:18:55.250904 #13512]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T07:18:55.403913 #13512] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-04-14T07:18:55.534920 #13512] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-14T07:18:55.627926 #13512] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T07:18:55.709930 #13512]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (1.0ms)
+I, [2015-04-14T07:18:55.766934 #13512]  INFO -- :   Rendered store/index.html.erb within layouts/application (262.0ms)
+D, [2015-04-14T07:18:56.400970 #13512] DEBUG -- :   [1m[35mLineItem Exists (1.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-04-14T07:18:56.505976 #13512] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-04-14T07:18:56.546978 #13512]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-14T07:18:56.741989 #13512]  INFO -- :   Rendered carts/_cart.html.erb (276.0ms)
+I, [2015-04-14T07:18:56.799993 #13512]  INFO -- : Completed 200 OK in 1493ms (Views: 1308.1ms | ActiveRecord: 7.0ms)
+D, [2015-04-14T07:18:57.134012 #13512] DEBUG -- : 
+D, [2015-04-14T07:18:57.153013 #13512] DEBUG -- : 
+I, [2015-04-14T07:18:57.211016 #13512]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-04-14 07:18:57 +0100
+D, [2015-04-14T07:18:57.257019 #13512] DEBUG -- : 
+D, [2015-04-14T07:18:57.275020 #13512] DEBUG -- : 
+I, [2015-04-14T07:18:57.320023 #13512]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-04-14 07:18:57 +0100
+D, [2015-04-14T07:19:01.147241 #13512] DEBUG -- : 
+D, [2015-04-14T07:19:01.167243 #13512] DEBUG -- : 
+I, [2015-04-14T07:19:01.216245 #13512]  INFO -- : Started POST "/line_items?product_id=1" for ::1 at 2015-04-14 07:19:01 +0100
+I, [2015-04-14T07:19:01.274249 #13512]  INFO -- : Processing by LineItemsController#create as HTML
+I, [2015-04-14T07:19:01.339252 #13512]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+W, [2015-04-14T07:19:01.376255 #13512]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-04-14T07:19:01.415257 #13512]  INFO -- : Completed 422 Unprocessable Entity in 37ms
+F, [2015-04-14T07:19:03.582381 #13512] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-14T07:19:03.917400 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-14T07:19:04.017406 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+I, [2015-04-14T07:19:04.117411 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+I, [2015-04-14T07:19:04.194416 #13512]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (292.0ms)
+D, [2015-04-14T07:25:52.061744 #16000] DEBUG -- : 
+D, [2015-04-14T07:25:52.077745 #16000] DEBUG -- : 
+I, [2015-04-14T07:25:52.111747 #16000]  INFO -- : Started GET "/" for ::1 at 2015-04-14 07:25:52 +0100
+D, [2015-04-14T07:25:52.667779 #16000] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-14T07:25:52.804787 #16000]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-14T07:25:52.933794 #16000] DEBUG -- :   [1m[35mCart Load (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-04-14T07:25:53.042800 #16000] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-14T07:25:53.112804 #16000] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-14T07:25:53.168808 #16000]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (2.0ms)
+I, [2015-04-14T07:25:53.204810 #16000]  INFO -- :   Rendered store/index.html.erb within layouts/application (187.0ms)
+D, [2015-04-14T07:25:53.623834 #16000] DEBUG -- :   [1m[35mLineItem Exists (0.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-04-14T07:25:53.705838 #16000] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-04-14T07:25:53.743841 #16000]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-14T07:25:53.825845 #16000]  INFO -- :   Rendered carts/_cart.html.erb (151.0ms)
+I, [2015-04-14T07:25:53.875848 #16000]  INFO -- : Completed 200 OK in 1021ms (Views: 874.0ms | ActiveRecord: 6.0ms)
+D, [2015-04-14T07:25:54.120862 #16000] DEBUG -- : 
+D, [2015-04-14T07:25:54.136863 #16000] DEBUG -- : 
+I, [2015-04-14T07:25:54.174865 #16000]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-04-14 07:25:54 +0100
+D, [2015-04-14T07:25:54.218868 #16000] DEBUG -- : 
+D, [2015-04-14T07:25:54.240869 #16000] DEBUG -- : 
+I, [2015-04-14T07:25:54.300872 #16000]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-04-14 07:25:54 +0100
+D, [2015-04-14T07:25:58.617119 #16000] DEBUG -- : 
+D, [2015-04-14T07:25:58.640121 #16000] DEBUG -- : 
+I, [2015-04-14T07:25:58.690124 #16000]  INFO -- : Started POST "/line_items?product_id=1" for ::1 at 2015-04-14 07:25:58 +0100
+I, [2015-04-14T07:25:58.775128 #16000]  INFO -- : Processing by LineItemsController#create as HTML
+I, [2015-04-14T07:25:58.839132 #16000]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+W, [2015-04-14T07:25:58.875134 #16000]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-04-14T07:25:58.912136 #16000]  INFO -- : Completed 422 Unprocessable Entity in 36ms
+F, [2015-04-14T07:26:01.135263 #16000] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-14T07:26:01.477283 #16000]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-14T07:26:01.564288 #16000]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+I, [2015-04-14T07:26:01.649293 #16000]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+I, [2015-04-14T07:26:01.711296 #16000]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (256.0ms)
+D, [2015-04-19T22:25:36.599756 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:36.638759 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:36.680761 #11692]  INFO -- : Started GET "/" for ::1 at 2015-04-19 22:25:36 +0100
+D, [2015-04-19T22:25:39.775938 #11692] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-19T22:25:40.232964 #11692]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-19T22:25:40.605985 #11692] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-04-19T22:25:41.043010 #11692] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-19T22:25:41.160017 #11692] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-19T22:25:41.286024 #11692]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (37.0ms)
+I, [2015-04-19T22:25:41.340027 #11692]  INFO -- :   Rendered store/index.html.erb within layouts/application (353.0ms)
+D, [2015-04-19T22:25:42.800111 #11692] DEBUG -- :   [1m[35mLineItem Exists (1.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-04-19T22:25:42.952120 #11692] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-04-19T22:25:42.993122 #11692]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-19T22:25:43.285139 #11692]  INFO -- :   Rendered carts/_cart.html.erb (374.0ms)
+I, [2015-04-19T22:25:43.342142 #11692]  INFO -- : Completed 200 OK in 3052ms (Views: 2631.2ms | ActiveRecord: 9.0ms)
+D, [2015-04-19T22:25:43.683161 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:43.698162 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:43.751165 #11692]  INFO -- : Started GET "/assets/admin.css?body=1" for ::1 at 2015-04-19 22:25:43 +0100
+D, [2015-04-19T22:25:43.816169 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:43.837170 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:43.877173 #11692]  INFO -- : Started GET "/assets/carts.css?body=1" for ::1 at 2015-04-19 22:25:43 +0100
+D, [2015-04-19T22:25:43.917175 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:43.933176 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:43.973178 #11692]  INFO -- : Started GET "/assets/line_items.css?body=1" for ::1 at 2015-04-19 22:25:43 +0100
+D, [2015-04-19T22:25:44.041182 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.060183 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.100185 #11692]  INFO -- : Started GET "/assets/orders.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:44.141188 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.156189 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.192191 #11692]  INFO -- : Started GET "/assets/products.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:44.226193 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.243193 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.285196 #11692]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:44.323198 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.339199 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.392202 #11692]  INFO -- : Started GET "/assets/sessions.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:44.429204 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.447205 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.495208 #11692]  INFO -- : Started GET "/assets/static_pages.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:44.534210 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.551211 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.608214 #11692]  INFO -- : Started GET "/assets/store.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:44.650217 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.671218 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.725221 #11692]  INFO -- : Started GET "/assets/users.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:44.779224 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:44.805226 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:44.860229 #11692]  INFO -- : Started GET "/assets/application.css?body=1" for ::1 at 2015-04-19 22:25:44 +0100
+D, [2015-04-19T22:25:45.033239 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:45.049240 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:45.099242 #11692]  INFO -- : Started GET "/assets/king%20logos.png" for ::1 at 2015-04-19 22:25:45 +0100
+D, [2015-04-19T22:25:45.148245 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:45.167246 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:45.235250 #11692]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-04-19 22:25:45 +0100
+D, [2015-04-19T22:25:45.291253 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:45.306254 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:45.352257 #11692]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-04-19 22:25:45 +0100
+D, [2015-04-19T22:25:45.448262 #11692] DEBUG -- : 
+D, [2015-04-19T22:25:45.470264 #11692] DEBUG -- : 
+I, [2015-04-19T22:25:45.533267 #11692]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for ::1 at 2015-04-19 22:25:45 +0100
+D, [2015-04-19T22:26:41.450466 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:41.473467 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:41.523470 #11692]  INFO -- : Started GET "/showcase2" for ::1 at 2015-04-19 22:26:41 +0100
+I, [2015-04-19T22:26:41.587473 #11692]  INFO -- : Processing by StoreController#showcase2 as HTML
+D, [2015-04-19T22:26:41.657477 #11692] DEBUG -- :   [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-04-19T22:26:41.789485 #11692] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-19T22:26:41.851489 #11692] DEBUG -- :   Cache digest for app/views/store/showcase2.html.erb: 57588f453ea924407308bbc3b5270c1c
+I, [2015-04-19T22:26:41.966495 #11692]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/57588f453ea924407308bbc3b5270c1c (48.0ms)
+I, [2015-04-19T22:26:42.014498 #11692]  INFO -- :   Rendered store/showcase2.html.erb within layouts/application (252.0ms)
+D, [2015-04-19T22:26:42.483525 #11692] DEBUG -- :   [1m[35mLineItem Exists (1.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-04-19T22:26:42.575530 #11692] DEBUG -- :   [1m[36mLineItem Load (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-04-19T22:26:42.613532 #11692]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-19T22:26:42.666535 #11692]  INFO -- :   Rendered carts/_cart.html.erb (129.0ms)
+I, [2015-04-19T22:26:42.725538 #11692]  INFO -- : Completed 200 OK in 1079ms (Views: 1006.1ms | ActiveRecord: 3.0ms)
+D, [2015-04-19T22:26:43.010555 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.036556 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:43.098560 #11692]  INFO -- : Started GET "/assets/admin.css?body=1" for ::1 at 2015-04-19 22:26:43 +0100
+D, [2015-04-19T22:26:43.138562 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.162563 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:43.227567 #11692]  INFO -- : Started GET "/assets/orders.css?body=1" for ::1 at 2015-04-19 22:26:43 +0100
+D, [2015-04-19T22:26:43.276570 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.302572 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:43.368575 #11692]  INFO -- : Started GET "/assets/products.css?body=1" for ::1 at 2015-04-19 22:26:43 +0100
+D, [2015-04-19T22:26:43.420578 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.444580 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:43.505583 #11692]  INFO -- : Started GET "/assets/carts.css?body=1" for ::1 at 2015-04-19 22:26:43 +0100
+D, [2015-04-19T22:26:43.553586 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.579587 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:43.645591 #11692]  INFO -- : Started GET "/assets/line_items.css?body=1" for ::1 at 2015-04-19 22:26:43 +0100
+D, [2015-04-19T22:26:43.696594 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.722596 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:43.786599 #11692]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-04-19 22:26:43 +0100
+D, [2015-04-19T22:26:43.832602 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.858603 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:43.915607 #11692]  INFO -- : Started GET "/assets/sessions.css?body=1" for ::1 at 2015-04-19 22:26:43 +0100
+D, [2015-04-19T22:26:43.959609 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:43.986611 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:44.043614 #11692]  INFO -- : Started GET "/assets/static_pages.css?body=1" for ::1 at 2015-04-19 22:26:44 +0100
+D, [2015-04-19T22:26:44.092617 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:44.120618 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:44.178622 #11692]  INFO -- : Started GET "/assets/store.css?body=1" for ::1 at 2015-04-19 22:26:44 +0100
+D, [2015-04-19T22:26:44.228624 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:44.256626 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:44.324630 #11692]  INFO -- : Started GET "/assets/users.css?body=1" for ::1 at 2015-04-19 22:26:44 +0100
+D, [2015-04-19T22:26:44.372633 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:44.400634 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:44.463638 #11692]  INFO -- : Started GET "/assets/application.css?body=1" for ::1 at 2015-04-19 22:26:44 +0100
+D, [2015-04-19T22:26:44.511641 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:44.537642 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:44.597646 #11692]  INFO -- : Started GET "/assets/king%20logos.png" for ::1 at 2015-04-19 22:26:44 +0100
+D, [2015-04-19T22:26:44.641648 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:44.665649 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:44.722653 #11692]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-04-19 22:26:44 +0100
+D, [2015-04-19T22:26:44.768655 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:44.791657 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:44.845660 #11692]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for ::1 at 2015-04-19 22:26:44 +0100
+D, [2015-04-19T22:26:44.905663 #11692] DEBUG -- : 
+D, [2015-04-19T22:26:44.930665 #11692] DEBUG -- : 
+I, [2015-04-19T22:26:45.018670 #11692]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-04-19 22:26:45 +0100
+D, [2015-04-19T22:27:47.396237 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:47.420239 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:47.476242 #11692]  INFO -- : Started GET "/" for ::1 at 2015-04-19 22:27:47 +0100
+I, [2015-04-19T22:27:47.548246 #11692]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-04-19T22:27:47.606249 #11692] DEBUG -- :   [1m[35mCart Load (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 53]]
+D, [2015-04-19T22:27:47.671253 #11692] DEBUG -- :   [1m[36mProduct Load (1.0ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-04-19T22:27:47.719256 #11692] DEBUG -- :   Cache digest for app/views/store/index.html.erb: a93d4e2e981ab3dfce98a095c3b6c059
+I, [2015-04-19T22:27:47.769259 #11692]  INFO -- : Read fragment views/store/products/3-20150409203706733278000/a93d4e2e981ab3dfce98a095c3b6c059 (1.0ms)
+I, [2015-04-19T22:27:47.809261 #11692]  INFO -- :   Rendered store/index.html.erb within layouts/application (153.0ms)
+D, [2015-04-19T22:27:48.081277 #11692] DEBUG -- :   [1m[35mLineItem Exists (1.0ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 53]]
+D, [2015-04-19T22:27:48.137280 #11692] DEBUG -- :   [1m[36mLineItem Load (1.0ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 53]]
+I, [2015-04-19T22:27:48.163281 #11692]  INFO -- :   Rendered collection (0.0ms)
+I, [2015-04-19T22:27:48.194283 #11692]  INFO -- :   Rendered carts/_cart.html.erb (81.0ms)
+I, [2015-04-19T22:27:48.231285 #11692]  INFO -- : Completed 200 OK in 646ms (Views: 585.0ms | ActiveRecord: 3.0ms)
+D, [2015-04-19T22:27:48.443297 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.456298 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.489300 #11692]  INFO -- : Started GET "/assets/line_items.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.518302 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.530302 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.560304 #11692]  INFO -- : Started GET "/assets/carts.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.587306 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.600306 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.628308 #11692]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.655309 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.666310 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.693312 #11692]  INFO -- : Started GET "/assets/admin.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.721313 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.737314 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.767316 #11692]  INFO -- : Started GET "/assets/products.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.793317 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.805318 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.834320 #11692]  INFO -- : Started GET "/assets/orders.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.861321 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.873322 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.903324 #11692]  INFO -- : Started GET "/assets/sessions.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.928325 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:48.939326 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:48.969327 #11692]  INFO -- : Started GET "/assets/static_pages.css?body=1" for ::1 at 2015-04-19 22:27:48 +0100
+D, [2015-04-19T22:27:48.994329 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:49.006330 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:49.036331 #11692]  INFO -- : Started GET "/assets/store.css?body=1" for ::1 at 2015-04-19 22:27:49 +0100
+D, [2015-04-19T22:27:49.062333 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:49.073333 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:49.102335 #11692]  INFO -- : Started GET "/assets/users.css?body=1" for ::1 at 2015-04-19 22:27:49 +0100
+D, [2015-04-19T22:27:49.128337 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:49.140337 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:49.171339 #11692]  INFO -- : Started GET "/assets/application.css?body=1" for ::1 at 2015-04-19 22:27:49 +0100
+D, [2015-04-19T22:27:49.210341 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:49.221342 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:49.248343 #11692]  INFO -- : Started GET "/assets/king%20logos.png" for ::1 at 2015-04-19 22:27:49 +0100
+D, [2015-04-19T22:27:49.271345 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:49.282345 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:49.315347 #11692]  INFO -- : Started GET "/assets/est%202014%20tee.jpg" for ::1 at 2015-04-19 22:27:49 +0100
+D, [2015-04-19T22:27:49.343349 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:49.355350 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:49.385351 #11692]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-04-19 22:27:49 +0100
+D, [2015-04-19T22:27:49.415353 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:49.426354 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:49.457355 #11692]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-04-19 22:27:49 +0100
+D, [2015-04-19T22:27:51.344463 #11692] DEBUG -- : 
+D, [2015-04-19T22:27:51.369465 #11692] DEBUG -- : 
+I, [2015-04-19T22:27:51.430468 #11692]  INFO -- : Started POST "/line_items?product_id=1" for ::1 at 2015-04-19 22:27:51 +0100
+I, [2015-04-19T22:27:51.553475 #11692]  INFO -- : Processing by LineItemsController#create as HTML
+I, [2015-04-19T22:27:51.649481 #11692]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+W, [2015-04-19T22:27:51.690483 #11692]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-04-19T22:27:51.732485 #11692]  INFO -- : Completed 422 Unprocessable Entity in 41ms
+F, [2015-04-19T22:27:54.219628 #11692] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-19T22:27:54.768659 #11692]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+I, [2015-04-19T22:27:54.966670 #11692]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.0ms)
+I, [2015-04-19T22:27:55.182683 #11692]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+I, [2015-04-19T22:27:55.283689 #11692]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (579.0ms)
+D, [2015-04-19T22:36:21.474641 #3724] DEBUG -- : 
+D, [2015-04-19T22:36:21.495642 #3724] DEBUG -- : 
+I, [2015-04-19T22:36:21.559646 #3724]  INFO -- : Started POST "/line_items?product_id=1" for ::1 at 2015-04-19 22:36:21 +0100
+D, [2015-04-19T22:36:22.330690 #3724] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-04-19T22:36:22.698711 #3724]  INFO -- : Processing by LineItemsController#create as HTML
+I, [2015-04-19T22:36:22.767715 #3724]  INFO -- :   Parameters: {"utf8"=>"✓", "item"=>{"sizze"=>"extra small"}, "commit"=>"Add to Cart", "product_id"=>"1"}
+W, [2015-04-19T22:36:22.805717 #3724]  WARN -- : Can't verify CSRF token authenticity
+I, [2015-04-19T22:36:22.847720 #3724]  INFO -- : Completed 422 Unprocessable Entity in 39ms
+F, [2015-04-19T22:36:25.434868 #3724] FATAL -- : 
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.0) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:427:in `block in make_lambda'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:163:in `block in halting'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_process_action_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.0) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.0) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.0) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:42:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.0) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.0) lib/action_dispatch/routing/route_set.rb:802:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:647:in `call'
+  activerecord (4.2.0) lib/active_record/migration.rb:378:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:22:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+I, [2015-04-19T22:36:25.837891 #3724]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+I, [2015-04-19T22:36:25.973898 #3724]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.0ms)
+I, [2015-04-19T22:36:26.139908 #3724]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (46.0ms)
+I, [2015-04-19T22:36:26.222913 #3724]  INFO -- :   Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (428.0ms)
