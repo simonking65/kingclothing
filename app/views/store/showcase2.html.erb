@@ -1,37 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Example of Bootstrap 3 Carousel</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<style type="text/css">
-h2{
-    margin: 0;     
-    color: #666;
-    padding-top: 90px;
-    font-size: 52px;
-    font-family: "trebuchet ms", sans-serif;    
-}
-.item{
-    background: #333;    
-    text-align: center;
-    height: 300px !important;
-}
-.carousel{
-    margin-top: 20px;
-}
-.bs-example{
-	margin: 20px;
-}
-</style>
-</head>
-<body>
+
 <div class="bs-example">
     <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
-    	<!-- Carousel indicators -->
+        <!-- Carousel indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -39,27 +9,24 @@ h2{
         </ol>   
        <!-- Carousel items -->
         <div class="carousel-inner">
-            <div class="active item">
-                <h2>Slide 1</h2>
-                <div class="carousel-caption">
-                  <h3>First slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<% cache ['store', Product.latest] do %>
+  <% @products.each_with_index do |product, index| %>
+    <% cache ['entry', product] do %>
+            <div class=<% if index == 0 %>"active item" <% else %>"item"<%end%>>
+                <%= image_tag(product.image_url) %> <h3><%= product.title %></h3>
+                <%= sanitize(product.description) %> 
+                <div class="price_line">
+                    <span class="price"><%= number_to_currency(product.price, :unit => "£") %></span> 
+                    <%= form_tag(line_items_path(product_id: product), remote: true) do %>
+                    <%= select(:item, :sizze, %w[extra\ small small medium large extra\ large]) %>
+
+                    <%= submit_tag('Add to Cart')  %>
+                    <% end %>
                 </div>
             </div>
-            <div class="item">
-                <h2>Slide 2</h2>
-                <div class="carousel-caption">
-                  <h3>Second slide label</h3>
-                  <p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
-                </div>
-            </div>
-            <div class="item">
-                <h2>Slide 3</h2>
-                <div class="carousel-caption">
-                  <h3>Third slide label</h3>
-                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-            </div>
+        <% end %>
+    <% end %>
+<% end %>
         </div>
         <!-- Carousel nav -->
         <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -70,5 +37,3 @@ h2{
         </a>
     </div>
 </div>
-</body>
-</html>    

@@ -2,28 +2,31 @@
 <html>
 <head>
   <title>Kingclothing</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4.css/bootstrap.min.css"-->
-  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4.css/bootstrap-theme.min.css"-->
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootsrap.min.js"></script>
-
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+ 
   <%= csrf_meta_tags %>
       <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body class='<%= controller.controller_name %>'>
-	<div class="container">
+	<div class="container-fluid">
+		<div class="row">
 	<div id="banner">
 		<%= image_tag('king logos.png') %>
 		<%= @page_title || "King Clothing" %>
 	</div>
-	<div id="columns">
-		<div id="menu">
-			<div class="main_menu">
-			<ul >
+</div>
+<div class="row">
+	<div id="columns" class="col-lg-12">
+		<div id="menu" class="col-lg-12">
+			<div <% if session[:user_id] %>class="col-lg-5 main_menu" <% else %> class="col-lg-10 main_menu" <% end %>>
+			<ul class="nav nav-tabs">
 				<li><%= link_to "Home", store_path %></li>
 				<li><%= link_to "Questions", questions_path %></li>
 				<li><%= link_to "News", news_path %></li>
@@ -31,14 +34,14 @@
 			</ul>
 		</div>
 		<% if session[:user_id] %>
-		<div class="admin_menu">
-				<ul >
+		<div class="col-lg-5 admin_menu">
+				<ul class="nav nav-tabs">
 					<li><%= link_to 'Orders', orders_path %></li>
 					<li><%= link_to 'Products', products_path %></li>
 					<li><%= link_to 'Users', users_path %></li>
 				</ul>
 			</div>
-				<div class="logout">
+				<div class="col-lg-2 logout">
 				<%= button_to 'Logout', logout_path, method: :delete , :html => {:class => "menu" } %>
 			</div>
 			<% end %>
@@ -53,10 +56,11 @@
 			
 	
 		</div>
-		<div id="main">
+		<div id="main" class="col-md-10">
 			<%= yield %>
 		</div>
 	</div>
+</div>
 </div>
 </body>
 </html>

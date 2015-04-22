@@ -29,5 +29,6 @@ production:
   username: simonking65
   password: thomas1068
   host: mypginstance.cgnwndolek45.eu-west-1.rds.amazonaws.com
-  port: 5432
+  #port: 5432
+  port: ENV['RDS_PORT']
   
