@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  skip_before_action :authorize, only: [:new, :create, :execute, :confirm, :cancel]
+  skip_before_action :authorize, only: [:new, :create, :execute, :confirm, :cancel, :ppcheckout]
   include CurrentCart
   before_action :set_cart, only: [:new, :create, :ppcheckout]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
@@ -109,12 +109,13 @@ class OrdersController < ApplicationController
   end
 
   def cancel
-    order = current_user.orders.find(params[:order_id])
+    order = Order.find(params[:order_id])
+    #order = current_user.orders.find(params[:order_id])
     unless order.state == "approved"
       order.state = "cancelled"
       order.save
     end
-    redirect_to orders_path, :alert => "Order[#{order.description}] cancelled"
+    redirect_to store_url, :notice => "Your order was cancelled"
   end
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json

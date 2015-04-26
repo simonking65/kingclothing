@@ -11,55 +11,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218192522) do
+ActiveRecord::Schema.define(version: 20150426074959) do
 
-  create_table "carts", force: true do |t|
+  create_table "carts", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "line_items", force: true do |t|
+  create_table "line_items", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "cart_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "quantity",     default: 1
+    t.integer  "quantity",                                         default: 1
     t.integer  "order_id"
-    t.decimal  "productprice"
-    t.string   "size"
+    t.decimal  "productprice",             precision: 8, scale: 2
+    t.string   "size",         limit: 255
   end
 
   add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
   add_index "line_items", ["order_id"], name: "index_line_items_on_order_id"
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id"
 
-  create_table "orders", force: true do |t|
-    t.string   "name"
+  create_table "orders", force: :cascade do |t|
+    t.string   "name",              limit: 255
     t.text     "address"
-    t.string   "email"
-    t.string   "pay_type"
+    t.string   "email",             limit: 255
+    t.string   "pay_type",          limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "payment_method"
-    t.string   "payment_id"
-    t.string   "state"
-    t.string   "amount"
-    t.string   "description"
-    t.string   "shipping_address1"
+    t.string   "payment_method",    limit: 255
+    t.string   "payment_id",        limit: 255
+    t.string   "state",             limit: 255
+    t.string   "amount",            limit: 255
+    t.string   "description",       limit: 255
+    t.string   "shipping_address1", limit: 255
   end
 
-  create_table "products", force: true do |t|
-    t.string   "title"
+  create_table "products", force: :cascade do |t|
+    t.string   "title",       limit: 255
     t.text     "description"
-    t.string   "image_url"
-    t.decimal  "price",       precision: 8, scale: 2
+    t.string   "image_url",   limit: 255
+    t.decimal  "price",                   precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "password_digest"
+  create_table "users", force: :cascade do |t|
+    t.string   "name",            limit: 255
+    t.string   "password_digest", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
