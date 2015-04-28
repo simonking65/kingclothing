@@ -1,7 +1,9 @@
 <h2>Your KingClothing Cart</h2>
 <table>
-	<%= render(cart.line_items) %>
 
+
+	<%= render(cart.line_items) %>
+cart is: <%= cart.id %> and total is <%= cart.total_price %> and was updated: <%= cart.updated_at %>
 	<tr class="total_line">
 		<td colspan="2">Total</td>
 		<td class="total_cell"><%= number_to_currency(cart.total_price, :unit =>'£') %></td>
