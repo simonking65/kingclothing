@@ -13,7 +13,7 @@ class Cart < ActiveRecord::Base
 		current_item
 	end
 	def total_price
-		debugger
+		
 		line_items.to_a.sum { |item| item.total_price }
 	end
 	def subtotal
