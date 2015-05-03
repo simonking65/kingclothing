@@ -50,43 +50,27 @@
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					 <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">King Clothing</a>
+	
+      <a class="navbar-brand" <%= link_to "King Clothing", store_path %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Questions<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">News</a></li>
-         <li><a href="#">Contact</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
+        <li class="active"><%= link_to "Questions", questions_path %><span class="sr-only">(current)</span></a></li>
+        <li><%= link_to "News", news_path %></li>
+         <li><%= link_to "Contact", contact_path %></li>
 
+      </ul>
+		<% if session[:user_id] %>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Orders</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Users</a></li>
-        <li><button type="submit" class="btn btn-default navbar-btn">Logout</button></li>
+        <li><%= link_to 'Orders', orders_path %></li>
+        <li><%= link_to 'Products', products_path %></li>
+        <li><%= link_to 'Users', users_path %></li>
+        <li><%= button_to 'Logout', logout_path, method: :delete , form_class: "navbar-btn", class: "navbar-btn", :html => {:class => "menu navbar-btn" } %></li>
 
       </ul>
+    <% end %>
     </div><!-- /.navbar-collapse -->
 			</div>
 
