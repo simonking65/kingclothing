@@ -28657,3 +28657,220 @@ I, [2015-05-02T18:54:52.273522 #38343]  INFO -- : Started GET "/assets/est%20201
 D, [2015-05-02T18:54:52.287886 #38343] DEBUG -- : 
 D, [2015-05-02T18:54:52.287998 #38343] DEBUG -- : 
 I, [2015-05-02T18:54:52.288147 #38343]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-05-02 18:54:52 +0100
+D, [2015-05-03T23:09:57.475832 #40144] DEBUG -- : 
+D, [2015-05-03T23:09:57.475957 #40144] DEBUG -- : 
+I, [2015-05-03T23:09:57.476514 #40144]  INFO -- : Started GET "/" for ::1 at 2015-05-03 23:09:57 +0100
+D, [2015-05-03T23:09:58.708950 #40144] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (19.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2015-05-03T23:09:58.929564 #40144]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-05-03T23:09:59.066520 #40144] DEBUG -- :   [1m[35mCart Load (7.5ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 115]]
+D, [2015-05-03T23:09:59.222365 #40144] DEBUG -- :   [1m[36mProduct Load (7.6ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-05-03T23:09:59.245351 #40144] DEBUG -- :   Cache digest for app/views/store/index.html.erb: 72c378c6a47740c581fba86121a512b3
+I, [2015-05-03T23:09:59.266228 #40144]  INFO -- : Read fragment views/store/products/2-20150501220934963126000/72c378c6a47740c581fba86121a512b3 (19.1ms)
+I, [2015-05-03T23:09:59.266527 #40144]  INFO -- :   Rendered store/index.html.erb within layouts/application (67.0ms)
+D, [2015-05-03T23:10:00.922597 #40144] DEBUG -- :   [1m[35mLineItem Exists (6.9ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 115]]
+D, [2015-05-03T23:10:01.032752 #40144] DEBUG -- :   [1m[36mLineItem Load (22.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 115]]
+D, [2015-05-03T23:10:01.079627 #40144] DEBUG -- :   [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+I, [2015-05-03T23:10:01.246652 #40144]  INFO -- :   Rendered line_items/_line_item.html.erb (170.0ms)
+I, [2015-05-03T23:10:01.269142 #40144]  INFO -- :   Rendered carts/_cart.html.erb (252.1ms)
+I, [2015-05-03T23:10:01.272242 #40144]  INFO -- : Completed 200 OK in 2340ms (Views: 2155.6ms | ActiveRecord: 45.6ms)
+D, [2015-05-03T23:10:01.502381 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.502538 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.503486 #40144]  INFO -- : Started GET "/assets/line_items.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.518907 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.518996 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.519266 #40144]  INFO -- : Started GET "/assets/admin.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.529530 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.529654 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.529921 #40144]  INFO -- : Started GET "/assets/orders.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.555852 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.555953 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.556381 #40144]  INFO -- : Started GET "/assets/carts.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.618208 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.618323 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.618761 #40144]  INFO -- : Started GET "/assets/products.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.641355 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.641438 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.641677 #40144]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.712649 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.712953 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.713507 #40144]  INFO -- : Started GET "/assets/static_pages.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.751035 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.757602 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.758064 #40144]  INFO -- : Started GET "/assets/store.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.780196 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.780277 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.781965 #40144]  INFO -- : Started GET "/assets/sessions.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.819585 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.819680 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.820152 #40144]  INFO -- : Started GET "/assets/users.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.869395 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.869506 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.870025 #40144]  INFO -- : Started GET "/assets/application.css?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:01.995168 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:01.995357 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:01.997257 #40144]  INFO -- : Started GET "/assets/jquery.js?body=1" for ::1 at 2015-05-03 23:10:01 +0100
+D, [2015-05-03T23:10:02.159130 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.159286 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.159553 #40144]  INFO -- : Started GET "/assets/jquery-ui/effect.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.215204 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.216882 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.217141 #40144]  INFO -- : Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.227105 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.227204 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.233549 #40144]  INFO -- : Started GET "/assets/jquery-ui/effect-blind.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.349074 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.349157 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.349395 #40144]  INFO -- : Started GET "/assets/admin.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.361427 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.361528 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.361803 #40144]  INFO -- : Started GET "/assets/carts.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.369636 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.369741 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.370052 #40144]  INFO -- : Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.381369 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.381657 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.382010 #40144]  INFO -- : Started GET "/assets/orders.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.519890 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.520875 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.521480 #40144]  INFO -- : Started GET "/assets/sessions.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.552120 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.552206 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.552472 #40144]  INFO -- : Started GET "/assets/line_items.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.561589 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.561871 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.562117 #40144]  INFO -- : Started GET "/assets/products.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.634634 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.634715 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.635000 #40144]  INFO -- : Started GET "/assets/static_pages.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.709809 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.709888 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.713195 #40144]  INFO -- : Started GET "/assets/users.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.831546 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.831626 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.831926 #40144]  INFO -- : Started GET "/assets/application.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:02.912057 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:02.912723 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:02.913521 #40144]  INFO -- : Started GET "/assets/store.js?body=1" for ::1 at 2015-05-03 23:10:02 +0100
+D, [2015-05-03T23:10:03.213527 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:03.213773 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:03.214099 #40144]  INFO -- : Started GET "/assets/king%20logos.png" for ::1 at 2015-05-03 23:10:03 +0100
+D, [2015-05-03T23:10:03.232102 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:03.232588 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:03.233840 #40144]  INFO -- : Started GET "/assets/camo%20print%20tee.jpg" for ::1 at 2015-05-03 23:10:03 +0100
+D, [2015-05-03T23:10:03.431067 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:03.432314 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:03.432946 #40144]  INFO -- : Started GET "/assets/nyc%20tee.jpg" for ::1 at 2015-05-03 23:10:03 +0100
+D, [2015-05-03T23:10:03.463969 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:03.464066 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:03.464228 #40144]  INFO -- : Started GET "/assets/est%202014%20tee2.png" for ::1 at 2015-05-03 23:10:03 +0100
+D, [2015-05-03T23:10:11.884512 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:11.884597 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:11.884789 #40144]  INFO -- : Started GET "/" for ::1 at 2015-05-03 23:10:11 +0100
+I, [2015-05-03T23:10:11.891797 #40144]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-05-03T23:10:11.893774 #40144] DEBUG -- :   [1m[36mCart Load (0.7ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 115]]
+D, [2015-05-03T23:10:11.903083 #40144] DEBUG -- :   [1m[35mProduct Load (0.6ms)[0m  SELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1
+D, [2015-05-03T23:10:11.905308 #40144] DEBUG -- :   Cache digest for app/views/store/index.html.erb: 72c378c6a47740c581fba86121a512b3
+I, [2015-05-03T23:10:11.906551 #40144]  INFO -- : Read fragment views/store/products/2-20150501220934963126000/72c378c6a47740c581fba86121a512b3 (0.5ms)
+I, [2015-05-03T23:10:11.906798 #40144]  INFO -- :   Rendered store/index.html.erb within layouts/application (6.7ms)
+D, [2015-05-03T23:10:12.248890 #40144] DEBUG -- :   [1m[36mLineItem Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1[0m  [["cart_id", 115]]
+D, [2015-05-03T23:10:12.253636 #40144] DEBUG -- :   [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?  [["cart_id", 115]]
+D, [2015-05-03T23:10:12.257127 #40144] DEBUG -- :   [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+I, [2015-05-03T23:10:12.258147 #40144]  INFO -- :   Rendered line_items/_line_item.html.erb (2.6ms)
+I, [2015-05-03T23:10:12.259636 #40144]  INFO -- :   Rendered carts/_cart.html.erb (8.3ms)
+I, [2015-05-03T23:10:12.260356 #40144]  INFO -- : Completed 200 OK in 368ms (Views: 362.9ms | ActiveRecord: 2.0ms)
+D, [2015-05-03T23:10:26.237769 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.237883 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.238194 #40144]  INFO -- : Started GET "/assets/carts.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.252054 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.252145 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.252396 #40144]  INFO -- : Started GET "/assets/line_items.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.266303 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.266510 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.268134 #40144]  INFO -- : Started GET "/assets/orders.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.279994 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.282876 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.283187 #40144]  INFO -- : Started GET "/assets/products.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.299690 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.299907 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.300162 #40144]  INFO -- : Started GET "/assets/static_pages.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.315064 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.315169 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.315804 #40144]  INFO -- : Started GET "/assets/sessions.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.324395 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.324694 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.327509 #40144]  INFO -- : Started GET "/assets/admin.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.364125 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.364210 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.364412 #40144]  INFO -- : Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.377532 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.377626 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.377915 #40144]  INFO -- : Started GET "/assets/users.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.387635 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.387716 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.387966 #40144]  INFO -- : Started GET "/assets/store.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-03T23:10:26.403017 #40144] DEBUG -- : 
+D, [2015-05-03T23:10:26.403238 #40144] DEBUG -- : 
+I, [2015-05-03T23:10:26.409498 #40144]  INFO -- : Started GET "/assets/application.css?body=1" for ::1 at 2015-05-03 23:10:26 +0100
+D, [2015-05-04T08:25:14.976851 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:14.987267 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:14.989021 #40144]  INFO -- : Started GET "/news" for ::1 at 2015-05-04 08:25:14 +0100
+I, [2015-05-04T08:25:15.844752 #40144]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-05-04T08:25:15.935232 #40144]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (11.9ms)
+I, [2015-05-04T08:25:16.884634 #40144]  INFO -- : Completed 200 OK in 1039ms (Views: 1027.9ms | ActiveRecord: 0.0ms)
+D, [2015-05-04T08:25:16.887116 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:16.887204 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:16.887820 #40144]  INFO -- : Started GET "/news" for ::1 at 2015-05-04 08:25:16 +0100
+I, [2015-05-04T08:25:16.892864 #40144]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-05-04T08:25:16.896636 #40144]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (0.1ms)
+I, [2015-05-04T08:25:17.246722 #40144]  INFO -- : Completed 200 OK in 354ms (Views: 352.9ms | ActiveRecord: 0.0ms)
+D, [2015-05-04T08:25:17.247857 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:17.248195 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:17.248407 #40144]  INFO -- : Started GET "/news" for ::1 at 2015-05-04 08:25:17 +0100
+I, [2015-05-04T08:25:17.253739 #40144]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-05-04T08:25:17.256682 #40144]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (0.0ms)
+I, [2015-05-04T08:25:17.559586 #40144]  INFO -- : Completed 200 OK in 306ms (Views: 304.9ms | ActiveRecord: 0.0ms)
+D, [2015-05-04T08:25:21.741164 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:21.741244 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:21.741380 #40144]  INFO -- : Started GET "/contact" for ::1 at 2015-05-04 08:25:21 +0100
+I, [2015-05-04T08:25:21.746259 #40144]  INFO -- : Processing by StaticPagesController#contact as HTML
+I, [2015-05-04T08:25:21.767660 #40144]  INFO -- :   Rendered static_pages/contact.html.erb within layouts/application (0.8ms)
+I, [2015-05-04T08:25:22.092389 #40144]  INFO -- : Completed 200 OK in 346ms (Views: 344.6ms | ActiveRecord: 0.0ms)
+D, [2015-05-04T08:25:26.357646 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:26.357729 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:26.357879 #40144]  INFO -- : Started GET "/news" for ::1 at 2015-05-04 08:25:26 +0100
+I, [2015-05-04T08:25:26.365068 #40144]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-05-04T08:25:26.368731 #40144]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (0.1ms)
+I, [2015-05-04T08:25:26.692619 #40144]  INFO -- : Completed 200 OK in 327ms (Views: 326.2ms | ActiveRecord: 0.0ms)
+D, [2015-05-04T08:25:28.562918 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:28.563001 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:28.563153 #40144]  INFO -- : Started GET "/" for ::1 at 2015-05-04 08:25:28 +0100
+I, [2015-05-04T08:25:28.568350 #40144]  INFO -- : Processing by StoreController#index as HTML
+D, [2015-05-04T08:25:28.601249 #40144] DEBUG -- :   [1m[35mCart Load (31.8ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT 1  [["id", 115]]
+D, [2015-05-04T08:25:28.637904 #40144] DEBUG -- :   [1m[36mProduct Load (0.4ms)[0m  [1mSELECT  "products".* FROM "products"  ORDER BY "products"."updated_at" DESC LIMIT 1[0m
+D, [2015-05-04T08:25:28.639273 #40144] DEBUG -- :   Cache digest for app/views/store/index.html.erb: 72c378c6a47740c581fba86121a512b3
+I, [2015-05-04T08:25:28.665445 #40144]  INFO -- : Read fragment views/store/products/2-20150501220934963126000/72c378c6a47740c581fba86121a512b3 (25.0ms)
+I, [2015-05-04T08:25:28.665826 #40144]  INFO -- :   Rendered store/index.html.erb within layouts/application (29.5ms)
+D, [2015-05-04T08:25:29.042438 #40144] DEBUG -- :   [1m[35mLineItem Exists (0.2ms)[0m  SELECT  1 AS one FROM "line_items" WHERE "line_items"."cart_id" = ? LIMIT 1  [["cart_id", 115]]
+D, [2015-05-04T08:25:29.098209 #40144] DEBUG -- :   [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 115]]
+D, [2015-05-04T08:25:29.122774 #40144] DEBUG -- :   [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+I, [2015-05-04T08:25:29.124261 #40144]  INFO -- :   Rendered line_items/_line_item.html.erb (2.6ms)
+I, [2015-05-04T08:25:29.126877 #40144]  INFO -- :   Rendered carts/_cart.html.erb (29.6ms)
+I, [2015-05-04T08:25:29.128072 #40144]  INFO -- : Completed 200 OK in 560ms (Views: 525.0ms | ActiveRecord: 32.7ms)
+D, [2015-05-04T08:25:30.655727 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:30.655812 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:30.655964 #40144]  INFO -- : Started GET "/questions" for ::1 at 2015-05-04 08:25:30 +0100
+I, [2015-05-04T08:25:30.661572 #40144]  INFO -- : Processing by StaticPagesController#questions as HTML
+I, [2015-05-04T08:25:30.712934 #40144]  INFO -- :   Rendered static_pages/questions.html.erb within layouts/application (0.6ms)
+I, [2015-05-04T08:25:31.085443 #40144]  INFO -- : Completed 200 OK in 424ms (Views: 410.6ms | ActiveRecord: 0.0ms)
+D, [2015-05-04T08:25:33.111683 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:33.111789 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:33.111934 #40144]  INFO -- : Started GET "/news" for ::1 at 2015-05-04 08:25:33 +0100
+I, [2015-05-04T08:25:33.116667 #40144]  INFO -- : Processing by StaticPagesController#news as HTML
+I, [2015-05-04T08:25:33.119807 #40144]  INFO -- :   Rendered static_pages/news.html.erb within layouts/application (0.1ms)
+I, [2015-05-04T08:25:33.407488 #40144]  INFO -- : Completed 200 OK in 291ms (Views: 289.8ms | ActiveRecord: 0.0ms)
+D, [2015-05-04T08:25:35.085558 #40144] DEBUG -- : 
+D, [2015-05-04T08:25:35.085640 #40144] DEBUG -- : 
+I, [2015-05-04T08:25:35.085817 #40144]  INFO -- : Started GET "/contact" for ::1 at 2015-05-04 08:25:35 +0100
+I, [2015-05-04T08:25:35.092664 #40144]  INFO -- : Processing by StaticPagesController#contact as HTML
+I, [2015-05-04T08:25:35.098530 #40144]  INFO -- :   Rendered static_pages/contact.html.erb within layouts/application (0.1ms)
+I, [2015-05-04T08:25:35.426324 #40144]  INFO -- : Completed 200 OK in 333ms (Views: 332.1ms | ActiveRecord: 0.0ms)
