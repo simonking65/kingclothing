@@ -1,0 +1,366 @@
+/* line 5, /Users/benking/workspace/kingclothing/app/assets/stylesheets/carts.css.scss */
+.carts .item_price, .carts .total_line, #side #cart .item_price, #side #cart .total_line {
+  text-align: right;
+}
+/* line 8, /Users/benking/workspace/kingclothing/app/assets/stylesheets/carts.css.scss */
+.carts .total_line, .carts .total_cell, #side #cart .total_line, #side #cart .total_cell {
+  font-weight: bold;
+  border-top: 1px solid #595;
+}
+
+/* line 14, /Users/benking/workspace/kingclothing/app/assets/stylesheets/carts.css.scss */
+.button_to {
+  color: black;
+}
+/* line 5, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products table {
+  border-collapse: collapse;
+}
+/* line 9, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+/* line 14, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_image {
+  width: 60px;
+  height: 70px;
+}
+/* line 19, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_description {
+  width: 60%;
+}
+/* line 22, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_description dl {
+  margin: 0;
+}
+/* line 26, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_description dt {
+  color: #244;
+  font-weight: bold;
+  font-size: larger;
+}
+/* line 32, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_description dd {
+  margin: 0;
+}
+/* line 37, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+}
+/* line 43, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_line_even {
+  background: #e0f8f8;
+}
+/* line 47, /Users/benking/workspace/kingclothing/app/assets/stylesheets/products.css.scss */
+.products .list_line_odd {
+  background: #f8b0f8;
+}
+
+/* END_HIGHLIGHT */
+/* line 1, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/benking/workspace/kingclothing/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* START_HIGHLIGHT */
+/* line 10, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store {
+  /* An entry in the store catalog */
+}
+/* line 11, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store h1 {
+  margin: 0;
+  padding-bottom: 0.5em;
+  font: 150% sans-serif;
+  color: #226;
+}
+/* line 20, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store .entry {
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted #77d;
+  min-height: 100px;
+}
+/* line 26, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store .entry img {
+  width: 80px;
+  height: 85px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  position: absolute;
+}
+/* line 34, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store .entry h3 {
+  font-size: 120%;
+  font-family: sans-serif;
+  margin-left: 100px;
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: #227;
+}
+/* line 43, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store .entry p, .store .entry div.price_line {
+  margin-left: 100px;
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+}
+/* line 48, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store .entry p form, .store .entry p div, .store .entry div.price_line form, .store .entry div.price_line div {
+  display: inline;
+}
+/* line 53, /Users/benking/workspace/kingclothing/app/assets/stylesheets/store.css.scss */
+.store .entry .price {
+  color: #44a;
+  font-weight: bold;
+  margin-right: 3em;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+/* line 18, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#banner {
+  padding: 10px;
+  border-bottom: 2px solid;
+  width: 100%;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #3EA0FF;
+  text-align: center;
+}
+/* line 27, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#banner img {
+  float: left;
+}
+
+/* line 32, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#notice {
+  color: #000 !important;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+/* line 41, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns {
+  width: 100%;
+}
+/* line 45, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #main {
+  padding: 1em;
+  background: white;
+}
+/* line 52, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side {
+  float: right;
+  padding: 1em 2em;
+  width: 13em;
+  background: #141;
+}
+/* line 59, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side form, #columns #side div {
+  display: inline;
+}
+/* line 64, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side input {
+  font-size: small;
+}
+/* line 70, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side #cart {
+  font-size: smaller;
+  color: white;
+}
+/* line 74, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side #cart table {
+  border-top: 1px dotted #595;
+  border-bottom: 1px dotted #595;
+  margin-bottom: 10px;
+}
+/* line 81, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side ul {
+  padding: 0;
+  display: inline;
+}
+/* line 84, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side ul li {
+  list-style: none;
+}
+/* line 86, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns #side ul li a {
+  color: #bfb;
+  font-size: small;
+}
+/* line 94, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns form {
+  display: inline;
+}
+/* line 98, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+#columns .button_to div {
+  display: inline;
+}
+
+/* line 105, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.kingclothing_form fieldset {
+  background: #efe;
+}
+/* line 108, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.kingclothing_form fieldset legend {
+  color: #dfd;
+  background: #141;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
+}
+/* line 116, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.kingclothing_form form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+}
+/* line 125, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.kingclothing_form form select, .kingclothing_form form textarea, .kingclothing_form form input {
+  margin-left: 0.5em;
+}
+/* line 129, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.kingclothing_form form .submit {
+  margin-left: 4em;
+}
+/* line 133, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.kingclothing_form form br {
+  display: none;
+}
+
+/* line 139, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 146, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.main_menu li, .admin_menu li {
+  display: inline-block;
+  padding: 3px;
+  width: 20%;
+}
+/* line 151, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.main_menu li a, .admin_menu li a {
+  color: white;
+}
+
+/* line 157, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.logout {
+  width: 20%;
+}
+
+/* line 161, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.main_menu, .admin_menu {
+  width: 30%;
+}
+
+/* line 176, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.item {
+  background: #333;
+  text-align: center;
+  height: 300px !important;
+}
+
+/* line 181, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.carousel {
+  margin-top: 20px;
+}
+
+/* line 184, /Users/benking/workspace/kingclothing/app/assets/stylesheets/application.css.scss */
+.bs-example {
+  margin: 20px;
+  width: 80%;
+}
