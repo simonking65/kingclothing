@@ -26,6 +26,10 @@ Rails.application.routes.draw do
 
   get 'contact' => 'static_pages#contact'
 
+  get 'delivery' => 'static_pages#delivery'
+
+  get 'returns' => 'static_pages#returns'
+
   get 'showcase' => 'store#showcase'
 
   get 'showcase2' => 'store#showcase2'

@@ -53,7 +53,7 @@ class OrdersController < ApplicationController
             logger.info @order.approve_url.to_s
             redirect_to @order.approve_url
           else
-            redirect_to store_url, :notice => "Order[#{@order.description}] placed successfully"
+            redirect_to store_url, :notice => "Your Order was placed successfully"
           end  
         
         else
@@ -81,7 +81,7 @@ class OrdersController < ApplicationController
         OrderNotifier.received(order).deliver
         #format.html { redirect_to store_url, notice: 'Thank you for your order.' }
         #format.json { render :show, status: :created, location: @order }
-      redirect_to store_url, :notice => "Order placed successfully"
+      redirect_to store_url, :notice => "Your Order was placed successfully"
     else
       redirect_to store_url, :alert => order.payment.error.inspect
     end
@@ -164,7 +164,7 @@ class OrdersController < ApplicationController
             logger.info @order.approve_url.to_s
             redirect_to @order.approve_url
           else
-            redirect_to store_url, :notice => "Order[#{@order.description}] placed successfully"
+            redirect_to store_url, :notice => "Your Order was placed successfully"
           end  
         
         else

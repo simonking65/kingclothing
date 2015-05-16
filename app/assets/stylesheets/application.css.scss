@@ -45,16 +45,19 @@
   #main {
     //margin-right: 17em;
     padding: 1em;
-
+    overflow-y: scroll;
     background: white;
   }
 
   #side {
-    float: right;
-    padding: 1em 2em;
-    width: 13em;
+  //  float: right;
+  //  padding: 1em 2em;
+  //  width: 13em;
     //color: black;
+    position:absolute;
+    right:0;
     background: #141;
+    overflow-y: scroll;
 	
     form, div {
       display: inline;
