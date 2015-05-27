@@ -17,7 +17,7 @@
 
 #banner {
   
-  padding: 10px;
+//  padding: 10px;
   border-bottom: 2px solid;
   width: 100%;
   font: small-caps 40px/40px "Times New Roman", serif;
@@ -41,28 +41,34 @@
 #columns {
    width: 100%;
   //background: #141;
-
-  #main {
-    //margin-right: 17em;
+}
+#main {
+   // margin-right: 2em;
+   // margin-left: 2em;
     padding: 1em;
     overflow-y: scroll;
     background: white;
+    height: 700px;
+    top:100px;
+
   }
 
-  #side {
+#side {
   //  float: right;
   //  padding: 1em 2em;
   //  width: 13em;
     //color: black;
     position:absolute;
     right:0;
-    background: #141;
-    overflow-y: scroll;
+    background: white;
+    overflow-y: none;
+    height: 500px;
+    top: 100px;
 	
     form, div {
       display: inline;
 
-    }
+   }
 
     input {
       font-size: small;
@@ -72,14 +78,14 @@
 
     #cart {
       font-size: smaller;
-      color: white;
+      color: black;
 
       table {
         border-top: 1px dotted #595;
         border-bottom: 1px dotted #595;
         margin-bottom: 10px;
       }
-    }
+    
     
     ul {
       padding: 0;
@@ -92,7 +98,7 @@
         }
       }
     }
-  }
+}
 
 form {
   display: inline;
@@ -102,6 +108,10 @@ form {
   display: inline;
 }
 
+}
+
+h1 {
+  padding: 5px;
 }
 
 .kingclothing_form {
@@ -140,10 +150,12 @@ form {
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
+ // display: flex;
+ // flex-wrap: wrap;
 }
-
+.body {
+  //padding-top: 40px;
+}
 
 .main_menu, .admin_menu {
   li {

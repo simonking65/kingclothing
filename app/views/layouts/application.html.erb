@@ -16,63 +16,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body class='<%= controller.controller_name %>'>
+	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
-		<div class="row navbar-fixed-top">
-	<div id="banner">
-		<%= image_tag('king logos.png') %>
-		<%= @page_title || "King Clothing" %>
-	</div>
-</div>
-
-	<div id="columns" class="col-lg-12">
 		
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-			<div class="navbar-header">
-	
-      <div class="navbar-brand"> <%= link_to "King Clothing", store_path %></div>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><%= link_to "Questiooooons", questions_path %><span class="sr-only">(current)</span></a></li>
-        <li><%= link_to "News", news_path %></li>
-        <li><%= link_to "Contact", contact_path %></li>
-        <li><%= link_to "Delivery", delivery_path %></li>
-				<li><%= link_to "Returns", returns_path %></li>
-
-      </ul>
-		<% if session[:user_id] %>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Orders', orders_path %></li>
-        <li><%= link_to 'Products', products_path %></li>
-        <li><%= link_to 'Users', users_path %></li>
-        <li><%= button_to 'Logout', logout_path, method: :delete , form_class: "navbar-btn", class: "navbar-btn", :html => {:class => "menu navbar-btn" } %></li>
-
-      </ul>
-    <% end %>
-    </div><!-- /.navbar-collapse -->
+			<div id="banner" class="navbar-header">
+				<%= image_tag('king logos.png') %>
+				<%= @page_title || "King Clothing" %>
 			</div>
 
-		</nav>
 
+			<div id="columns" class="col-lg-12">
+		
+			
+				<div class="navbar-header">
+	
+      		<div class="navbar-brand"> <%= link_to "King Clothing", store_path %></div>
+    		</div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      		<ul class="nav navbar-nav">
+        		<li><%= link_to "Questiooooons", questions_path %><span class="sr-only">(current)</span></a></li>
+        		<li><%= link_to "News", news_path %></li>
+        		<li><%= link_to "Contact", contact_path %></li>
+        		<li><%= link_to "Delivery", delivery_path %></li>
+						<li><%= link_to "Returns", returns_path %></li>
+      		</ul>
+
+					<% if session[:user_id] %>
+      			<ul class="nav navbar-nav navbar-right">
+        			<li><%= link_to 'Orders', orders_path %></li>
+        			<li><%= link_to 'Products', products_path %></li>
+        			<li><%= link_to 'Users', users_path %></li>
+        			<li><%= button_to 'Logout', logout_path, method: :delete , form_class: "navbar-btn", class: "navbar-btn", :html => {:class => "menu navbar-btn" } %></li>
+      			</ul>
+    			<% end %>
+    		</div><!-- /.navbar-collapse -->
+</div>
+		</div>
+			</nav>
+			
+
+		<div class="row">
 		<div id="main" class="col-md-10">
 			<%= yield %>
 		</div>
-				<div id="side" class="col-md-2">
+		<div id="side" class="col-md-2">
 			<% if @cart %>
 				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
 					<%= render @cart %>
 				<% end %>
-			<% end %>
-			
-			
-	
+			<% end %>	
 		</div>
 	</div>
-</div>
-</div>
+	</div>
 </body>
 </html>
