@@ -55,14 +55,15 @@
 
 #side {
   //  float: right;
-  //  padding: 1em 2em;
+    padding: 1em 2em;
   //  width: 13em;
     //color: black;
-    position:absolute;
-    right:0;
+    //position:fixed;
+    //right:0;
+
     background: white;
-    overflow-y: none;
-    height: 500px;
+    overflow-y: scroll;
+    //height: calc(100%-100px);
     top: 100px;
 	
     form, div {
