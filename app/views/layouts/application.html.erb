@@ -6,7 +6,7 @@
    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <!--link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /-->
 <!--%= favicon_link_tag 'https://maps.gstatic.com/favicon4.ico' %-->
 <%= favicon_link_tag 'king logos.png' %>
@@ -65,8 +65,8 @@
 		<div id="main" class="col-md-10">
 			<%= yield %>
 		</div>
-		<div id="side" class="col-md-2">
-			<% if @cart %>
+		<div id="side" class="col-md-2 shopping-cart">
+			<% if @cart %>s
 				<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
 					<%= render @cart %>
 				<% end %>
