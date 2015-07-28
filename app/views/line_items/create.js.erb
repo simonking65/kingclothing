@@ -4,3 +4,4 @@ if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
 $('div#cart').html("<%= escape_javascript render(@cart) %>");
 
 $('#current_item').css({'background-color':'#5061DB'}).animate({'background-color':'#10F4E2'}, 1000);
+$('#basket-btn').text(<%= @cart.total_items %> + " £" + <%= @cart.total_price %> );
