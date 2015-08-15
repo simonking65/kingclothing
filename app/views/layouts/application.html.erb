@@ -55,8 +55,9 @@
         			<li><%= button_to 'Logout', logout_path, method: :delete , form_class: "navbar-btn", class: "navbar-btn", :html => {:class => "menu navbar-btn" } %></li>
       			</ul>
     			<% end %>
+    			<a href="#" class="toggle-nav btn btn-lg" id="basket-btn"><i class="fa fa-bars"></i> <%= @cart.total_items %> £<%= @cart.total_price %></a>
     		</div><!-- /.navbar-collapse -->
-    		<a href="#" class="toggle-nav btn btn-lg btn-success" id="basket-btn"><i class="fa fa-bars"></i> <%= @cart.total_items %> £<%= @cart.total_price %></a>
+    		
 </div>
 		</div>
 			</nav>
