@@ -5,12 +5,16 @@
    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<!--link href="favicon.ico" rel="shortcut icon" type="image/x-icon" /-->
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <!--%= favicon_link_tag 'https://maps.gstatic.com/favicon4.ico' %-->
 <%= favicon_link_tag 'king logos.png' %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
+  <!--script src="bootstrap.min.js"-->
+  
   </script>
  
   <%= csrf_meta_tags %>
@@ -55,7 +59,9 @@
         			<li><%= button_to 'Logout', logout_path, method: :delete , form_class: "navbar-btn", class: "navbar-btn", :html => {:class => "menu navbar-btn" } %></li>
       			</ul>
     			<% end %>
+    			<% if @cart %>
     			<a href="#" class="toggle-nav btn btn-lg" id="basket-btn"><i class="fa fa-bars"></i> <%= @cart.total_items %> £<%= @cart.total_price %></a>
+    			<% end %>
     		</div><!-- /.navbar-collapse -->
     		
 </div>

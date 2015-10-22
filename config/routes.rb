@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  
+  get '/portfolio/framework/bootstrap/css'
   get 'sessions/create'
 
   get 'sessions/destroy'
